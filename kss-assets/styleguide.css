@@ -1,0 +1,138 @@
+#kss-node {
+  padding: 0;
+}
+
+.kss-style,
+.kss-modifier__wrapper {
+  font-family: 'ProximaNova', Helvetica, sans-serif;
+}
+
+.kss-style P CODE {
+  background: #DDD;
+  padding: 3px;
+  border-radius: 5px;
+}
+
+#kss-node .kss-main {
+  padding: 10px 20px;
+  box-sizing: border-box;
+}
+
+#kss-node .kss-section {
+  margin-bottom: 24px;
+}
+
+#kss-node .kss-overview H2 {
+  padding-bottom: 5px;
+  border-bottom: 1px solid #DDD;
+}
+
+#kss-node .kss-style p {
+  margin: 12px 0;
+}
+
+#kss-node .kss-doc-title {
+  display: block;
+  width: 100%;
+  padding-bottom: 10%;
+  background-image: url(/img/schemius/logo.svg?v=51065);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-shadow: none;
+  font: 0/0 a !important;
+  color: transparent !important;
+  cursor: pointer !important;
+}
+
+@media screen and (min-width: 769px) {
+  #kss-node .kss-doc-title {
+    width: 100%;
+    padding-bottom: 19%;
+  }
+}
+
+#kss-node .kss-sidebar {
+  max-width: 350px;
+  padding: 20px 20px 0;
+  background: #004359;
+}
+
+@media screen and (min-width: 769px) {
+  #kss-node .kss-sidebar {
+    padding: 0 20px;
+  }
+}
+
+#kss-node .kss-sidebar A  {
+  color: #FFF !important;
+}
+
+#kss-node .kss-nav__ref {
+  color: #00A3D9;
+}
+#kss-node .kss-nav__ref::after {
+  content: ". ";
+}
+
+#kss-node .kss-nav__menu-child li:first-child,
+#kss-node .kss-nav__menu-child li:last-child {
+  border-color: rgba(255,255,255,.25);
+}
+
+#kss-node .kss-nav__menu-link.is-in-viewport:before {
+  width: 12px;
+  background: #00A3D9;
+  border-radius: 0 12px 12px 0;
+}
+
+#kss-node H1,
+#kss-node H2,
+#kss-node H3,
+#kss-node H4,
+#kss-node H5,
+#kss-node H6 {
+  font-weight: 400;
+  color: #242F33;
+}
+#kss-node H1.kss-title {
+  line-height: 1;
+  font-size: 2.0625em;
+}
+#kss-node H2.kss-title {
+  line-height: 1.2;
+  font-size: 1.5em;
+  font-weight: 400;
+}
+#kss-node H3.kss-title {
+  line-height: 1.2;
+  margin: 0.7em 0;
+  font-size: 1.125em;
+  font-weight: 400;
+}
+#kss-node H4.kss-title {
+  font-size: 1em;
+  font-weight: 400;
+}
+
+#kss-node .kss-title__ref {
+  display: inline-flex;
+  font-size: inherit;
+  color: #00A3D9;
+}
+
+#kss-node .kss-title__ref::before {
+  content: none;
+}
+#kss-node .kss-title__ref::after {
+  content: ".";
+}
+
+#kss-node .kss-modifier__wrapper {
+  position: relative;
+  z-index: 10;
+}
+
+.hidden {
+  display: none !important;
+}

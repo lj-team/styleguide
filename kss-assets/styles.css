@@ -1,0 +1,181 @@
+/* >>> file start: stc/core/styles.css */
+/*
+Colors
+
+Colors:
+$white: #FFFFFF - white
+$black: #000000 - black
+$gray-pure-dark: #333333 - gray-pure-dark
+$gray-pure-darker: #5B5F61 - gray-pure-darker
+$gray-pure-middle: #7D7F7F - gray-pure-middle
+$gray-pure-light: #D8D8D8 - gray-pure-light
+$gray-pure-smoke: #F9FAFA - gray-pure-smoke
+$gray-stone-darker: #838B8E - gray-stone-darker
+$gray-stone-darker-2: #8C969B - gray-stone-darker-2
+$gray-stone-middle: #BEC3C6 - gray-stone-middle
+$gray-stone-middle-2: #D0D1D5 - gray-stone-middle-2
+$gray-stone-middle-3: #DfE0E4 - gray-stone-middle-3
+$gray-stone-lighter: #E5E6E9 - gray-stone-lighter
+$gray-stone-lighter-2: #EDEDF3 - gray-stone-lighter-2
+$gray-stone-smoke: #F6F6F9 - gray-stone-smoke
+$gray-blue-darker: #7A9199 - gray-blue-darker
+$gray-blue-darker-2: #829399 - gray-blue-darker-2
+$gray-blue-middle: #A8B3B9 - gray-blue-middle
+$gray-blue-middle-2: #ABBBC2 - gray-blue-middle-2
+$gray-blue-middle-3: #BDC8CD - gray-blue-middle-3
+$gray-blue-lighter: #C7D4DA - gray-blue-lighter
+$gray-blue-lighter-2: #C8D4DA - gray-blue-lighter-2
+$gray-blue-lighter-3: #D4DCE0 - gray-blue-lighter-3
+$gray-blue-light: #DCE1E4 - gray-blue-light
+$gray-blue-light-2: #DAE3E6 - gray-blue-light-2
+$gray-blue-lightest: #E5EBEE - gray-blue-lightest
+$gray-blue-smoke: #F5F7F8 - gray-blue-smoke
+$blue-deepest: #003040 - blue-deepest
+$blue-deeper: #00394D - blue-deeper
+$blue-deep: #004359 - blue-deep
+$blue-muted-darker: #007399 - blue-muted-darker
+$blue-muted: #3A87AD - blue-muted
+$blue-muted-smoke: #D9EDF7 - blue-muted-smoke
+$blue-base-darker: #0996C5 - blue-base-darker
+$blue-base: #00A3D9 - blue-base
+$blue-base-lighter: #00C0FF - blue-base-lighter
+$blue-sky: #76DBEF - blue-sky
+$red-pure: #FF0000 - red-pure
+$red-pure-smoke: #FFEFEF - red-pure-smoke
+$red-base-darker: #CB1427 - red-base-darker
+$red-base: #EC3434 - red-base
+$red-base-lighter: #FF3838 - red-base-lighter
+$red-darksalmon: #FF4C44 - red-darksalmon
+$yellow-sand: #C09853 - yellow-sand
+$yellow-smoke: #FCF8E3 - yellow-smoke
+$green-grass: #468847 - green-grass
+$green-emerald: #39BF71 - green-emerald
+$green-smoke: #DFF0D8 - green-smoke
+$brands-facebook: #3B5A97 - brands-facebook
+$brands-twitter: #1CA1F1 - brands-twitter
+$brands-vk: #4E76A1 - brands-vk
+$brands-ok: #F47421 - brands-ok
+
+Style guide: Core.colors
+*/
+
+/*
+Lightness steps
+
+midnight
+darkest
+dark
+darker
+middle
+lighter
+light
+lightest
+smoke
+*/
+
+/*
+Core Table
+
+Basic table for service pages
+
+Markup:
+<table class="core-table {{modifier_class}}">
+  <thead>
+    <tr>
+      <th>
+        <a
+          class="
+            core-table__sort
+            core-table__sort--asc
+            "
+          href="#"
+          title="Sort by ID"
+        >
+          ID
+        </a>
+      </th>
+      <th>Text</th>
+      <th>Number</th>
+    </tr>
+  </thead>
+  <tr>
+    <td>
+      1
+    </td>
+    <td>
+      Kittens
+    </td>
+    <td class="core-table__td-number">
+      23
+    </td>
+  </tr>
+  <tr>
+    <td>
+      2
+    </td>
+    <td>
+      Balloons
+    </td>
+    <td class="core-table__td-number">
+      128
+    </td>
+  </tr>
+</table>
+
+Style guide: Core.core-table
+*/
+
+.core-table {
+  border-collapse: collapse;
+  }
+
+.core-table TR:nth-child(even) {
+  background: #F7F9FA;
+}
+
+.core-table TH, .core-table TD {
+  padding: 10px;
+  border-bottom: 1px solid #DAE3E6;
+}
+
+.core-table TH {
+  text-transform: uppercase;
+  line-height: 1;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+  font-size: 12px;
+  color: #829399;
+}
+
+.core-table__td-number {
+  text-align: right;
+  white-space: nowrap;
+  }
+
+.core-table__sort {
+  position: relative;
+  padding-right: 1em;
+  text-decoration: none;
+  }
+
+.core-table__sort::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 0;
+  height: 0;
+  border: 0 solid;
+  border-color: currentColor transparent;
+  border-width: .5em .35em 0;
+}
+
+.core-table__sort--asc::before {
+  border-width: 0 .35em .5em;
+}
+
+/* <<< file end: stc/core/styles.css */
+
+/*# sourceMappingURL=styles.css.map */

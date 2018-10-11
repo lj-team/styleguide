@@ -53,23 +53,23 @@
 <main class="kss-main" aria-label="Content">
   <article>
 
-    <div id="kssref-inputs-b-input-b-flatbutton" class="kss-section kss-section--depth-2 is-fullscreen">
+    <div id="kssref-core-core-table" class="kss-section kss-section--depth-2 is-fullscreen">
 
       <div class="kss-style">
         <h2 class="kss-title kss-title--level-2">
-          <a class="kss-title__permalink" href="#kssref-inputs-b-input-b-flatbutton">
+          <a class="kss-title__permalink" href="#kssref-core-core-table">
             <span class="kss-title__ref">
-              3.2
+              2.2
               <span class="kss-title__permalink-hash">
-                  #Inputs.b-input-b-flatbutton
+                  #Core.core-table
               </span>
             </span>
-            b-input + b-flatbuttom
+            Core Table
           </a>
         </h2>
 
           <p class="kss-toolbar">
-            <a href="#kssref-inputs-b-input-b-flatbutton" data-kss-guides="true">
+            <a href="#kssref-core-core-table" data-kss-guides="true">
               <span class="kss-toolbar__tooltip">Toggle example guides</span>
               <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                 <rect class="kss-toolbar__icon-fill" x="5" y="35" width="5" height="9"/>
@@ -90,7 +90,7 @@
                 <rect class="kss-toolbar__icon-fill" x="20" y="54" width="9" height="5"/>
               </svg>
             </a>
-            <a href="#kssref-inputs-b-input-b-flatbutton" data-kss-markup="true">
+            <a href="#kssref-core-core-table" data-kss-markup="true">
               <span class="kss-toolbar__tooltip">Toggle HTML markup</span>
               <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                 <path class="kss-toolbar__icon-fill" d="M37.555,46.239l6.103,6.103l20.342,-20.342l-20.342,-20.342l-6.103,6.103l14.24,14.239l-14.24,14.239Z"/>
@@ -99,6 +99,10 @@
             </a>
           </p>
 
+          <div class="kss-description">
+            <p>Basic table for service pages</p>
+
+          </div>
 
 
       </div>
@@ -110,8 +114,48 @@
 
 
           <div class="kss-modifier__example">
-            <input class="b-input " type="text" placeholder="Placeholder"/>
-<button class="b-flatbutton">Button</button>
+            <table class="core-table ">
+  <thead>
+    <tr>
+      <th>
+        <a
+          class="
+            core-table__sort
+            core-table__sort--asc
+            "
+          href="#"
+          title="Sort by ID"
+        >
+          ID
+        </a>
+      </th>
+      <th>Text</th>
+      <th>Number</th>
+    </tr>
+  </thead>
+  <tr>
+    <td>
+      1
+    </td>
+    <td>
+      Kittens
+    </td>
+    <td class="core-table__td-number">
+      23
+    </td>
+  </tr>
+  <tr>
+    <td>
+      2
+    </td>
+    <td>
+      Balloons
+    </td>
+    <td class="core-table__td-number">
+      128
+    </td>
+  </tr>
+</table>
             <div class="kss-modifier__example-footer"></div>
           </div>
 
@@ -121,12 +165,52 @@
             <summary>
                 Markup
             </summary>
-            <pre class="hljs"><code class="language-handlebars"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"b-input "</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Placeholder"</span>/&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"b-flatbutton"</span>&gt;</span>Button<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></span></code></pre>
+            <pre class="hljs"><code class="language-handlebars"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">table</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"core-table "</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">thead</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">th</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">a</span>
+          <span class="hljs-attr">class</span>=<span class="hljs-string">"
+            core-table__sort
+            core-table__sort--asc
+            "</span>
+          <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>
+          <span class="hljs-attr">title</span>=<span class="hljs-string">"Sort by ID"</span>
+        &gt;</span>
+          ID
+        <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">th</span>&gt;</span>Text<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">th</span>&gt;</span>Number<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">thead</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>
+      1
+    <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>
+      Kittens
+    <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"core-table__td-number"</span>&gt;</span>
+      23
+    <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>
+      2
+    <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>
+      Balloons
+    <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"core-table__td-number"</span>&gt;</span>
+      128
+    <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">table</span>&gt;</span></span></code></pre>
           </details>
 
         <div class="kss-source kss-style">
-          Source: <code>lj-basestrap-app.css</code>, line 249
+          Source: <code>core/components/table.css</code>, line 4
         </div>
 
     </div>
