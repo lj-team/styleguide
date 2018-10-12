@@ -35,7 +35,7 @@
   display: block;
   width: 100%;
   padding-bottom: 10%;
-  background-image: url(/img/schemius/logo.svg?v=51065);
+  background-image: url(../assets/logo.svg);
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
