@@ -53,13 +53,13 @@
 }
 
 #kss-node .kss-sidebar {
-  max-width: 350px;
   padding: 20px 20px 0;
   background: #004359;
 }
 
 @media screen and (min-width: 769px) {
   #kss-node .kss-sidebar {
+    max-width: 350px;
     padding: 0 20px;
   }
 }
