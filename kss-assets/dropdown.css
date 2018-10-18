@@ -1,38 +1,89 @@
-/* >>> file start: stc/components/dropdown.css */
+/* >>> file start: stc/core/components/dropdown.css */
 /*
 Colors
 
 Colors:
---gray1: #7A9099 - gray
---gray2: #8C969B - gray
---gray3: #DAE3E6 - gray
---gray4: #D4DCE0 - gray
---gray5: #BDC8CD - gray
---gray6: #F9FAFA - gray
---gray7: #C8D4DA - gray
---gray8: #BDC8CD - gray
---gray9: #F7F9FA - gray
---black1: #333333 - gray
---blue1: #00A3D9 - gray
---blue2: #0996C5 - gray
---blue3: #00C0FF - gray
---white1: #FFFFFF - gray
+$white: #FFFFFF - white
+$black: #000000 - black
+$gray-pure-dark: #333333 - gray-pure-dark
+$gray-pure-darker: #5B5F61 - gray-pure-darker
+$gray-pure-middle: #7D7F7F - gray-pure-middle
+$gray-pure-light: #D8D8D8 - gray-pure-light
+$gray-pure-smoke: #F9FAFA - gray-pure-smoke
+$gray-stone-darker: #838B8E - gray-stone-darker
+$gray-stone-darker-2: #8C969B - gray-stone-darker-2
+$gray-stone-middle: #BEC3C6 - gray-stone-middle
+$gray-stone-middle-2: #D0D1D5 - gray-stone-middle-2
+$gray-stone-middle-3: #DfE0E4 - gray-stone-middle-3
+$gray-stone-lighter: #E5E6E9 - gray-stone-lighter
+$gray-stone-lighter-2: #EDEDF3 - gray-stone-lighter-2
+$gray-stone-smoke: #F6F6F9 - gray-stone-smoke
+$gray-blue-darker: #7A9199 - gray-blue-darker
+$gray-blue-darker-2: #829399 - gray-blue-darker-2
+$gray-blue-middle: #A8B3B9 - gray-blue-middle
+$gray-blue-middle-2: #ABBBC2 - gray-blue-middle-2
+$gray-blue-middle-3: #BDC8CD - gray-blue-middle-3
+$gray-blue-lighter: #C7D4DA - gray-blue-lighter
+$gray-blue-lighter-2: #C8D4DA - gray-blue-lighter-2
+$gray-blue-lighter-3: #D4DCE0 - gray-blue-lighter-3
+$gray-blue-light: #DCE1E4 - gray-blue-light
+$gray-blue-light-2: #DAE3E6 - gray-blue-light-2
+$gray-blue-lightest: #E5EBEE - gray-blue-lightest
+$gray-blue-smoke: #F5F7F8 - gray-blue-smoke
+$blue-deepest: #003040 - blue-deepest
+$blue-deeper: #00394D - blue-deeper
+$blue-deep: #004359 - blue-deep
+$blue-muted-darker: #007399 - blue-muted-darker
+$blue-muted: #3A87AD - blue-muted
+$blue-muted-smoke: #D9EDF7 - blue-muted-smoke
+$blue-base-darker: #0996C5 - blue-base-darker
+$blue-base: #00A3D9 - blue-base
+$blue-base-lighter: #00C0FF - blue-base-lighter
+$blue-sky: #76DBEF - blue-sky
+$red-pure: #FF0000 - red-pure
+$red-pure-smoke: #FFEFEF - red-pure-smoke
+$red-base-darker: #CB1427 - red-base-darker
+$red-base: #EC3434 - red-base
+$red-base-lighter: #FF3838 - red-base-lighter
+$red-darksalmon: #FF4C44 - red-darksalmon
+$yellow-sand: #C09853 - yellow-sand
+$yellow-smoke: #FCF8E3 - yellow-smoke
+$green-grass: #468847 - green-grass
+$green-emerald: #39BF71 - green-emerald
+$green-smoke: #DFF0D8 - green-smoke
+$brands-facebook: #3B5A97 - brands-facebook
+$brands-twitter: #1CA1F1 - brands-twitter
+$brands-vk: #4E76A1 - brands-vk
+$brands-ok: #F47421 - brands-ok
 
-Style guide: Controls.dropdown.colors
+Style guide: Core.colors
 */
 
+/*
+Lightness steps
+
+midnight
+darkest
+dark
+darker
+middle
+lighter
+light
+lightest
+smoke
+*/
 
 /*
 Dropdown
 
 Markup:
 <div class="dropdown-box" >
-  <button class="dropdown-box__toggle" type="button">
+  <button class="dropdown-box__toggle kss-toggle" type="button">
     <span class="dropdown-box__toggle-text">Select something</span>
     <svg class="svgicon flaticon flaticon--arrow-dropdown" width="16" height="16"><use xlink:href="/img/svg/flaticon.svg#flaticon--arrow-dropdown"></svg>
   </button>
-  <div class="dropdown-box__list hidden">
-    <p class="dropdown-box__title">Title</p>
+  <div class="dropdown-box__container" hidden>
+    <div class="dropdown-box__title">Title</div>
     <div class="dropdown-box__field-wrap">
       <input class="dropdown-box__field" type="text" placeholder="I want to believe">
       <div class="dropdown-box__field-holder">
@@ -54,12 +105,8 @@ Markup:
   </div>
 </div>
 
-Style guide: Controls.dropdown
+Style guide: Core.dropdown
 */
-
-
-/* dropdown checkboxes widget */
-
 
 .dropdown-box {
   position: relative;
@@ -67,7 +114,6 @@ Style guide: Controls.dropdown
   margin-top: 16px;
   margin-bottom: 4px;
   }
-
 
 .dropdown-box__toggle {
   display: -webkit-inline-box;
@@ -101,7 +147,6 @@ Style guide: Controls.dropdown
   transition: border-color .2s, background-color .2s, color .2s;
 }
 
-
 .dropdown-box__toggle .svgicon {
   position: absolute;
   right: 11px;
@@ -114,28 +159,23 @@ Style guide: Controls.dropdown
   transition: transform 0.2s, -webkit-transform 0.2s;
 }
 
-
 .dropdown-box__toggle:hover {
   border-color: #BDC8CD;
 }
-
 
 .dropdown-box__toggle:focus {
   border-color: #00A3D9;
 }
 
-
 .dropdown-box__toggle:active {
   background-color: #F9FAFA;
 }
-
 
 .dropdown-box__toggle--open .svgicon {
   -webkit-transform: rotate(180deg);
       -ms-transform: rotate(180deg);
           transform: rotate(180deg);
 }
-
 
 .dropdown-box__toggle-text {
   display: -webkit-box;
@@ -157,7 +197,6 @@ Style guide: Controls.dropdown
   color: #333333;
 }
 
-
 .dropdown-box__reset {
   margin: 8px 0;
   padding: 0;
@@ -169,24 +208,20 @@ Style guide: Controls.dropdown
   color: #00A3D9;
 }
 
-
 .dropdown-box__reset:hover {
   color: #00C0FF;
 }
-
 
 .dropdown-box__reset:focus {
   outline: none;
   color: #00C0FF;
 }
 
-
 .dropdown-box__reset:active {
   color: #0996C5;
 }
 
-
-.dropdown-box__list {
+.dropdown-box__container {
   display: inline-block;
   position: absolute;
   z-index: 10;
@@ -203,8 +238,11 @@ Style guide: Controls.dropdown
   color: #333333;
 }
 
+.dropdown-box__container--hidden {
+  display: none;
+}
 
-.dropdown-box .dropdown-box__title {
+.dropdown-box__title {
   display: block;
   position: relative;
   width: auto;
@@ -221,12 +259,10 @@ Style guide: Controls.dropdown
           user-select: none;
 }
 
-
 .dropdown-box__field-wrap {
   position: relative;
   margin: 7px 15px 12px;
 }
-
 
 .dropdown-box__field {
   width: 100%;
@@ -246,12 +282,10 @@ Style guide: Controls.dropdown
   transition: border-color .2s;
 }
 
-
 .dropdown-box__field:focus {
   outline: 0;
   border-color: #00A3D9;
 }
-
 
 .dropdown-box__field-holder {
   display: -webkit-box;
@@ -274,7 +308,6 @@ Style guide: Controls.dropdown
   pointer-events: none;
 }
 
-
 .dropdown-box__field-holder .svgicon {
   width: auto;
   height: 16px;
@@ -282,14 +315,12 @@ Style guide: Controls.dropdown
   fill: #C8D4DA;
 }
 
-
 .dropdown-box__checkbox-group {
   max-height: 208px;
   min-height: 100px;
   overflow: auto;
   padding: 0 15px 8px;
 }
-
 
 .dropdown-box__checkbox-wrap {
   display: block;
@@ -305,7 +336,6 @@ Style guide: Controls.dropdown
           user-select: none;
 }
 
-
 .dropdown-box__checkbox {
   position: absolute;
   left: -9999px;
@@ -313,28 +343,23 @@ Style guide: Controls.dropdown
   height: 1px;
 }
 
-
 .dropdown-box__checkbox:checked ~ .dropdown-box__checkbox-box {
   background-color: #00A3D9;
   border-color: transparent !important;
 }
 
-
 .dropdown-box__checkbox:focus ~ .dropdown-box__checkbox-box {
   border-color: #00A3D9;
 }
-
 
 .dropdown-box__checkbox:checked:focus ~ .dropdown-box__checkbox-box {
   background-color: #00C0FF;
 }
 
-
 .dropdown-box__checkbox:checked ~ .dropdown-box__checkbox-box::after {
   margin-top: 0;
   opacity: 1;
 }
-
 
 .dropdown-box__checkbox-label {
   display: block;
@@ -343,7 +368,6 @@ Style guide: Controls.dropdown
   color: #333333;
   cursor: pointer;
 }
-
 
 .dropdown-box__checkbox-box {
   display: block;
@@ -361,7 +385,6 @@ Style guide: Controls.dropdown
   transition: border-width .15s, border-color .15s, background-color .15s;
 }
 
-
 .dropdown-box__checkbox-box::before,
     .dropdown-box__checkbox-box::after {
   content: "";
@@ -370,7 +393,6 @@ Style guide: Controls.dropdown
   transition: opacity .15s, margin .15s;
 }
 
-
 .dropdown-box__checkbox-box::before {
   height: 2px;
   margin: 6px 7px;
@@ -378,7 +400,6 @@ Style guide: Controls.dropdown
   border-radius: 1px;
   background-color: #FFFFFF;
 }
-
 
 .dropdown-box__checkbox-box::after {
   position: absolute;
@@ -392,18 +413,15 @@ Style guide: Controls.dropdown
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 10 10'%3E%3Cpath d='M1 6l3 3 5-8' stroke-width='2' stroke='%23FFF' fill='none' fill-rule='evenodd' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
 }
 
-
 .dropdown-box__checkbox-box:hover {
   background-color: #FFFFFF;
   border-color: #BDC8CD;
 }
 
-
 .dropdown-box__checkbox-box:active {
   background-color: #F9FAFA;
   border-color: #BDC8CD;
 }
-
 
 .dropdown-box__footer {
   display: -webkit-box;
@@ -417,7 +435,6 @@ Style guide: Controls.dropdown
   border-top: 1px solid #D4DCE0;
   padding: 16px 15px 8px;
 }
-
 
 .dropdown-box__button {
   height: 32px;
@@ -434,22 +451,18 @@ Style guide: Controls.dropdown
   transition: border-color .2s, background-color .2s, color .2s;
 }
 
-
 .dropdown-box__button:hover {
   border-color: #BDC8CD;
 }
-
 
 .dropdown-box__button:focus {
   outline: none;
   border-color: #00A3D9;
 }
 
-
 .dropdown-box__button:active {
   background-color: #F9FAFA;
 }
-
 
 .dropdown-box__button--reset {
   background-color: transparent;
@@ -458,6 +471,6 @@ Style guide: Controls.dropdown
   color: #333333;
 }
 
-/* <<< file end: stc/components/dropdown.css */
+/* <<< file end: stc/core/components/dropdown.css */
 
 /*# sourceMappingURL=dropdown.css.map */

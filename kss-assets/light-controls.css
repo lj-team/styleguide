@@ -1,0 +1,274 @@
+/* >>> file start: stc/core/components/light-controls.css */
+/*
+Colors
+
+Weight: 1
+
+Colors:
+$white: #FFFFFF - white
+$black: #000000 - black
+$gray-pure-dark: #333333 - gray-pure-dark
+$gray-pure-darker: #5B5F61 - gray-pure-darker
+$gray-pure-middle: #7D7F7F - gray-pure-middle
+$gray-pure-light: #D8D8D8 - gray-pure-light
+$gray-pure-smoke: #F9FAFA - gray-pure-smoke
+$gray-stone-darker: #838B8E - gray-stone-darker
+$gray-stone-darker-2: #8C969B - gray-stone-darker-2
+$gray-stone-middle: #BEC3C6 - gray-stone-middle
+$gray-stone-middle-2: #D0D1D5 - gray-stone-middle-2
+$gray-stone-middle-3: #DfE0E4 - gray-stone-middle-3
+$gray-stone-lighter: #E5E6E9 - gray-stone-lighter
+$gray-stone-lighter-2: #EDEDF3 - gray-stone-lighter-2
+$gray-stone-smoke: #F6F6F9 - gray-stone-smoke
+$gray-blue-darker: #7A9199 - gray-blue-darker
+$gray-blue-darker-2: #829399 - gray-blue-darker-2
+$gray-blue-middle: #A8B3B9 - gray-blue-middle
+$gray-blue-middle-2: #ABBBC2 - gray-blue-middle-2
+$gray-blue-middle-3: #BDC8CD - gray-blue-middle-3
+$gray-blue-lighter: #C7D4DA - gray-blue-lighter
+$gray-blue-lighter-2: #C8D4DA - gray-blue-lighter-2
+$gray-blue-lighter-3: #D4DCE0 - gray-blue-lighter-3
+$gray-blue-light: #DCE1E4 - gray-blue-light
+$gray-blue-light-2: #DAE3E6 - gray-blue-light-2
+$gray-blue-lightest: #E5EBEE - gray-blue-lightest
+$gray-blue-smoke: #F5F7F8 - gray-blue-smoke
+$blue-deepest: #003040 - blue-deepest
+$blue-deeper: #00394D - blue-deeper
+$blue-deep: #004359 - blue-deep
+$blue-muted-darker: #007399 - blue-muted-darker
+$blue-muted: #3A87AD - blue-muted
+$blue-muted-smoke: #D9EDF7 - blue-muted-smoke
+$blue-base-darker: #0996C5 - blue-base-darker
+$blue-base: #00A3D9 - blue-base
+$blue-base-lighter: #00C0FF - blue-base-lighter
+$blue-sky: #76DBEF - blue-sky
+$red-pure: #FF0000 - red-pure
+$red-pure-smoke: #FFEFEF - red-pure-smoke
+$red-base-darker: #CB1427 - red-base-darker
+$red-base: #EC3434 - red-base
+$red-base-lighter: #FF3838 - red-base-lighter
+$red-darksalmon: #FF4C44 - red-darksalmon
+$yellow-sand: #C09853 - yellow-sand
+$yellow-smoke: #FCF8E3 - yellow-smoke
+$green-grass: #468847 - green-grass
+$green-emerald: #39BF71 - green-emerald
+$green-smoke: #DFF0D8 - green-smoke
+$brands-facebook: #3B5A97 - brands-facebook
+$brands-twitter: #1CA1F1 - brands-twitter
+$brands-vk: #4E76A1 - brands-vk
+$brands-ok: #F47421 - brands-ok
+
+Style guide: Core.colors
+*/
+
+/*
+Lightness steps
+
+midnight
+darkest
+dark
+darker
+middle
+lighter
+light
+lightest
+smoke
+*/
+
+/*
+Light controls
+
+Style guide: Core.light
+*/
+
+/*
+Light input
+
+Markup:
+<div class="lightinput {{modifier_class}}">
+  <input type="text" class="lightinput__textfield"/>
+  <button type="button" class="lightinput__clear">
+    <svg class="svgicon" width="16" height="16"><use xlink:href="/img/svg/flaticon.svg#flaticon--cross-3"/></svg>
+  </button>
+</div>
+
+:disabled - disabled
+
+Style guide: Core.light.input
+*/
+
+.lightinput {
+  position: relative;
+  max-width: 580px;
+  }
+
+.lightinput__clear {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 0;
+  }
+
+.lightinput__clear:focus {
+  outline: 0;
+}
+
+.lightinput__clear .svgicon {
+  fill: #C8D4DA;
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+}
+
+.lightinput__clear:focus .svgicon {
+  box-shadow: 0 0 0 2px #00A3D9;
+}
+
+.lightinput__textfield {
+  width: 100%;
+  height: 32px;
+  padding: 0 12px;
+  padding-right: 20px;
+  box-sizing: border-box;
+  background-color: #FFFFFF;
+  border: 1px solid #D4DCE0;
+  border-radius: 4px;
+  font-size: 14px;
+  line-height: 22px;
+  color: #333333;
+  -webkit-transition: border-color .2s;
+  transition: border-color .2s;
+  }
+
+.lightinput__textfield:focus {
+  outline: 0;
+  border-color: #00A3D9;
+}
+
+/*
+Light button
+
+Markup:
+<a href="#" class="lightbutton {{modifier_class}}" type="button">Link</a>
+<button class="lightbutton {{modifier_class}}" type="button">Button</button>
+<button class="lightbutton lightbutton--toggle {{modifier_class}}" type="button">
+  Toggle button
+  <svg class="svgicon" width="16" height="16"><use xlink:href="/img/svg/flaticon.svg#flaticon--arrow-dropdown"/></svg>
+</button>
+
+:disabled - disabled
+.lightbutton--toggle-open - toggle control in opened state
+
+Style guide: Core.light.button
+*/
+
+.lightbutton {
+  display: inline-block;
+  padding: 5px 16px 7px;
+  box-sizing: border-box;
+  background: none;
+  border: 1px solid #D4DCE0;
+  border-radius: 4px;
+  text-align: center;
+  font: inherit;
+  font-size: 14px;
+  line-height: 1;
+  cursor: pointer;
+  -webkit-transition: border-color .2s, background-color .2s, color .2s;
+  transition: border-color .2s, background-color .2s, color .2s;
+  }
+
+.lightbutton,
+  .lightbutton:link,
+  .lightbutton:visited {
+  color: #333333;
+}
+
+.lightbutton:hover {
+  border-color: #BDC8CD;
+}
+
+.lightbutton:active {
+  border-color: #0996C5;
+}
+
+.lightbutton:focus {
+  outline: none;
+  border-color: #00A3D9;
+}
+
+.lightbutton:disabled {
+  opacity: .5;
+  cursor: not-allowed;
+}
+
+.lightbutton--toggle {
+  position: relative;
+  padding-right: 30px;
+  padding-left: 12px;
+  }
+
+.lightbutton--toggle .svgicon {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 10px;
+  margin: auto;
+  width: 10px;
+  height: 6px;
+  fill: #333333;
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
+}
+
+.lightbutton--toggle-open .svgicon {
+    -webkit-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+            transform: rotate(180deg);
+    }
+
+.lightbutton--blue {
+  background-color: #00A3D9;
+  border-color: #00A3D9;
+  }
+
+.lightbutton--blue,
+  .lightbutton--blue:link,
+  .lightbutton--blue:visited {
+  color: #FFFFFF;
+}
+
+.lightbutton--blue:hover,
+  .lightbutton--blue:focus {
+  border-color: #00C0FF;
+  background-color: #00C0FF;
+}
+
+.lightbutton--blue:active {
+  border-color: #0996C5;
+  background-color: #0996C5;
+}
+
+/* <<< file end: stc/core/components/light-controls.css */
+
+/*# sourceMappingURL=light-controls.css.map */

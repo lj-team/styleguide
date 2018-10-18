@@ -1,3 +1,7 @@
+[hidden] {
+  display: none !important;
+}
+
 #kss-node {
   padding: 0;
 }
@@ -52,6 +56,20 @@
   }
 }
 
+#kss-node .kss-modifier__wrapper {
+  position: relative;
+  z-index: 10;
+  min-height: 200px;
+}
+
+#kss-node .kss-modifier__example {
+  position: static;
+}
+
+.kss-toggle {
+  cursor: pointer;
+}
+
 #kss-node .kss-sidebar {
   padding: 20px 20px 0;
   background: #004359;
@@ -100,6 +118,7 @@
   font-size: 2.0625em;
 }
 #kss-node H2.kss-title {
+  margin-bottom: 12px;
   line-height: 1.2;
   font-size: 1.5em;
   font-weight: 400;
@@ -126,13 +145,4 @@
 }
 #kss-node .kss-title__ref::after {
   content: ".";
-}
-
-#kss-node .kss-modifier__wrapper {
-  position: relative;
-  z-index: 10;
-}
-
-.hidden {
-  display: none !important;
 }

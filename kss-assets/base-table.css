@@ -1,4 +1,4 @@
-/* >>> file start: stc/core/styles.css */
+/* >>> file start: stc/core/components/base-table.css */
 /*
 Colors
 
@@ -74,19 +74,19 @@ smoke
 */
 
 /*
-Core Table
+Base Table
 
-Basic table for service pages
+Table for service pages
 
 Markup:
-<table class="core-table {{modifier_class}}">
+<table class="base-table {{modifier_class}}">
   <thead>
     <tr>
       <th>
         <a
           class="
-            core-table__sort
-            core-table__sort--asc
+            base-table__sort
+            base-table__sort--asc
             "
           href="#"
           title="Sort by ID"
@@ -105,7 +105,7 @@ Markup:
     <td>
       Kittens
     </td>
-    <td class="core-table__td-number">
+    <td class="base-table__td-number">
       23
     </td>
   </tr>
@@ -116,29 +116,29 @@ Markup:
     <td>
       Balloons
     </td>
-    <td class="core-table__td-number">
+    <td class="base-table__td-number">
       128
     </td>
   </tr>
 </table>
 
-Style guide: Core.core-table
+Style guide: Core.base-table
 */
 
-.core-table {
+.base-table {
   border-collapse: collapse;
   }
 
-.core-table TR:nth-child(even) {
+.base-table TR:nth-child(even) {
   background: #F7F9FA;
 }
 
-.core-table TH, .core-table TD {
+.base-table TH, .base-table TD {
   padding: 10px;
   border-bottom: 1px solid #DAE3E6;
 }
 
-.core-table TH {
+.base-table TH {
   text-transform: uppercase;
   line-height: 1;
   letter-spacing: 0.05em;
@@ -147,18 +147,18 @@ Style guide: Core.core-table
   color: #829399;
 }
 
-.core-table__td-number {
+.base-table__td-number {
   text-align: right;
   white-space: nowrap;
   }
 
-.core-table__sort {
+.base-table__sort {
   position: relative;
   padding-right: 1em;
   text-decoration: none;
   }
 
-.core-table__sort::before {
+.base-table__sort::before {
   content: "";
   position: absolute;
   top: 0;
@@ -172,10 +172,10 @@ Style guide: Core.core-table
   border-width: .5em .35em 0;
 }
 
-.core-table__sort--asc::before {
+.base-table__sort--asc::before {
   border-width: 0 .35em .5em;
 }
 
-/* <<< file end: stc/core/styles.css */
+/* <<< file end: stc/core/components/base-table.css */
 
-/*# sourceMappingURL=styles.css.map */
+/*# sourceMappingURL=base-table.css.map */

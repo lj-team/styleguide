@@ -1,21 +1,30 @@
 'use strict';
 
 /*
-JS for LJ Styleguide demos
-See htdocs/kss
+USAGE:
+
+1. Add to markup toggel button:
+<button class="kss-toggle">Toggle popup</button>
+
+2. Add to the next elem attr hidden to hide it:
+<div class="b-popup" hidden>
+
+3.After rebuilding demo toggle button will toggle attr hidden for the next sibling
 */
 
 (function() {
   const doc = document;
-  const dropDownControl = doc.querySelector('.dropdown-box__toggle');
-  const dropDownTarget = doc.querySelector('.dropdown-box__list');
+  const toggleControls = doc.querySelectorAll('.kss-toggle');
 
-  if(!dropDownControl) {
+  if(!toggleControls) {
     return;
   }
 
-  dropDownControl.addEventListener('click', () => {
-    dropDownControl.classList.toggle('dropdown-box__toggle--open')
-    dropDownTarget.classList.toggle('hidden');
-  });
+  toggleControls.forEach(control => {
+    const toggleTarget = control.nextElementSibling;
+
+    control.addEventListener('click', () => {
+      toggleTarget.hidden = !toggleTarget.hidden;
+    });
+  })
 })();
