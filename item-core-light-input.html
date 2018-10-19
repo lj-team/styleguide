@@ -36,18 +36,13 @@
         </a>
       </li>
       <li class="kss-nav__menu-item">
-        <a class="kss-nav__menu-link" href="section-controls.html">
-          <span class="kss-nav__ref">1</span><span class="kss-nav__name">Controls</span>
-        </a>
-      </li>
-      <li class="kss-nav__menu-item">
         <a class="kss-nav__menu-link" href="section-core.html">
-          <span class="kss-nav__ref">2</span><span class="kss-nav__name">Core</span>
+          <span class="kss-nav__ref">1</span><span class="kss-nav__name">Core</span>
         </a>
       </li>
       <li class="kss-nav__menu-item">
-        <a class="kss-nav__menu-link" href="section-inputs.html">
-          <span class="kss-nav__ref">3</span><span class="kss-nav__name">Inputs</span>
+        <a class="kss-nav__menu-link" href="section-flatstyle.html">
+          <span class="kss-nav__ref">2</span><span class="kss-nav__name">Flatstyle</span>
         </a>
       </li>
     </ul>
@@ -62,7 +57,7 @@
         <h3 class="kss-title kss-title--level-3">
           <a class="kss-title__permalink" href="#kssref-core-light-input">
             <span class="kss-title__ref">
-              2.4.2
+              1.2.2
               <span class="kss-title__permalink-hash">
                   #Core.light.input
               </span>
@@ -117,10 +112,17 @@
 
           <div class="kss-modifier__example">
             <div class="lightinput ">
-  <input type="text" class="lightinput__textfield"/>
+  <input type="text" class="lightinput__textfield" placeholder="Empty spaces what are we living for"/>
+</div>
+<div class="lightinput ">
+  <input type="text" class="lightinput__textfield" placeholder="Abandoned places I guess we know the score"/>
   <button type="button" class="lightinput__clear">
-    <svg class="svgicon" width="16" height="16"><use xlink:href="./kss-assets/flaticon.svg#flaticon--cross-3"/></svg>
+    <svg  class="svgicon flaticon flaticon--cross-3" width="16" height="16"><use xlink:href="./kss-assets/flaticon.svg#flaticon--cross-3"/></svg>
   </button>
+</div>
+<div class="lightinput ">
+  <input type="text" class="lightinput__textfield lightinput__textfield--search" placeholder="On and on, does anybody know what we are looking for">
+  <svg  class="lightinput__search-icon svgicon flaticon flaticon--search" width="16" height="16"><use xlink:href="./kss-assets/flaticon.svg#flaticon--search"/></svg>
 </div>
             <div class="kss-modifier__example-footer"></div>
           </div>
@@ -133,10 +135,39 @@
             </div>
             <div class="kss-modifier__example">
               <div class="lightinput pseudo-class-disabled">
-  <input type="text" class="lightinput__textfield"/>
+  <input type="text" class="lightinput__textfield" placeholder="Empty spaces what are we living for"/>
+</div>
+<div class="lightinput pseudo-class-disabled">
+  <input type="text" class="lightinput__textfield" placeholder="Abandoned places I guess we know the score"/>
   <button type="button" class="lightinput__clear">
-    <svg class="svgicon" width="16" height="16"><use xlink:href="./kss-assets/flaticon.svg#flaticon--cross-3"/></svg>
+    <svg  class="svgicon flaticon flaticon--cross-3" width="16" height="16"><use xlink:href="./kss-assets/flaticon.svg#flaticon--cross-3"/></svg>
   </button>
+</div>
+<div class="lightinput pseudo-class-disabled">
+  <input type="text" class="lightinput__textfield lightinput__textfield--search" placeholder="On and on, does anybody know what we are looking for">
+  <svg  class="lightinput__search-icon svgicon flaticon flaticon--search" width="16" height="16"><use xlink:href="./kss-assets/flaticon.svg#flaticon--search"/></svg>
+</div>
+              <div class="kss-modifier__example-footer"></div>
+            </div>
+            <div class="kss-modifier__name kss-style">
+              [disabled]
+            </div>
+            <div class="kss-modifier__description kss-style">
+              disabled
+            </div>
+            <div class="kss-modifier__example">
+              <div class="lightinput [disabled]">
+  <input type="text" class="lightinput__textfield" placeholder="Empty spaces what are we living for"/>
+</div>
+<div class="lightinput [disabled]">
+  <input type="text" class="lightinput__textfield" placeholder="Abandoned places I guess we know the score"/>
+  <button type="button" class="lightinput__clear">
+    <svg  class="svgicon flaticon flaticon--cross-3" width="16" height="16"><use xlink:href="./kss-assets/flaticon.svg#flaticon--cross-3"/></svg>
+  </button>
+</div>
+<div class="lightinput [disabled]">
+  <input type="text" class="lightinput__textfield lightinput__textfield--search" placeholder="On and on, does anybody know what we are looking for">
+  <svg  class="lightinput__search-icon svgicon flaticon flaticon--search" width="16" height="16"><use xlink:href="./kss-assets/flaticon.svg#flaticon--search"/></svg>
 </div>
               <div class="kss-modifier__example-footer"></div>
             </div>
@@ -147,15 +178,22 @@
                 Markup
             </summary>
             <pre class="hljs"><code class="language-handlebars"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"lightinput [modifier class]"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"lightinput__textfield"</span>/&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"lightinput__textfield"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Empty spaces what are we living for"</span>/&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"lightinput [modifier class]"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"lightinput__textfield"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Abandoned places I guess we know the score"</span>/&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"lightinput__clear"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"svgicon"</span> <span class="hljs-attr">width</span>=<span class="hljs-string">"16"</span> <span class="hljs-attr">height</span>=<span class="hljs-string">"16"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">use</span> <span class="hljs-attr">xlink:href</span>=<span class="hljs-string">"./kss-assets/flaticon.svg#flaticon--cross-3"</span>/&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">svg</span>  <span class="hljs-attr">class</span>=<span class="hljs-string">"svgicon flaticon flaticon--cross-3"</span> <span class="hljs-attr">width</span>=<span class="hljs-string">"16"</span> <span class="hljs-attr">height</span>=<span class="hljs-string">"16"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">use</span> <span class="hljs-attr">xlink:href</span>=<span class="hljs-string">"./kss-assets/flaticon.svg#flaticon--cross-3"</span>/&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"lightinput [modifier class]"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"lightinput__textfield lightinput__textfield--search"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"On and on, does anybody know what we are looking for"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">svg</span>  <span class="hljs-attr">class</span>=<span class="hljs-string">"lightinput__search-icon svgicon flaticon flaticon--search"</span> <span class="hljs-attr">width</span>=<span class="hljs-string">"16"</span> <span class="hljs-attr">height</span>=<span class="hljs-string">"16"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">use</span> <span class="hljs-attr">xlink:href</span>=<span class="hljs-string">"./kss-assets/flaticon.svg#flaticon--search"</span>/&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span></code></pre>
           </details>
 
         <div class="kss-source kss-style">
-          Source: <code>core/components/light-controls.css</code>, line 9
+          Source: <code>core/components/light-controls.css</code>, line 11
         </div>
 
     </div>

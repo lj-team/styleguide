@@ -887,9 +887,9 @@ DIV.lj_ippu_app .b-select-users INPUT {
 /* Must be removed after implementation of Framework! */
 
 /*
-.b-popup
+Popup
 
-Old popup
+Default popup
 
 Markup:
 <button class="kss-toggle">Toggle popup</button>
@@ -954,7 +954,7 @@ Markup:
 
 .b-popup-noclosecontrol - no close control
 
-Style guide: Controls.b-popup
+Style guide: Flatstyle.widgets.b-popup
 */
 
 .b-popup {

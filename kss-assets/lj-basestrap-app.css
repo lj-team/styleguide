@@ -155,7 +155,7 @@ Markup:
 .b-input-max - max
 .b-input-error - error
 
-Style guide: Inputs.b-input
+Style guide: Flatstyle.inputs.b-input
 */
 .b-input {
     padding: 7px 5px;
@@ -235,13 +235,13 @@ Style guide: Inputs.b-input
     outline-color: #ef3a3a;
     }
 /*
-b-input + b-flatbuttom
+Input + button
 
 Markup:
-<input class="b-input {{modifier_class}}" type="text" placeholder="Placeholder"/>
+<input class="b-input b-input-tiny" type="text" placeholder="Placeholder"/>
 <button class="b-flatbutton">Button</button>
 
-Style guide: Inputs.b-input-b-flatbutton
+Style guide: Flatstyle.inputs.input+button
 */
 /* input + button */
 .b-input + .b-flatbutton {

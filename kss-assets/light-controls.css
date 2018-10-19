@@ -2,7 +2,7 @@
 /*
 Colors
 
-Weight: 1
+Weight: -1
 
 Colors:
 $white: #FFFFFF - white
@@ -78,6 +78,8 @@ smoke
 /*
 Light controls
 
+Weight: -1
+
 Style guide: Core.light
 */
 
@@ -86,10 +88,17 @@ Light input
 
 Markup:
 <div class="lightinput {{modifier_class}}">
-  <input type="text" class="lightinput__textfield"/>
+  <input type="text" class="lightinput__textfield" placeholder="Empty spaces what are we living for"/>
+</div>
+<div class="lightinput {{modifier_class}}">
+  <input type="text" class="lightinput__textfield" placeholder="Abandoned places I guess we know the score"/>
   <button type="button" class="lightinput__clear">
-    <svg class="svgicon" width="16" height="16"><use xlink:href="/img/svg/flaticon.svg#flaticon--cross-3"/></svg>
+    <svg  class="svgicon flaticon flaticon--cross-3" width="16" height="16"><use xlink:href="./kss-assets/flaticon.svg#flaticon--cross-3"/></svg>
   </button>
+</div>
+<div class="lightinput {{modifier_class}}">
+  <input type="text" class="lightinput__textfield lightinput__textfield--search" placeholder="On and on, does anybody know what we are looking for">
+  <svg  class="lightinput__search-icon svgicon flaticon flaticon--search" width="16" height="16"><use xlink:href="./kss-assets/flaticon.svg#flaticon--search"/></svg>
 </div>
 
 :disabled - disabled
@@ -142,6 +151,18 @@ Style guide: Core.light.input
   box-shadow: 0 0 0 2px #00A3D9;
 }
 
+.lightinput__search-icon {
+  position: absolute;
+  top: 50%;
+  left: 14px;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  fill: #C8D4DA;
+  }
+
 .lightinput__textfield {
   width: 100%;
   height: 32px;
@@ -158,9 +179,26 @@ Style guide: Core.light.input
   transition: border-color .2s;
   }
 
+.lightinput__textfield:hover {
+  border-color: #BDC8CD;
+}
+
+.lightinput__textfield:active {
+  border-color: #0996C5;
+}
+
 .lightinput__textfield:focus {
-  outline: 0;
+  outline: none;
   border-color: #00A3D9;
+}
+
+.lightinput__textfield:disabled {
+  opacity: .5;
+  cursor: not-allowed;
+}
+
+.lightinput__textfield--search {
+  padding-left: 40px;
 }
 
 /*
@@ -169,13 +207,16 @@ Light button
 Markup:
 <a href="#" class="lightbutton {{modifier_class}}" type="button">Link</a>
 <button class="lightbutton {{modifier_class}}" type="button">Button</button>
-<button class="lightbutton lightbutton--toggle {{modifier_class}}" type="button">
+<button
+  class="lightbutton lightbutton--toggle kss-toggle-class {{modifier_class}}"
+  data-toggle-class="lightbutton--toggle-open"
+  type="button">
   Toggle button
-  <svg class="svgicon" width="16" height="16"><use xlink:href="/img/svg/flaticon.svg#flaticon--arrow-dropdown"/></svg>
+  <svg class="svgicon" width="16" height="16"><use xlink:href="./kss-assets/flaticon.svg#flaticon--arrow-dropdown"/></svg>
 </button>
 
 :disabled - disabled
-.lightbutton--toggle-open - toggle control in opened state
+.lightbutton--blue - blue button
 
 Style guide: Core.light.button
 */
@@ -246,6 +287,10 @@ Style guide: Core.light.button
         -ms-transform: rotate(180deg);
             transform: rotate(180deg);
     }
+
+.lightbutton--toggle.lightbutton--blue .svgicon {
+  fill: white
+}
 
 .lightbutton--blue {
   background-color: #00A3D9;

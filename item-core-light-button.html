@@ -36,18 +36,13 @@
         </a>
       </li>
       <li class="kss-nav__menu-item">
-        <a class="kss-nav__menu-link" href="section-controls.html">
-          <span class="kss-nav__ref">1</span><span class="kss-nav__name">Controls</span>
-        </a>
-      </li>
-      <li class="kss-nav__menu-item">
         <a class="kss-nav__menu-link" href="section-core.html">
-          <span class="kss-nav__ref">2</span><span class="kss-nav__name">Core</span>
+          <span class="kss-nav__ref">1</span><span class="kss-nav__name">Core</span>
         </a>
       </li>
       <li class="kss-nav__menu-item">
-        <a class="kss-nav__menu-link" href="section-inputs.html">
-          <span class="kss-nav__ref">3</span><span class="kss-nav__name">Inputs</span>
+        <a class="kss-nav__menu-link" href="section-flatstyle.html">
+          <span class="kss-nav__ref">2</span><span class="kss-nav__name">Flatstyle</span>
         </a>
       </li>
     </ul>
@@ -62,7 +57,7 @@
         <h3 class="kss-title kss-title--level-3">
           <a class="kss-title__permalink" href="#kssref-core-light-button">
             <span class="kss-title__ref">
-              2.4.1
+              1.2.1
               <span class="kss-title__permalink-hash">
                   #Core.light.button
               </span>
@@ -118,7 +113,10 @@
           <div class="kss-modifier__example">
             <a href="#" class="lightbutton " type="button">Link</a>
 <button class="lightbutton " type="button">Button</button>
-<button class="lightbutton lightbutton--toggle " type="button">
+<button
+  class="lightbutton lightbutton--toggle kss-toggle-class "
+  data-toggle-class="lightbutton--toggle-open"
+  type="button">
   Toggle button
   <svg class="svgicon" width="16" height="16"><use xlink:href="./kss-assets/flaticon.svg#flaticon--arrow-dropdown"/></svg>
 </button>
@@ -134,7 +132,28 @@
             <div class="kss-modifier__example">
               <a href="#" class="lightbutton pseudo-class-disabled" type="button">Link</a>
 <button class="lightbutton pseudo-class-disabled" type="button">Button</button>
-<button class="lightbutton lightbutton--toggle pseudo-class-disabled" type="button">
+<button
+  class="lightbutton lightbutton--toggle kss-toggle-class pseudo-class-disabled"
+  data-toggle-class="lightbutton--toggle-open"
+  type="button">
+  Toggle button
+  <svg class="svgicon" width="16" height="16"><use xlink:href="./kss-assets/flaticon.svg#flaticon--arrow-dropdown"/></svg>
+</button>
+              <div class="kss-modifier__example-footer"></div>
+            </div>
+            <div class="kss-modifier__name kss-style">
+              .lightbutton--blue
+            </div>
+            <div class="kss-modifier__description kss-style">
+              blue button
+            </div>
+            <div class="kss-modifier__example">
+              <a href="#" class="lightbutton lightbutton--blue" type="button">Link</a>
+<button class="lightbutton lightbutton--blue" type="button">Button</button>
+<button
+  class="lightbutton lightbutton--toggle kss-toggle-class lightbutton--blue"
+  data-toggle-class="lightbutton--toggle-open"
+  type="button">
   Toggle button
   <svg class="svgicon" width="16" height="16"><use xlink:href="./kss-assets/flaticon.svg#flaticon--arrow-dropdown"/></svg>
 </button>
@@ -148,14 +167,17 @@
             </summary>
             <pre class="hljs"><code class="language-handlebars"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"lightbutton [modifier class]"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span>&gt;</span>Link<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"lightbutton [modifier class]"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span>&gt;</span>Button<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"lightbutton lightbutton--toggle [modifier class]"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span>
+  <span class="hljs-attr">class</span>=<span class="hljs-string">"lightbutton lightbutton--toggle kss-toggle-class [modifier class]"</span>
+  <span class="hljs-attr">data-toggle-class</span>=<span class="hljs-string">"lightbutton--toggle-open"</span>
+  <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span>&gt;</span>
   Toggle button
   <span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"svgicon"</span> <span class="hljs-attr">width</span>=<span class="hljs-string">"16"</span> <span class="hljs-attr">height</span>=<span class="hljs-string">"16"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">use</span> <span class="hljs-attr">xlink:href</span>=<span class="hljs-string">"./kss-assets/flaticon.svg#flaticon--arrow-dropdown"</span>/&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></span></code></pre>
           </details>
 
         <div class="kss-source kss-style">
-          Source: <code>core/components/light-controls.css</code>, line 79
+          Source: <code>core/components/light-controls.css</code>, line 113
         </div>
 
     </div>

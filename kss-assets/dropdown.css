@@ -2,6 +2,8 @@
 /*
 Colors
 
+Weight: -1
+
 Colors:
 $white: #FFFFFF - white
 $black: #000000 - black
@@ -78,16 +80,19 @@ Dropdown
 
 Markup:
 <div class="dropdown-box" >
-  <button class="dropdown-box__toggle kss-toggle" type="button">
+  <button
+    class="dropdown-box__toggle kss-toggle kss-toggle-class"
+    type="button"
+    data-toggle-class="dropdown-box__toggle--open">
     <span class="dropdown-box__toggle-text">Select something</span>
-    <svg class="svgicon flaticon flaticon--arrow-dropdown" width="16" height="16"><use xlink:href="/img/svg/flaticon.svg#flaticon--arrow-dropdown"></svg>
+    <svg class="svgicon flaticon flaticon--arrow-dropdown" width="16" height="16"><use xlink:href="./kss-assets/flaticon.svg#flaticon--arrow-dropdown"></svg>
   </button>
   <div class="dropdown-box__container" hidden>
     <div class="dropdown-box__title">Title</div>
     <div class="dropdown-box__field-wrap">
       <input class="dropdown-box__field" type="text" placeholder="I want to believe">
       <div class="dropdown-box__field-holder">
-        <svg class="svgicon flaticon flaticon--search" width="16" height="16"><use xlink:href="/img/svg/flaticon.svg#flaticon--search"></svg>
+        <svg class="svgicon flaticon flaticon--search" width="16" height="16"><use xlink:href="./kss-assets/flaticon.svg#flaticon--search"></svg>
       </div>
     </div>
     <div class="dropdown-box__checkbox-group">

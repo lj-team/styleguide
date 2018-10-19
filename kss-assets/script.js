@@ -3,7 +3,7 @@
 /*
 USAGE:
 
-1. Add to markup toggel button:
+1. Add to markup toggle button:
 <button class="kss-toggle">Toggle popup</button>
 
 2. Add to the next elem attr hidden to hide it:
@@ -25,6 +25,22 @@ USAGE:
 
     control.addEventListener('click', () => {
       toggleTarget.hidden = !toggleTarget.hidden;
+    });
+  });
+
+  // ------------------------------
+
+  const toggleClassControls = doc.querySelectorAll('.kss-toggle-class');
+
+  if(!toggleClassControls) {
+    return;
+  }
+
+  toggleClassControls.forEach(control => {
+    const toggleClass = control.dataset.toggleClass;
+
+    control.addEventListener('click', () => {
+      control.classList.toggle(toggleClass);
     });
   })
 })();

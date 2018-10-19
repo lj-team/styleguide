@@ -32,7 +32,7 @@ Markup:
 .b-flatbutton-mailru - Mailru
 .b-flatbutton-ljread - Ljread
 
-Style guide: Controls.flatbutton
+Style guide: Flatstyle.controls.flatbutton
 */
 
 /* basic sizing */
@@ -133,7 +133,7 @@ Row of buttons
 Markup:
 <a href="#" class="b-flatbutton">Text</a><a href="#" class="b-flatbutton">Text</a>
 
-Style guide: Controls.flatbutton.row
+Style guide: Flatstyle.controls.flatbutton-row
 */
 
 .b-flatbutton + .b-flatbutton {
