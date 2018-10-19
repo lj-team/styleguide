@@ -87,19 +87,7 @@ Style guide: Core.light
 Light input
 
 Markup:
-<div class="lightinput {{modifier_class}}">
-  <input type="text" class="lightinput__textfield" placeholder="Empty spaces what are we living for"/>
-</div>
-<div class="lightinput {{modifier_class}}">
-  <input type="text" class="lightinput__textfield" placeholder="Abandoned places I guess we know the score"/>
-  <button type="button" class="lightinput__clear">
-    <svg  class="svgicon flaticon flaticon--cross-3" width="16" height="16"><use xlink:href="./kss-assets/flaticon.svg#flaticon--cross-3"/></svg>
-  </button>
-</div>
-<div class="lightinput {{modifier_class}}">
-  <input type="text" class="lightinput__textfield lightinput__textfield--search" placeholder="On and on, does anybody know what we are looking for">
-  <svg  class="lightinput__search-icon svgicon flaticon flaticon--search" width="16" height="16"><use xlink:href="./kss-assets/flaticon.svg#flaticon--search"/></svg>
-</div>
+<input type="text" class="lightinput" placeholder="Empty spaces what are we living for"/>
 
 :disabled - disabled
 
@@ -110,7 +98,6 @@ Style guide: Core.light.input
   width: 100%;
   height: 32px;
   padding: 0 12px;
-  padding-right: 20px;
   box-sizing: border-box;
   background-color: #FFFFFF;
   border: 1px solid #D4DCE0;
@@ -141,7 +128,7 @@ Style guide: Core.light.input
 }
 
 /*
-Light clear
+Light input with clear control
 
 Markup:
 <div class="lightclear">
@@ -156,6 +143,10 @@ Style guide: Core.light.light-clear
 
 .lightclear {
   position: relative;
+  }
+
+.lightclear__lightinput {
+  padding-right: 20px;
   }
 
 .lightclear__control {
@@ -203,12 +194,20 @@ Style guide: Core.light.light-clear
 }
 
 /*
-Light search
+Light input with search icon
 
 Markup:
 <div class="lightsearch">
-  <input type="text" class="lightinput lightsearch__lightinput" placeholder="Abandoned places I guess we know the score"/>
-  <svg  class="lightinput__search-icon svgicon flaticon flaticon--search" width="16" height="16"><use xlink:href="./kss-assets/flaticon.svg#flaticon--search"/></svg>
+  <input type="text" class="lightinput lightsearch__lightinput" placeholder="On and on, does anybody know what we are looking for"/>
+  <svg  class="lightsearch__search-icon svgicon flaticon flaticon--search" width="16" height="16"><use xlink:href="./kss-assets/flaticon.svg#flaticon--search"/></svg>
+</div>
+
+<div class="lightsearch lightclear">
+  <input type="text" class="lightinput lightsearch__lightinput lightclear__lightinput" placeholder="On and on, does anybody know what we are looking for"/>
+  <svg  class="lightsearch__search-icon svgicon flaticon flaticon--search" width="16" height="16"><use xlink:href="./kss-assets/flaticon.svg#flaticon--search"/></svg>
+  <button type="button" class="lightclear__control">
+    <svg class="lightclear__cross-icon svgicon flaticon flaticon--cross-3" width="16" height="16"><use xlink:href="./kss-assets/flaticon.svg#flaticon--cross-3"/></svg>
+  </button>
 </div>
 
 Style guide: Core.light.light-search
@@ -238,7 +237,7 @@ Style guide: Core.light.light-search
 Light button
 
 Markup:
-<a href="#" class="lightbutton {{modifier_class}}" type="button">Link</a>
+<a class="lightbutton {{modifier_class}}" href="#">Link</a>
 <button class="lightbutton {{modifier_class}}" type="button">Button</button>
 <button
   class="lightbutton lightbutton--toggle kss-toggle-class {{modifier_class}}"
