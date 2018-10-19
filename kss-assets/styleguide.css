@@ -7,7 +7,10 @@
 }
 
 .kss-style,
-.kss-modifier__wrapper {
+.kss-modifier__wrapper,
+.kss-modifier__wrapper INPUT,
+.kss-modifier__wrapper TEXTAREA,
+.kss-modifier__wrapper BUTTON {
   font-family: 'ProximaNova', Helvetica, sans-serif;
 }
 
