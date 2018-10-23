@@ -17,9 +17,10 @@
 <link rel="stylesheet" href="kss-assets/lj-basestrap-app.css">
 <link rel="stylesheet" href="kss-assets/normalize.css">
 <link rel="stylesheet" href="kss-assets/layout.css">
-<link rel="stylesheet" href="kss-assets/base-table.css">
+<link rel="stylesheet" href="kss-assets/basetable.css">
+<link rel="stylesheet" href="kss-assets/sortcontrol.css">
 <link rel="stylesheet" href="kss-assets/dropdown.css">
-<link rel="stylesheet" href="kss-assets/light-controls.css">
+<link rel="stylesheet" href="kss-assets/lightcontrols.css">
 
 </head>
 <body id="kss-node" >
@@ -78,7 +79,7 @@
                 </a>
               </li>
               <li class="kss-nav__menu-item">
-                <a class="kss-nav__menu-link" href="section-core.html#kssref-core-base-table">
+                <a class="kss-nav__menu-link" href="section-core.html#kssref-core-basetable">
                   <span class="kss-nav__ref ">1.3</span
                   ><span class="kss-nav__name">Base Table</span>
                 </a>
@@ -87,6 +88,12 @@
                 <a class="kss-nav__menu-link" href="section-core.html#kssref-core-dropdown">
                   <span class="kss-nav__ref ">1.4</span
                   ><span class="kss-nav__name">Dropdown</span>
+                </a>
+              </li>
+              <li class="kss-nav__menu-item">
+                <a class="kss-nav__menu-link" href="section-core.html#kssref-core-sortcontrol">
+                  <span class="kss-nav__ref ">1.5</span
+                  ><span class="kss-nav__name">Sort control</span>
                 </a>
               </li>
             </ul>
@@ -747,7 +754,7 @@
 
 
         <div class="kss-source kss-style">
-          Source: <code>core/components/light-controls.css</code>, line 3
+          Source: <code>core/components/lightcontrols.css</code>, line 3
         </div>
 
     </section>
@@ -838,7 +845,7 @@
   data-toggle-class="lightbutton--toggle-open"
   type="button">
   Toggle button
-  <svg class="svgicon" width="16" height="16"><use xlink:href="./kss-assets/flaticon.svg#flaticon--arrow-dropdown"/></svg>
+  <svg class="lightbutton__dropdown-icon svgicon" width="16" height="16"><use xlink:href="./kss-assets/flaticon.svg#flaticon--arrow-dropdown"/></svg>
 </button>
             <div class="kss-modifier__example-footer"></div>
           </div>
@@ -857,7 +864,7 @@
   data-toggle-class="lightbutton--toggle-open"
   type="button">
   Toggle button
-  <svg class="svgicon" width="16" height="16"><use xlink:href="./kss-assets/flaticon.svg#flaticon--arrow-dropdown"/></svg>
+  <svg class="lightbutton__dropdown-icon svgicon" width="16" height="16"><use xlink:href="./kss-assets/flaticon.svg#flaticon--arrow-dropdown"/></svg>
 </button>
               <div class="kss-modifier__example-footer"></div>
             </div>
@@ -875,7 +882,7 @@
   data-toggle-class="lightbutton--toggle-open"
   type="button">
   Toggle button
-  <svg class="svgicon" width="16" height="16"><use xlink:href="./kss-assets/flaticon.svg#flaticon--arrow-dropdown"/></svg>
+  <svg class="lightbutton__dropdown-icon svgicon" width="16" height="16"><use xlink:href="./kss-assets/flaticon.svg#flaticon--arrow-dropdown"/></svg>
 </button>
               <div class="kss-modifier__example-footer"></div>
             </div>
@@ -892,12 +899,12 @@
   <span class="hljs-attr">data-toggle-class</span>=<span class="hljs-string">"lightbutton--toggle-open"</span>
   <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span>&gt;</span>
   Toggle button
-  <span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"svgicon"</span> <span class="hljs-attr">width</span>=<span class="hljs-string">"16"</span> <span class="hljs-attr">height</span>=<span class="hljs-string">"16"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">use</span> <span class="hljs-attr">xlink:href</span>=<span class="hljs-string">"./kss-assets/flaticon.svg#flaticon--arrow-dropdown"</span>/&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"lightbutton__dropdown-icon svgicon"</span> <span class="hljs-attr">width</span>=<span class="hljs-string">"16"</span> <span class="hljs-attr">height</span>=<span class="hljs-string">"16"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">use</span> <span class="hljs-attr">xlink:href</span>=<span class="hljs-string">"./kss-assets/flaticon.svg#flaticon--arrow-dropdown"</span>/&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></span></code></pre>
           </details>
 
         <div class="kss-source kss-style">
-          Source: <code>core/components/light-controls.css</code>, line 151
+          Source: <code>core/components/lightcontrols.css</code>, line 152
         </div>
 
     </section>
@@ -1005,7 +1012,7 @@
           </details>
 
         <div class="kss-source kss-style">
-          Source: <code>core/components/light-controls.css</code>, line 13
+          Source: <code>core/components/lightcontrols.css</code>, line 13
         </div>
 
     </section>
@@ -1110,7 +1117,7 @@
           </details>
 
         <div class="kss-source kss-style">
-          Source: <code>core/components/light-controls.css</code>, line 55
+          Source: <code>core/components/lightcontrols.css</code>, line 56
         </div>
 
     </section>
@@ -1227,19 +1234,19 @@
           </details>
 
         <div class="kss-source kss-style">
-          Source: <code>core/components/light-controls.css</code>, line 112
+          Source: <code>core/components/lightcontrols.css</code>, line 113
         </div>
 
     </section>
-    <section id="kssref-core-base-table" class="kss-section kss-section--depth-2 ">
+    <section id="kssref-core-basetable" class="kss-section kss-section--depth-2 ">
 
       <div class="kss-style">
         <h2 class="kss-title kss-title--level-2">
-          <a class="kss-title__permalink" href="#kssref-core-base-table">
+          <a class="kss-title__permalink" href="#kssref-core-basetable">
             <span class="kss-title__ref">
               1.3
               <span class="kss-title__permalink-hash">
-                  #Core.base-table
+                  #Core.basetable
               </span>
             </span>
             Base Table
@@ -1247,7 +1254,7 @@
         </h2>
 
           <p class="kss-toolbar">
-              <a href="#kssref-core-base-table" data-kss-fullscreen="kssref-core-base-table">
+              <a href="#kssref-core-basetable" data-kss-fullscreen="kssref-core-basetable">
                 <span class="kss-toolbar__tooltip">Toggle full screen</span>
                 <svg focusable="false" aria-hidden="true" class="off" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                   <path class="kss-toolbar__icon-fill" d="M64 0v26l-10-10-12 12-6-6 12-12-10-10zM28 42l-12 12 10 10h-26v-26l10 10 12-12z"></path>
@@ -1256,7 +1263,7 @@
                   <path class="kss-toolbar__icon-fill" d="M28 36v26l-10-10-12 12-6-6 12-12-10-10zM64 6l-12 12 10 10h-26v-26l10 10 12-12z"></path>
                 </svg>
               </a>
-              <a href="item-core-base-table.html" target="_blank">
+              <a href="item-core-basetable.html" target="_blank">
                 <span class="kss-toolbar__tooltip">Open in new window</span>
                 <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                   <rect x="0" y="20" width="40" height="44" fill="#fff"/>
@@ -1267,7 +1274,7 @@
                   <rect class="kss-toolbar__icon-fill" x="24" y="0" width="40" height="10"/>
                 </svg>
               </a>
-            <a href="#kssref-core-base-table" data-kss-guides="true">
+            <a href="#kssref-core-basetable" data-kss-guides="true">
               <span class="kss-toolbar__tooltip">Toggle example guides</span>
               <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                 <rect class="kss-toolbar__icon-fill" x="5" y="35" width="5" height="9"/>
@@ -1288,7 +1295,7 @@
                 <rect class="kss-toolbar__icon-fill" x="20" y="54" width="9" height="5"/>
               </svg>
             </a>
-            <a href="#kssref-core-base-table" data-kss-markup="true">
+            <a href="#kssref-core-basetable" data-kss-markup="true">
               <span class="kss-toolbar__tooltip">Toggle HTML markup</span>
               <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                 <path class="kss-toolbar__icon-fill" d="M37.555,46.239l6.103,6.103l20.342,-20.342l-20.342,-20.342l-6.103,6.103l14.24,14.239l-14.24,14.239Z"/>
@@ -1312,15 +1319,17 @@
 
 
           <div class="kss-modifier__example">
-            <table class="base-table ">
+            <table class="basetable ">
   <thead>
     <tr>
       <th>
         <a
           class="
-            base-table__sort
-            base-table__sort--asc
+            basetable__sort
+            sortcontrol
+            kss-toggle-class
             "
+          data-toggle-class="sortcontrol--asc"
           href="#"
           title="Sort by ID"
         >
@@ -1338,7 +1347,7 @@
     <td>
       Kittens
     </td>
-    <td class="base-table__td-number">
+    <td class="basetable__td--number">
       23
     </td>
   </tr>
@@ -1349,7 +1358,7 @@
     <td>
       Balloons
     </td>
-    <td class="base-table__td-number">
+    <td class="basetable__td--number">
       128
     </td>
   </tr>
@@ -1363,15 +1372,17 @@
             <summary>
                 Markup
             </summary>
-            <pre class="hljs"><code class="language-handlebars"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">table</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"base-table "</span>&gt;</span>
+            <pre class="hljs"><code class="language-handlebars"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">table</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"basetable "</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">thead</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">th</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">a</span>
           <span class="hljs-attr">class</span>=<span class="hljs-string">"
-            base-table__sort
-            base-table__sort--asc
+            basetable__sort
+            sortcontrol
+            kss-toggle-class
             "</span>
+          <span class="hljs-attr">data-toggle-class</span>=<span class="hljs-string">"sortcontrol--asc"</span>
           <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>
           <span class="hljs-attr">title</span>=<span class="hljs-string">"Sort by ID"</span>
         &gt;</span>
@@ -1389,7 +1400,7 @@
     <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>
       Kittens
     <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"base-table__td-number"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"basetable__td--number"</span>&gt;</span>
       23
     <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
@@ -1400,7 +1411,7 @@
     <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>
       Balloons
     <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"base-table__td-number"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"basetable__td--number"</span>&gt;</span>
       128
     <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
@@ -1408,7 +1419,7 @@
           </details>
 
         <div class="kss-source kss-style">
-          Source: <code>core/components/base-table.css</code>, line 4
+          Source: <code>core/components/basetable.css</code>, line 4
         </div>
 
     </section>
@@ -1562,6 +1573,143 @@
 
         <div class="kss-source kss-style">
           Source: <code>core/components/dropdown.css</code>, line 3
+        </div>
+
+    </section>
+    <section id="kssref-core-sortcontrol" class="kss-section kss-section--depth-2 ">
+
+      <div class="kss-style">
+        <h2 class="kss-title kss-title--level-2">
+          <a class="kss-title__permalink" href="#kssref-core-sortcontrol">
+            <span class="kss-title__ref">
+              1.5
+              <span class="kss-title__permalink-hash">
+                  #Core.sortcontrol
+              </span>
+            </span>
+            Sort control
+          </a>
+        </h2>
+
+          <p class="kss-toolbar">
+              <a href="#kssref-core-sortcontrol" data-kss-fullscreen="kssref-core-sortcontrol">
+                <span class="kss-toolbar__tooltip">Toggle full screen</span>
+                <svg focusable="false" aria-hidden="true" class="off" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                  <path class="kss-toolbar__icon-fill" d="M64 0v26l-10-10-12 12-6-6 12-12-10-10zM28 42l-12 12 10 10h-26v-26l10 10 12-12z"></path>
+                </svg>
+                <svg focusable="false" aria-hidden="true" class="on" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                  <path class="kss-toolbar__icon-fill" d="M28 36v26l-10-10-12 12-6-6 12-12-10-10zM64 6l-12 12 10 10h-26v-26l10 10 12-12z"></path>
+                </svg>
+              </a>
+              <a href="item-core-sortcontrol.html" target="_blank">
+                <span class="kss-toolbar__tooltip">Open in new window</span>
+                <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                  <rect x="0" y="20" width="40" height="44" fill="#fff"/>
+                  <path class="kss-toolbar__icon-fill" d="M40,64l-40,0l0,-44l40,0l0,44Zm-36,-40l0,36l32,0l0,-36l-32,0Z"/>
+                  <rect class="kss-toolbar__icon-fill" x="0" y="20" width="40" height="10"/>
+                  <rect x="24" y="0" width="40" height="44" fill="#fff"/>
+                  <path class="kss-toolbar__icon-fill" d="M64,44l-40,0l0,-44l40,0l0,44Zm-36,-40l0,36l32,0l0,-36l-32,0Z"/>
+                  <rect class="kss-toolbar__icon-fill" x="24" y="0" width="40" height="10"/>
+                </svg>
+              </a>
+            <a href="#kssref-core-sortcontrol" data-kss-guides="true">
+              <span class="kss-toolbar__tooltip">Toggle example guides</span>
+              <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <rect class="kss-toolbar__icon-fill" x="5" y="35" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="21" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="35" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="5" y="21" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="5" y="0" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="35" y="5" width="9" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="20" y="5" width="9" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="0" y="5" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="0" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="49" y="5" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="49" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="49" y="54" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="5" y="49" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="0" y="54" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="35" y="54" width="9" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="20" y="54" width="9" height="5"/>
+              </svg>
+            </a>
+            <a href="#kssref-core-sortcontrol" data-kss-markup="true">
+              <span class="kss-toolbar__tooltip">Toggle HTML markup</span>
+              <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <path class="kss-toolbar__icon-fill" d="M37.555,46.239l6.103,6.103l20.342,-20.342l-20.342,-20.342l-6.103,6.103l14.24,14.239l-14.24,14.239Z"/>
+                <path class="kss-toolbar__icon-fill" d="M26.445,17.761l-6.103,-6.103l-20.342,20.342l20.342,20.342l6.103,-6.103l-14.24,-14.239l14.24,-14.239Z"/>
+              </svg>
+            </a>
+          </p>
+
+          <div class="kss-description">
+            <p>Control with arrow for list or tables with sorting</p>
+
+          </div>
+
+
+      </div>
+
+        <div class="kss-modifier__wrapper">
+          <div class="kss-modifier__heading kss-style">
+            Example
+          </div>
+
+
+          <div class="kss-modifier__example">
+            <p>
+  <a
+    class="sortcontrol kss-toggle-class"
+    data-toggle-class="sortcontrol--asc"
+    href="#"
+    title="Sort by ID"
+  >
+    Link
+  </a>
+</p>
+<p>
+  <button
+    class="sortcontrol  kss-toggle-class"
+    data-toggle-class="sortcontrol--asc"
+    type="button"
+    title="Sort by ID"
+  >
+    Button
+  </button>
+</p>
+            <div class="kss-modifier__example-footer"></div>
+          </div>
+
+        </div>
+
+          <details class="kss-markup kss-style">
+            <summary>
+                Markup
+            </summary>
+            <pre class="hljs"><code class="language-handlebars"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">a</span>
+    <span class="hljs-attr">class</span>=<span class="hljs-string">"sortcontrol kss-toggle-class"</span>
+    <span class="hljs-attr">data-toggle-class</span>=<span class="hljs-string">"sortcontrol--asc"</span>
+    <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>
+    <span class="hljs-attr">title</span>=<span class="hljs-string">"Sort by ID"</span>
+  &gt;</span>
+    Link
+  <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">button</span>
+    <span class="hljs-attr">class</span>=<span class="hljs-string">"sortcontrol  kss-toggle-class"</span>
+    <span class="hljs-attr">data-toggle-class</span>=<span class="hljs-string">"sortcontrol--asc"</span>
+    <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span>
+    <span class="hljs-attr">title</span>=<span class="hljs-string">"Sort by ID"</span>
+  &gt;</span>
+    Button
+  <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></span></code></pre>
+          </details>
+
+        <div class="kss-source kss-style">
+          Source: <code>core/components/sortcontrol.css</code>, line 1
         </div>
 
     </section>

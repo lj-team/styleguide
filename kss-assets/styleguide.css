@@ -7,10 +7,7 @@
 }
 
 .kss-style,
-.kss-modifier__wrapper,
-.kss-modifier__wrapper INPUT,
-.kss-modifier__wrapper TEXTAREA,
-.kss-modifier__wrapper BUTTON {
+.kss-modifier__wrapper {
   font-family: 'ProximaNova', Helvetica, sans-serif;
 }
 
@@ -57,6 +54,11 @@
     width: 100%;
     padding-bottom: 19%;
   }
+}
+#kss-node .kss-title__permalink:hover,
+#kss-node .kss-title__permalink:focus,
+#kss-node .kss-title__permalink:active {
+  color: inherit;
 }
 
 #kss-node .kss-modifier__wrapper {

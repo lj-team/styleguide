@@ -1,6 +1,8 @@
-/* >>> file start: stc/core/components/base-table.css */
+/* >>> file start: stc/core/components/basetable.css */
 /*
 Colors
+
+Weight: -1
 
 Colors:
 $white: #FFFFFF - white
@@ -79,15 +81,17 @@ Base Table
 Table for service pages
 
 Markup:
-<table class="base-table {{modifier_class}}">
+<table class="basetable {{modifier_class}}">
   <thead>
     <tr>
       <th>
         <a
           class="
-            base-table__sort
-            base-table__sort--asc
+            basetable__sort
+            sortcontrol
+            kss-toggle-class
             "
+          data-toggle-class="sortcontrol--asc"
           href="#"
           title="Sort by ID"
         >
@@ -105,7 +109,7 @@ Markup:
     <td>
       Kittens
     </td>
-    <td class="base-table__td-number">
+    <td class="basetable__td--number">
       23
     </td>
   </tr>
@@ -116,29 +120,29 @@ Markup:
     <td>
       Balloons
     </td>
-    <td class="base-table__td-number">
+    <td class="basetable__td--number">
       128
     </td>
   </tr>
 </table>
 
-Style guide: Core.base-table
+Style guide: Core.basetable
 */
 
-.base-table {
+.basetable {
   border-collapse: collapse;
   }
 
-.base-table TR:nth-child(even) {
+.basetable TR:nth-child(even) {
   background: #F7F9FA;
 }
 
-.base-table TH, .base-table TD {
+.basetable TH, .basetable TD {
   padding: 10px;
   border-bottom: 1px solid #DAE3E6;
 }
 
-.base-table TH {
+.basetable TH {
   text-transform: uppercase;
   line-height: 1;
   letter-spacing: 0.05em;
@@ -147,35 +151,11 @@ Style guide: Core.base-table
   color: #829399;
 }
 
-.base-table__td-number {
+.basetable__td--number {
   text-align: right;
   white-space: nowrap;
   }
 
-.base-table__sort {
-  position: relative;
-  padding-right: 1em;
-  text-decoration: none;
-  }
+/* <<< file end: stc/core/components/basetable.css */
 
-.base-table__sort::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  margin: auto;
-  width: 0;
-  height: 0;
-  border: 0 solid;
-  border-color: currentColor transparent;
-  border-width: .5em .35em 0;
-}
-
-.base-table__sort--asc::before {
-  border-width: 0 .35em .5em;
-}
-
-/* <<< file end: stc/core/components/base-table.css */
-
-/*# sourceMappingURL=base-table.css.map */
+/*# sourceMappingURL=basetable.css.map */

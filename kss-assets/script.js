@@ -39,7 +39,8 @@ USAGE:
   toggleClassControls.forEach(control => {
     const toggleClass = control.dataset.toggleClass;
 
-    control.addEventListener('click', () => {
+    control.addEventListener('click', (event) => {
+      event.preventDefault();
       control.classList.toggle(toggleClass);
     });
   })

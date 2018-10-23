@@ -1,4 +1,4 @@
-/* >>> file start: stc/core/components/light-controls.css */
+/* >>> file start: stc/core/components/lightcontrols.css */
 /*
 Colors
 
@@ -102,6 +102,7 @@ Style guide: Core.light.input
   background-color: #FFFFFF;
   border: 1px solid #D4DCE0;
   border-radius: 4px;
+  font: inherit;
   font-size: 14px;
   line-height: 22px;
   color: #333333;
@@ -146,7 +147,7 @@ Style guide: Core.light.light-clear
   }
 
 .lightclear__lightinput {
-  padding-right: 20px;
+  padding-right: 24px;
   }
 
 .lightclear__control {
@@ -201,7 +202,7 @@ Markup:
   <input type="text" class="lightinput lightsearch__lightinput" placeholder="On and on, does anybody know what we are looking for"/>
   <svg  class="lightsearch__search-icon svgicon flaticon flaticon--search" width="16" height="16"><use xlink:href="./kss-assets/flaticon.svg#flaticon--search"/></svg>
 </div>
-
+<!-- search & clear -->
 <div class="lightsearch lightclear">
   <input type="text" class="lightinput lightsearch__lightinput lightclear__lightinput" placeholder="On and on, does anybody know what we are looking for"/>
   <svg  class="lightsearch__search-icon svgicon flaticon flaticon--search" width="16" height="16"><use xlink:href="./kss-assets/flaticon.svg#flaticon--search"/></svg>
@@ -244,7 +245,7 @@ Markup:
   data-toggle-class="lightbutton--toggle-open"
   type="button">
   Toggle button
-  <svg class="svgicon" width="16" height="16"><use xlink:href="./kss-assets/flaticon.svg#flaticon--arrow-dropdown"/></svg>
+  <svg class="lightbutton__dropdown-icon svgicon" width="16" height="16"><use xlink:href="./kss-assets/flaticon.svg#flaticon--arrow-dropdown"/></svg>
 </button>
 
 :disabled - disabled
@@ -299,7 +300,7 @@ Style guide: Core.light.button
   padding-left: 12px;
   }
 
-.lightbutton--toggle .svgicon {
+.lightbutton__dropdown-icon {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -312,15 +313,15 @@ Style guide: Core.light.button
   transition: -webkit-transform 0.2s;
   transition: transform 0.2s;
   transition: transform 0.2s, -webkit-transform 0.2s;
+  }
+
+.lightbutton--toggle-open .lightbutton__dropdown-icon {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
-.lightbutton--toggle-open .svgicon {
-    -webkit-transform: rotate(180deg);
-        -ms-transform: rotate(180deg);
-            transform: rotate(180deg);
-    }
-
-.lightbutton--toggle.lightbutton--blue .svgicon {
+.lightbutton--toggle.lightbutton--blue .lightbutton__dropdown-icon {
   fill: white
 }
 
@@ -346,6 +347,6 @@ Style guide: Core.light.button
   background-color: #0996C5;
 }
 
-/* <<< file end: stc/core/components/light-controls.css */
+/* <<< file end: stc/core/components/lightcontrols.css */
 
-/*# sourceMappingURL=light-controls.css.map */
+/*# sourceMappingURL=lightcontrols.css.map */

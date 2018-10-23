@@ -1,0 +1,63 @@
+/* >>> file start: stc/core/components/sortcontrol.css */
+/*
+Sort control
+
+Control with arrow for list or tables with sorting
+
+Markup:
+<p>
+  <a
+    class="sortcontrol kss-toggle-class"
+    data-toggle-class="sortcontrol--asc"
+    href="#"
+    title="Sort by ID"
+  >
+    Link
+  </a>
+</p>
+<p>
+  <button
+    class="sortcontrol  kss-toggle-class"
+    data-toggle-class="sortcontrol--asc"
+    type="button"
+    title="Sort by ID"
+  >
+    Button
+  </button>
+</p>
+
+Style guide: Core.sortcontrol
+*/
+
+.sortcontrol {
+  position: relative;
+  background: none;
+  border: none;
+  padding: 0;
+  padding-right: 1em;
+  vertical-align: middle;
+  text-decoration: none;
+  font: inherit;
+  }
+
+.sortcontrol::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 0;
+  height: 0;
+  border: 0 solid;
+  border-color: currentColor transparent;
+  border-width: .5em .35em 0;
+}
+
+.sortcontrol--asc::before {
+  border-width: 0 .35em .5em;
+}
+
+/* <<< file end: stc/core/components/sortcontrol.css */
+
+/*# sourceMappingURL=sortcontrol.css.map */
