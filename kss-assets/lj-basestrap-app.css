@@ -150,6 +150,7 @@ Markup:
 <input class="b-input {{modifier_class}}" type="text" placeholder="Placeholder" value="Hello, world"/>
 <input class="b-input {{modifier_class}}" type="text" placeholder="Placeholder" value="Hello, world" disabled/>
 
+.b-input-nano - nano version
 .b-input-tiny - tiny version
 .b-input-simple - simple
 .b-input-max - max
@@ -180,14 +181,6 @@ Style guide: Flatstyle.inputs.b-input
         width: 100%;
         }
 }
-.b-input-tiny {
-    font-size: 15px;
-    line-height: 1.05;
-    font-weight: 300;
-    }
-.html-ie11 .b-input-tiny {
-    padding: 9px 5px 5px;
-    }
 .b-input:focus,
 .b-input:hover {
     background-color: #FFF;
@@ -213,6 +206,23 @@ Style guide: Flatstyle.inputs.b-input
 .b-input[disabled]:hover {
     background-color: #F7F9FA;
     border-color: #DAE3E6;
+    }
+/* nano */
+.b-input-nano {
+    padding-top: 2px;
+    padding-bottom: 2px;
+    font-size: 15px;
+    line-height: 1.05;
+    font-weight: 300;
+    }
+/* tiny */
+.b-input-tiny {
+    font-size: 15px;
+    line-height: 1.05;
+    font-weight: 300;
+    }
+.html-ie11 .b-input-tiny {
+    padding: 9px 5px 5px;
     }
 /* simple */
 .b-input-simple {
@@ -241,7 +251,7 @@ Markup:
 <input class="b-input b-input-tiny" type="text" placeholder="Placeholder"/>
 <button class="b-flatbutton">Button</button>
 
-Style guide: Flatstyle.inputs.input+button
+Style guide: Flatstyle.inputs.b-input+button
 */
 /* input + button */
 .b-input + .b-flatbutton {
@@ -261,7 +271,7 @@ Markup:
     <input class="b-input b-input-community" type="text" placeholder="Placeholder"/>
 </div>
 
-Style guide: Flatstyle.inputs.user-community
+Style guide: Flatstyle.inputs.b-input-user-community
 */
 .b-input-username-wrapper,
 .b-input-community-wrapper {
