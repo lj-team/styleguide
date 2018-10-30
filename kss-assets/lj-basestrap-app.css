@@ -302,21 +302,6 @@ Style guide: Flatstyle.inputs.b-input-user-community
     .html-ie11 .b-input-community {
         padding-left: 25px;
         }
-/* select */
-.b-select {
-    height: 42px;
-    padding: 7px 5px;
-    border: 1px solid #DAE3E6;
-    border-radius: 2px;
-    box-sizing: border-box;
-    background-color: #F7F9FA;
-    font: 400 1.267em/1.05 'ProximaNova', Helvetica, sans-serif;
-    color: #242F33;
-    }
-.b-select-simple {
-    height: 36px;
-    font-size: 1em;
-    }
 SELECT.select {
     padding: 1px;
     }

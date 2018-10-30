@@ -968,7 +968,6 @@ Style guide: Flatstyle.widgets.b-popup
 .b-popup-outer {
         position: relative;
         z-index: 100;
-        max-width: 500px;
         padding: 1px;
         border: 1px solid #D4DDE1;
         border-radius: 6px;

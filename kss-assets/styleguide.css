@@ -81,7 +81,6 @@
   }
 }
 
-
 /* Logo */
 #kss-node .kss-doc-title {
   display: block;
@@ -146,6 +145,11 @@
 #kss-node .kss-title__permalink:focus,
 #kss-node .kss-title__permalink:active {
   color: inherit;
+}
+
+.kss-description > UL,
+.kss-description > OL {
+  margin-top: .25em;
 }
 
 #kss-node .kss-modifier__wrapper {

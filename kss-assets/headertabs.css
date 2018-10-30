@@ -1,0 +1,249 @@
+/* >>> file start: stc/core/components/headertabs.css */
+/*
+Colors
+
+Weight: -1
+
+Colors:
+$white: #FFFFFF - white
+$black: #000000 - black
+$gray-pure-dark: #333333 - gray-pure-dark
+$gray-pure-darker: #5B5F61 - gray-pure-darker
+$gray-pure-middle: #7D7F7F - gray-pure-middle
+$gray-pure-light: #D8D8D8 - gray-pure-light
+$gray-pure-smoke: #F9FAFA - gray-pure-smoke
+$gray-stone-darker: #838B8E - gray-stone-darker
+$gray-stone-darker-2: #8C969B - gray-stone-darker-2
+$gray-stone-middle: #BEC3C6 - gray-stone-middle
+$gray-stone-middle-2: #D0D1D5 - gray-stone-middle-2
+$gray-stone-middle-3: #DfE0E4 - gray-stone-middle-3
+$gray-stone-lighter: #E5E6E9 - gray-stone-lighter
+$gray-stone-lighter-2: #EDEDF3 - gray-stone-lighter-2
+$gray-stone-smoke: #F6F6F9 - gray-stone-smoke
+$gray-blue-darker: #7A9199 - gray-blue-darker
+$gray-blue-darker-2: #829399 - gray-blue-darker-2
+$gray-blue-middle: #A8B3B9 - gray-blue-middle
+$gray-blue-middle-2: #ABBBC2 - gray-blue-middle-2
+$gray-blue-middle-3: #BDC8CD - gray-blue-middle-3
+$gray-blue-lighter: #C7D4DA - gray-blue-lighter
+$gray-blue-lighter-2: #C8D4DA - gray-blue-lighter-2
+$gray-blue-lighter-3: #D4DCE0 - gray-blue-lighter-3
+$gray-blue-light: #DCE1E4 - gray-blue-light
+$gray-blue-light-2: #DAE3E6 - gray-blue-light-2
+$gray-blue-lightest: #E5EBEE - gray-blue-lightest
+$gray-blue-smoke: #F5F7F8 - gray-blue-smoke
+$blue-deepest: #003040 - blue-deepest
+$blue-deeper: #00394D - blue-deeper
+$blue-deep: #004359 - blue-deep
+$blue-muted-darker: #007399 - blue-muted-darker
+$blue-muted: #3A87AD - blue-muted
+$blue-muted-smoke: #D9EDF7 - blue-muted-smoke
+$blue-base-darker: #0996C5 - blue-base-darker
+$blue-base: #00A3D9 - blue-base
+$blue-base-lighter: #00C0FF - blue-base-lighter
+$blue-sky: #76DBEF - blue-sky
+$red-pure: #FF0000 - red-pure
+$red-pure-smoke: #FFEFEF - red-pure-smoke
+$red-base-darker: #CB1427 - red-base-darker
+$red-base: #EC3434 - red-base
+$red-base-lighter: #FF3838 - red-base-lighter
+$red-darksalmon: #FF4C44 - red-darksalmon
+$yellow-sand: #C09853 - yellow-sand
+$yellow-smoke: #FCF8E3 - yellow-smoke
+$green-grass: #468847 - green-grass
+$green-emerald: #39BF71 - green-emerald
+$green-smoke: #DFF0D8 - green-smoke
+$brands-facebook: #3B5A97 - brands-facebook
+$brands-twitter: #1CA1F1 - brands-twitter
+$brands-vk: #4E76A1 - brands-vk
+$brands-ok: #F47421 - brands-ok
+
+Style guide: Core.colors
+*/
+
+/*
+Lightness steps
+
+midnight
+darkest
+dark
+darker
+middle
+lighter
+light
+lightest
+smoke
+*/
+
+/*
+Header Tabs
+
+Very simple tabs, on 450px become dropdown
+
+Todo:
+— more clever detection of breakpoint
+— more advanced version with hiding items in dropdown
+
+Markup:
+<ul class="headertabs">
+  <li class="headertabs__tab headertabs__tab--current">
+    <a class="headertabs__tab-link" href="#">Is there</a>
+  </li>
+  <li class="headertabs__tab">
+    <a class="headertabs__tab-link" href="#">anybody</a>
+  </li>
+  <li class="headertabs__tab">
+    <a class="headertabs__tab-link" href="#">out there?</a>
+  </li>
+</ul>
+
+Style guide: Core.headertabs
+*/
+
+/* Tabs
+------------------------------ */
+
+.headertabs {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+}
+
+@media (max-width: 450px) {
+
+  .headertabs {
+    position: relative;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    cursor: pointer;
+  }
+}
+
+.headertabs__tab {
+  position: relative;
+  }
+
+@media (max-width: 450px) {
+
+  .headertabs__tab {
+    display: none;
+    border-bottom: 1px solid #DAE3E6;
+  }
+
+  .headertabs--opened .headertabs__tab {
+    display: block;
+  }
+}
+
+@media (max-width: 450px) {
+
+  .headertabs__tab--current,
+  .headertabs__tab--default {
+    display: block;
+    border-width: 0 0 1px;
+  }
+
+  .headertabs__tab--current::after, .headertabs__tab--default::after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: 15px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 12px;
+    height: 8px;
+    background: url(/img/schemius/s-icons.svg) no-repeat -181px 0;
+    -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+            transform: rotate(0deg);
+    -webkit-transition: -webkit-transform .25s;
+    transition: -webkit-transform .25s;
+    transition: transform .25s;
+    transition: transform .25s, -webkit-transform .25s;
+  }
+
+  .community-manage__tabs--opened .headertabs__tab--current::after, .community-manage__tabs--opened .headertabs__tab--default::after {
+    -webkit-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+}
+
+.headertabs__tab--current {
+  border: 1px solid #DAE3E6;
+  border-bottom-width: 0;
+  background: #FFF;
+  box-shadow: 0 1px 0 #FFF;
+  pointer-events: none;
+  cursor: default;
+  color: inherit;
+}
+
+@media (max-width: 450px) {
+
+  .headertabs__tab--current {
+    display: block;
+    border-width: 0 0 1px;
+  }
+
+  .headertabs__tab--current .community-manage__tab-link {
+    color: #829399
+  }
+}
+
+.headertabs__tab-link {
+  display: block;
+  padding: 16px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  line-height: 1;
+  text-transform: uppercase;
+  line-height: 1;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+  font-size: 12px;
+  color: #829399;
+}
+
+.headertabs__tab-counter {
+  position: relative;
+  display: inline-block;
+  min-width: 24px;
+  margin-left: .5em;
+  padding: 0 5px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.headertabs__tab-counter::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  right: 0;
+  bottom: -2px;
+  left: 0;
+  background: currentColor;
+  border-radius: 10px;
+}
+
+.headertabs__tab-counter-text {
+  position: relative;
+  color: #FFF;
+}
+
+/* <<< file end: stc/core/components/headertabs.css */
+
+/*# sourceMappingURL=headertabs.css.map */
