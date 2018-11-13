@@ -2,12 +2,13 @@
 /*
 Sort control
 
-Control with arrow for list or tables with sorting
+Control with arrow for list or tables with sorting.
+By default arrow is not shown, add `.sortcontrol--current` to show arrow
 
 Markup:
 <p>
   <a
-    class="sortcontrol kss-toggle-class"
+    class="sortcontrol {{modifier_class}} kss-toggle-class"
     data-toggle-class="sortcontrol--asc"
     href="#"
     title="Sort by ID"
@@ -17,7 +18,7 @@ Markup:
 </p>
 <p>
   <button
-    class="sortcontrol  kss-toggle-class"
+    class="sortcontrol {{modifier_class}} kss-toggle-class"
     data-toggle-class="sortcontrol--asc"
     type="button"
     title="Sort by ID"
@@ -25,6 +26,8 @@ Markup:
     Button
   </button>
 </p>
+
+.sortcontrol--current - current control with arrow
 
 Style guide: Core.sortcontrol
 */
@@ -38,9 +41,10 @@ Style guide: Core.sortcontrol
   vertical-align: middle;
   text-decoration: none;
   font: inherit;
+  cursor: pointer;
   }
 
-.sortcontrol::before {
+.sortcontrol--current::before {
   content: "";
   position: absolute;
   top: 0;
@@ -52,6 +56,7 @@ Style guide: Core.sortcontrol
   border: 0 solid;
   border-color: currentColor transparent;
   border-width: .5em .35em 0;
+  pointer-events: none;
 }
 
 .sortcontrol--asc::before {

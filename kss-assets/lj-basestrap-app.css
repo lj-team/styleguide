@@ -189,9 +189,6 @@ Style guide: Flatstyle.inputs.b-input
 .b-input::-webkit-input-placeholder {
     color: #858E8C;
     }
-.b-input::-moz-placeholder {
-    color: #858E8C;
-    }
 .b-input:-ms-input-placeholder {
     color: #858E8C;
     }
@@ -540,7 +537,6 @@ H2.solid-blue {
     border-radius: 5px;
     cursor: pointer;
     background-color: #6ED1FF;
-    background-image: -webkit-linear-gradient(top, #6ED1FF 0%, #1BB5FD 3%, #158FC8 100%);
     background-image: linear-gradient(to bottom, #6ED1FF 0%, #1BB5FD 3%, #158FC8 100%);
     text-transform: uppercase;
     text-shadow: 1px 1px 1px #0B6294;
@@ -551,7 +547,6 @@ H2.solid-blue {
 .b-btn-disabled {
     border-color: #C0C0C0;
     background-color: #EAEAEA;
-    background-image: -webkit-linear-gradient(top, #EAEAEA 0%, #CFCFCF 3%, #C5C5C5 100%);
     background-image: linear-gradient(to bottom, #EAEAEA 0%, #CFCFCF 3%, #C5C5C5 100%);
     text-shadow: 1px 1px 1px #999;
     }
@@ -560,7 +555,6 @@ H2.solid-blue {
     padding: 10px 6px 7px;
     border-color: #025266;
     background-color: #1495A7;
-    background-image: -webkit-linear-gradient(top, #6ED6E5 0%, #1BBBD2 14%, #1BB2C8 37%, #1BA4B8 66%, #1B9EB1 83%, #1495A7 100%);
     background-image: linear-gradient(to bottom, #6ED6E5 0%, #1BBBD2 14%, #1BB2C8 37%, #1BA4B8 66%, #1B9EB1 83%, #1495A7 100%);
     text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.3);
     }
@@ -1513,7 +1507,6 @@ SUP.i-new {
 .b-steps-step.active {
         border-radius: 0.5em;
         background-color: #369AFF;
-        background-image: -webkit-linear-gradient(top, #3863A0 0%, #369AFF 100%);
         background-image: linear-gradient(to bottom, #3863A0 0%, #369AFF 100%);
         box-shadow: inset 0 0 6px #2B4C7B;
         color: #FFF;
@@ -2455,7 +2448,6 @@ Three-Columns Layout (hidden menu + main column + sidebar)
 .l-flatslide-body {
             width: 100%;
             margin: 0;
-            -webkit-transition: margin .1s ease-in;
             transition: margin .1s ease-in;
             }
 .l-flatslide-body:after {
@@ -2544,16 +2536,12 @@ Three-Columns Layout (hidden menu + main column + sidebar)
 /* feed navigation | size-relative: 16 */
 .l-flatslide-feed-nav {
     position: relative;
-    display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
     -webkit-flex-direction: row;
         -ms-flex-direction: row;
             flex-direction: row;
-    -webkit-box-pack: center;
     -webkit-justify-content: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -2568,7 +2556,6 @@ Three-Columns Layout (hidden menu + main column + sidebar)
     margin: 0 0.875em;
     padding: 1em 0.3125em 1.125em 1.625em;
     color: #000000;
-    -webkit-transition: color .1s;
     transition: color .1s;
 }
 .l-flatslide-feed-nav__item:visited {
@@ -2616,7 +2603,6 @@ Three-Columns Layout (hidden menu + main column + sidebar)
     width: 1.125em;
     height: 1.125em;
     fill: #000000;
-    -webkit-transition: fill .1s;
     transition: fill .1s;
 }
 .l-flatslide-feed-nav__item--active .flaticon {
@@ -2634,19 +2620,15 @@ Three-Columns Layout (hidden menu + main column + sidebar)
             justify-content: space-around;
     }
   .l-flatslide-feed-nav__item {
-        -webkit-box-flex: 1;
         -webkit-flex: 1;
             -ms-flex: 1;
                 flex: 1;
-        display: -webkit-box;
         display: -webkit-flex;
         display: -ms-flexbox;
         display: flex;
-        -webkit-box-pack: center;
         -webkit-justify-content: center;
             -ms-flex-pack: center;
                 justify-content: center;
-        -webkit-box-align: center;
         -webkit-align-items: center;
             -ms-flex-align: center;
                 align-items: center;
@@ -2676,7 +2658,6 @@ Three-Columns Layout (hidden menu + main column + sidebar)
                         position: fixed;
                         left: 0;
                         padding: 48px 0 0;
-                        -webkit-transition: left .1s ease-in, top .3s;
                         transition: left .1s ease-in, top .3s;
                         }
 .l-flatslide-control--m-settings,
@@ -2740,7 +2721,6 @@ Three-Columns Layout (hidden menu + main column + sidebar)
                             visibility: hidden;
                             opacity: 0;
                             cursor: auto;
-                            -webkit-transition: visibility 0s linear .2s, opacity .2s linear;
                             transition: visibility 0s linear .2s, opacity .2s linear;
                             }
 .l-flatslide-state-menuinit .js--has-new-items,
@@ -2750,8 +2730,7 @@ Three-Columns Layout (hidden menu + main column + sidebar)
                                 visibility: visible;
                                 opacity: 1;
                                 cursor: pointer;
-                                -webkit-transition-delay: 0s;
-                                        transition-delay: 0s;
+                                transition-delay: 0s;
                                 }
 /* show close button when menu is open */
 .l-flatslide-menu-button-opened {
@@ -2868,7 +2847,6 @@ Three-Columns Layout (hidden menu + main column + sidebar)
                         letter-spacing: 0.05em;
                         font: 600 13px/1.1 'ProximaNova', Tahoma, Arial, sans-serif;
                         font: 600 0.8125rem/1.1 'ProximaNova', Tahoma, Arial, sans-serif;
-                        -webkit-transition: left 0.1s ease-in;
                         transition: left 0.1s ease-in;
                         }
 /* .iphone.body-state-menu-opened .l-flatslide-menu-items {
@@ -2944,7 +2922,6 @@ Three-Columns Layout (hidden menu + main column + sidebar)
                                 -webkit-transform: rotate(-90deg);
                                     -ms-transform: rotate(-90deg);
                                         transform: rotate(-90deg);
-                                -webkit-transition: -webkit-transform 1s easy 0;
                                 transition: -webkit-transform 1s easy 0;
                                 transition: transform 1s easy 0;
                                 transition: transform 1s easy 0, -webkit-transform 1s easy 0;
@@ -3059,11 +3036,6 @@ Three-Columns Layout (hidden menu + main column + sidebar)
                                 padding: 0;
                                 border: 1px solid #DAE3E6;
                                 border-bottom: 0;
-                                background:
-                                    -webkit-linear-gradient(#F7F9FA 30%, rgba(255,255,255,0)),
-                                    -webkit-linear-gradient(rgba(255,255,255,0), #F7F9FA 70%) 0 100%,
-                                    -webkit-radial-gradient(50% 0, farthest-side, rgba(0,0,0,.2), rgba(0,0,0,0)),
-                                    -webkit-radial-gradient(50% 100%, farthest-side, rgba(0,0,0,.2), rgba(0,0,0,0)) 0 100%;
                                 background:
                                     linear-gradient(#F7F9FA 30%, rgba(255,255,255,0)),
                                     linear-gradient(rgba(255,255,255,0), #F7F9FA 70%) 0 100%,
@@ -3212,7 +3184,6 @@ Three-Columns Layout (hidden menu + main column + sidebar)
     text-transform: uppercase;
     padding: 0.61538em 2.46154em;
     color: #000000;
-    -webkit-transition: background-color .2s;
     transition: background-color .2s;
 }
 .aside-menu__link:hover, .aside-menu__link:focus, .aside-menu__link:active {
@@ -3240,7 +3211,6 @@ Three-Columns Layout (hidden menu + main column + sidebar)
     margin-top: 0.61538em;
     padding: 1.23077em             2.46154em;
     color: #000000;
-    -webkit-transition: background-color .2s;
     transition: background-color .2s;
 }
 .aside-menu__link--settings::before {
@@ -3292,15 +3262,12 @@ Three-Columns Layout (hidden menu + main column + sidebar)
 .m-aside-menu__toggle {
     position: relative;
     box-sizing: border-box;
-    display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
     -webkit-align-items: center;
         -ms-flex-align: center;
             align-items: center;
-    -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
         -ms-flex-pack: justify;
             justify-content: space-between;
@@ -3310,7 +3277,6 @@ Three-Columns Layout (hidden menu + main column + sidebar)
     cursor: pointer;
 }
 .m-aside-menu__toggle .svgicon {
-    -webkit-transition: all .2s;
     transition: all .2s;
 }
 .m-aside-menu__title {
@@ -3339,7 +3305,6 @@ Three-Columns Layout (hidden menu + main column + sidebar)
 .m-aside-menu__link {
     position: relative;
     font-weight: 700;
-    display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
@@ -3348,7 +3313,6 @@ Three-Columns Layout (hidden menu + main column + sidebar)
     padding: 12px 0;
     border-bottom: 1px solid transparent;
     color: #000000;
-    -webkit-transition: background-color .2s;
     transition: background-color .2s;
     -webkit-user-select: none;
        -moz-user-select: none;
@@ -3628,7 +3592,6 @@ Three-Columns Layout (hidden menu + main column + sidebar)
             width: 360px;
             height: auto !important; /* js height calculation fix */
             box-sizing: border-box;
-            -webkit-transition: right .1s ease-in, top .3s;
             transition: right .1s ease-in, top .3s;
             }
             .l-flatslide-aside-content {
@@ -4246,7 +4209,6 @@ BODY .layers-create-btn {
 		background: #829399;
 		border-radius: 50%;
 		line-height: 0;
-		-webkit-transition: background .25s;
 		transition: background .25s;
 		}
 .file-uploader__delete:hover {

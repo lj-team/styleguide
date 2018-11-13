@@ -171,9 +171,7 @@ Style guide: Flatstyle.controls.flatbutton-row
         position: absolute;
         top: -200%;
         left: -225%;
-        background-image: -webkit-linear-gradient(315deg, rgba(255,255,255,0), rgba(255,255,255,0.6), rgba(255,255,255,0));
         background-image: linear-gradient(135deg, rgba(255,255,255,0), rgba(255,255,255,0.6), rgba(255,255,255,0));
-        -webkit-transition: all 0.5s ease-out;
         transition: all 0.5s ease-out;
         }
 
@@ -194,7 +192,6 @@ Style guide: Flatstyle.controls.flatbutton-row
         width: 200%;
         height: 200%;
         position: absolute;
-        background-image: -webkit-linear-gradient(315deg, rgba(255,255,255,0), rgba(255,255,255,0.6), rgba(255,255,255,0));
         background-image: linear-gradient(135deg, rgba(255,255,255,0), rgba(255,255,255,0.6), rgba(255,255,255,0));
         -webkit-animation: shining 1s ease-out infinite;
                 animation: shining 1s ease-out infinite;
@@ -222,11 +219,6 @@ DIV .b-flatbutton-loading {
         -ms-user-select: none;
             user-select: none;
     cursor: wait;
-    }
-
-DIV .b-flatbutton-loading::-moz-selection {
-    background: #09C;
-    color: #09C;
     }
 
 DIV .b-flatbutton-loading::selection {
@@ -850,7 +842,6 @@ BODY .b-popup .b-flatbutton-loading:active {
 /* ljread */
 
 .b-flatbutton-ljread {
-    -webkit-transition: top .25s;
     transition: top .25s;
     text-decoration: none !important;
     text-transform: none;
