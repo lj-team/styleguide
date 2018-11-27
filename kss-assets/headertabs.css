@@ -2,7 +2,7 @@
 /*
 Colors
 
-Weight: -1
+Weight: -3
 
 Colors:
 $white: #FFFFFF - white
@@ -52,7 +52,9 @@ $red-darksalmon: #FF4C44 - red-darksalmon
 $yellow-sand: #C09853 - yellow-sand
 $yellow-smoke: #FCF8E3 - yellow-smoke
 $green-grass: #468847 - green-grass
+$green-emerald-darker: #34AD66 - green-emerald-darker
 $green-emerald: #39BF71 - green-emerald
+$green-emerald-lighter: #4ECA82 - green-emerald-lighter
 $green-smoke: #DFF0D8 - green-smoke
 $brands-facebook: #3B5A97 - brands-facebook
 $brands-twitter: #1CA1F1 - brands-twitter
@@ -77,31 +79,58 @@ smoke
 */
 
 /*
+Mixins
+
+Weight: -2
+
+Style guide: Core.mixins
+*/
+
+/*
+capsText
+
+Gray text with caps. Usually used in table headers & labels for inputs
+
+Style guide: Core.mixins.capsText
+*/
+
+/*
+visually-hidden
+
+Hides element for users & keep it available for screenreaders
+
+Style guide: Core.mixins.visually-hidden
+*/
+
+/*
 Header Tabs
 
-Very simple tabs, on 450px become dropdown.
+Extends core/components/tabs
 
-Directive lj-tabs is needed to make dropdown work on mobile
+Need angular to display & work correctly
 
-TODO:
-* more clever detection of breakpoint
-* more advanced version with hiding items in dropdown
+Js: htdocs/js/misc/tabs.js
+
+Directive tabs is needed to make dropdown work on mobile
 
 Markup:
-<ul
+<div
   class="headertabs"
-  tabs
->
-  <li class="headertabs__tab headertabs__tab--current">
-    <a class="headertabs__tab-link" href="#">Is there</a>
-  </li>
-  <li class="headertabs__tab">
-    <a class="headertabs__tab-link" href="#">anybody</a>
-  </li>
-  <li class="headertabs__tab">
-    <a class="headertabs__tab-link" href="#">out there?</a>
-  </li>
-</ul>
+  tabs>
+  <ul
+    class="headertabs__list"
+  >
+    <li class="headertabs__item headertabs__item--current">
+      <a class="headertabs__item-link" href="#">Is there</a>
+    </li>
+    <li class="headertabs__item">
+      <a class="headertabs__item-link" href="#">anybody</a>
+    </li>
+    <li class="headertabs__item">
+      <a class="headertabs__item-link" href="#">out there?</a>
+    </li>
+  </ul>
+</div>
 
 Style guide: Core.headertabs
 */
@@ -118,68 +147,11 @@ Style guide: Core.headertabs
   list-style-type: none;
 }
 
-@media (max-width: 450px) {
-
-  .headertabs {
-    position: relative;
-    -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    cursor: pointer;
-  }
-}
-
-.headertabs__tab {
+.headertabs__item {
   position: relative;
   }
 
-@media (max-width: 450px) {
-
-  .headertabs__tab {
-    display: none;
-    border-bottom: 1px solid #DAE3E6;
-  }
-
-  .js-tabs-opened .headertabs__tab {
-    display: block;
-  }
-}
-
-@media (max-width: 450px) {
-
-  .headertabs__tab--current,
-  .headertabs__tab--default {
-    display: block;
-    border-width: 0 0 1px;
-  }
-
-  .headertabs__tab--current::after, .headertabs__tab--default::after {
-    content: "";
-    display: block;
-    position: absolute;
-    right: 15px;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-    width: 12px;
-    height: 8px;
-    background: url(/img/schemius/s-icons.svg) no-repeat -181px 0;
-    -webkit-transform: rotate(0deg);
-        -ms-transform: rotate(0deg);
-            transform: rotate(0deg);
-    transition: -webkit-transform .25s;
-    transition: transform .25s;
-    transition: transform .25s, -webkit-transform .25s;
-  }
-
-  .js-tabs-opened .headertabs__tab--current::after, .js-tabs-opened .headertabs__tab--default::after {
-    -webkit-transform: rotate(180deg);
-        -ms-transform: rotate(180deg);
-            transform: rotate(180deg);
-  }
-}
-
-.headertabs__tab--current {
+.headertabs__item--current {
   border: 1px solid #DAE3E6;
   border-bottom-width: 0;
   background: #FFF;
@@ -191,17 +163,12 @@ Style guide: Core.headertabs
 
 @media (max-width: 450px) {
 
-  .headertabs__tab--current {
-    display: block;
-    border-width: 0 0 1px;
-  }
-
-  .headertabs__tab--current .community-manage__tab-link {
+  .headertabs__item--current .community-manage__tab-link {
     color: #829399
   }
 }
 
-.headertabs__tab-link {
+.headertabs__item-link {
   display: block;
   padding: 16px;
   display: -webkit-flex;
@@ -217,11 +184,11 @@ Style guide: Core.headertabs
   font-size: 12px;
   }
 
-.headertabs__tab--current .headertabs__tab-link {
+.headertabs__item--current .headertabs__item-link {
   color: #333333;
 }
 
-.headertabs__tab-counter {
+.headertabs__item-counter {
   position: relative;
   display: inline-block;
   min-width: 24px;
@@ -231,7 +198,7 @@ Style guide: Core.headertabs
   text-align: center;
 }
 
-.headertabs__tab-counter::before {
+.headertabs__item-counter::before {
   content: "";
   position: absolute;
   top: -3px;
@@ -242,7 +209,7 @@ Style guide: Core.headertabs
   border-radius: 10px;
 }
 
-.headertabs__tab-counter-text {
+.headertabs__item-counter-text {
   position: relative;
   color: #FFF;
 }

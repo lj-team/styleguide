@@ -1,0 +1,333 @@
+/* >>> file start: stc/core/components/switcher.css */
+
+
+
+
+/*
+Mixins
+
+Weight: -2
+
+Style guide: Core.mixins
+*/
+
+
+
+/*
+capsText
+
+Gray text with caps. Usually used in table headers & labels for inputs
+
+Style guide: Core.mixins.capsText
+*/
+
+
+
+/*
+visually-hidden
+
+Hides element for users & keep it available for screenreaders
+
+Style guide: Core.mixins.visually-hidden
+*/
+
+
+
+/*
+Colors
+
+Weight: -3
+
+Colors:
+$white: #FFFFFF - white
+$black: #000000 - black
+$gray-pure-dark: #333333 - gray-pure-dark
+$gray-pure-darker: #5B5F61 - gray-pure-darker
+$gray-pure-middle: #7D7F7F - gray-pure-middle
+$gray-pure-light: #D8D8D8 - gray-pure-light
+$gray-pure-smoke: #F9FAFA - gray-pure-smoke
+$gray-stone-darker: #838B8E - gray-stone-darker
+$gray-stone-darker-2: #8C969B - gray-stone-darker-2
+$gray-stone-middle: #BEC3C6 - gray-stone-middle
+$gray-stone-middle-2: #D0D1D5 - gray-stone-middle-2
+$gray-stone-middle-3: #DfE0E4 - gray-stone-middle-3
+$gray-stone-lighter: #E5E6E9 - gray-stone-lighter
+$gray-stone-lighter-2: #EDEDF3 - gray-stone-lighter-2
+$gray-stone-smoke: #F6F6F9 - gray-stone-smoke
+$gray-blue-darker: #7A9199 - gray-blue-darker
+$gray-blue-darker-2: #829399 - gray-blue-darker-2
+$gray-blue-middle: #A8B3B9 - gray-blue-middle
+$gray-blue-middle-2: #ABBBC2 - gray-blue-middle-2
+$gray-blue-middle-3: #BDC8CD - gray-blue-middle-3
+$gray-blue-lighter: #C7D4DA - gray-blue-lighter
+$gray-blue-lighter-2: #C8D4DA - gray-blue-lighter-2
+$gray-blue-lighter-3: #D4DCE0 - gray-blue-lighter-3
+$gray-blue-light: #DCE1E4 - gray-blue-light
+$gray-blue-light-2: #DAE3E6 - gray-blue-light-2
+$gray-blue-lightest: #E5EBEE - gray-blue-lightest
+$gray-blue-smoke: #F5F7F8 - gray-blue-smoke
+$blue-deepest: #003040 - blue-deepest
+$blue-deeper: #00394D - blue-deeper
+$blue-deep: #004359 - blue-deep
+$blue-muted-darker: #007399 - blue-muted-darker
+$blue-muted: #3A87AD - blue-muted
+$blue-muted-smoke: #D9EDF7 - blue-muted-smoke
+$blue-base-dark: #0086B3 - blue-base-dark
+$blue-base-darker: #0996C5 - blue-base-darker
+$blue-base: #00A3D9 - blue-base
+$blue-base-lighter: #00C0FF - blue-base-lighter
+$blue-sky: #76DBEF - blue-sky
+$red-pure: #FF0000 - red-pure
+$red-pure-smoke: #FFEFEF - red-pure-smoke
+$red-base-darker: #CB1427 - red-base-darker
+$red-base: #EC3434 - red-base
+$red-base-lighter: #FF3838 - red-base-lighter
+$red-darksalmon: #FF4C44 - red-darksalmon
+$yellow-sand: #C09853 - yellow-sand
+$yellow-smoke: #FCF8E3 - yellow-smoke
+$green-grass: #468847 - green-grass
+$green-emerald-darker: #34AD66 - green-emerald-darker
+$green-emerald: #39BF71 - green-emerald
+$green-emerald-lighter: #4ECA82 - green-emerald-lighter
+$green-smoke: #DFF0D8 - green-smoke
+$brands-facebook: #3B5A97 - brands-facebook
+$brands-twitter: #1CA1F1 - brands-twitter
+$brands-vk: #4E76A1 - brands-vk
+$brands-ok: #F47421 - brands-ok
+
+Style guide: Core.colors
+*/
+
+
+
+/*
+Lightness steps
+
+midnight
+darkest
+dark
+darker
+middle
+lighter
+light
+lightest
+smoke
+*/
+
+
+
+/*
+Switcher
+
+Switcher for groups of radiobuttons
+
+Markup:
+<ul class="switcher">
+  <li class="switcher__item">
+    <label class="switcher__label">
+      <input
+        type="radio"
+        name="test"
+        class="switcher__radio"
+        checked=""
+        >
+      <span class="switcher__label-text">There’s</span>
+    </label>
+  </li>
+  <li class="switcher__item">
+    <label class="switcher__label">
+      <input
+        type="radio"
+        name="test"
+        class="switcher__radio"
+        >
+      <span class="switcher__label-text">something</span>
+    </label>
+  </li>
+  <li class="switcher__item">
+    <label class="switcher__label">
+      <input
+        type="radio"
+        name="test"
+        class="switcher__radio"
+        >
+      <span class="switcher__label-text"> in</span>
+    </label>
+  </li>
+  <li class="switcher__item">
+    <label class="switcher__label">
+      <input
+        type="radio"
+        name="test"
+        class="switcher__radio"
+        disabled
+        >
+      <span class="switcher__label-text">the air</span>
+    </label>
+  </li>
+</ul>
+
+Style guide: Core.switcher
+*/
+
+
+
+.switcher {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-size: 14px;
+  line-height: 1;
+  }
+
+
+
+.switcher__item {
+  }
+
+
+
+.switcher__label {
+  cursor: pointer;
+  }
+
+
+
+.switcher__radio {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+  }
+
+
+
+.switcher__label-text {
+  position: relative;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 4px 8px;
+  border: 1px solid #C7D4DA;
+  border-left-width: 0;
+  box-sizing: border-box;
+}
+
+
+
+.switcher__label-text::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+
+
+.switcher__label-text:hover::before {
+  box-shadow: 0 0 0 2px rgba(0,0,0,.2);
+}
+
+
+
+.switcher__label-text:active::before {
+  box-shadow: 0 0 0 2px rgba(0,0,0,.4);
+}
+
+
+
+.switcher__item:first-child .switcher__label-text {
+  border-left-width: 1px;
+  border-radius: 8px 0 0 8px;
+}
+
+
+
+.switcher__item:last-child .switcher__label-text {
+  border-radius: 0 8px 8px 0 ;
+}
+
+
+
+.switcher__radio:focus + .switcher__label-text::before {
+  box-shadow: 0 0 0 2px rgba(0,0,0,.25);
+}
+
+
+
+.switcher__radio:active + .switcher__label-text::before {
+  box-shadow: 0 0 0 2px rgba(0,0,0,.4);
+}
+
+
+
+.switcher__radio:checked + .switcher__label-text {
+  background: #00A3D9;
+  border-color: #00A3D9;
+  color: #FFFFFF;
+}
+
+
+
+.switcher__radio:checked + .switcher__label-text:hover {
+  background: #00C0FF;
+}
+
+
+
+.switcher__radio:checked + .switcher__label-text:hover::before {
+  box-shadow: 0 0 0 2px #0996C5;
+}
+
+
+
+.switcher__radio:checked:focus + .switcher__label-text::before {
+  box-shadow: 0 0 0 2px #0086B3;
+}
+
+
+
+.switcher__radio:checked:focus + .switcher__label-text:hover {
+  background: #00C0FF;
+}
+
+
+
+.switcher__radio:checked:focus + .switcher__label-text:hover::before {
+  box-shadow: 0 0 0 2px #0996C5;
+}
+
+
+
+.switcher__radio:disabled + .switcher__label-text {
+  background: none;
+  color: #BDC8CD;
+  cursor: not-allowed;
+}
+
+
+
+.switcher__radio:disabled + .switcher__label-text::before {
+  content: none;
+}
+
+
+
+/* <<< file end: stc/core/components/switcher.css */
+
+/*# sourceMappingURL=switcher.css.map */

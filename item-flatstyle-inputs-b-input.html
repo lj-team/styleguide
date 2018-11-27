@@ -19,8 +19,10 @@
 <link rel="stylesheet" href="kss-assets/layout.css">
 <link rel="stylesheet" href="kss-assets/components.css">
 <link rel="stylesheet" href="kss-assets/basetable.css">
+<link rel="stylesheet" href="kss-assets/tabs.css">
 <link rel="stylesheet" href="kss-assets/headertabs.css">
 <link rel="stylesheet" href="kss-assets/sortcontrol.css">
+<link rel="stylesheet" href="kss-assets/switcher.css">
 <link rel="stylesheet" href="kss-assets/dropdown.css">
 <link rel="stylesheet" href="kss-assets/lightcontrols.css">
 
@@ -119,9 +121,9 @@
             </div>
 
           <div class="kss-modifier__example">
-            <input class="b-input " type="text" placeholder="Placeholder"/>
-<input class="b-input " type="text" placeholder="Placeholder" value="Hello, world"/>
-<input class="b-input " type="text" placeholder="Placeholder" value="Hello, world" disabled/>
+            <input class="b-input " type="text" placeholder="Empty"/>
+<input class="b-input " type="text" placeholder="Placeholder" value="Filled"/>
+<input class="b-input " type="text" placeholder="Placeholder" value="Disabled" disabled/>
             <div class="kss-modifier__example-footer"></div>
           </div>
 
@@ -132,9 +134,9 @@
               nano version
             </div>
             <div class="kss-modifier__example">
-              <input class="b-input b-input-nano" type="text" placeholder="Placeholder"/>
-<input class="b-input b-input-nano" type="text" placeholder="Placeholder" value="Hello, world"/>
-<input class="b-input b-input-nano" type="text" placeholder="Placeholder" value="Hello, world" disabled/>
+              <input class="b-input b-input-nano" type="text" placeholder="Empty"/>
+<input class="b-input b-input-nano" type="text" placeholder="Placeholder" value="Filled"/>
+<input class="b-input b-input-nano" type="text" placeholder="Placeholder" value="Disabled" disabled/>
               <div class="kss-modifier__example-footer"></div>
             </div>
             <div class="kss-modifier__name kss-style">
@@ -144,9 +146,9 @@
               tiny version
             </div>
             <div class="kss-modifier__example">
-              <input class="b-input b-input-tiny" type="text" placeholder="Placeholder"/>
-<input class="b-input b-input-tiny" type="text" placeholder="Placeholder" value="Hello, world"/>
-<input class="b-input b-input-tiny" type="text" placeholder="Placeholder" value="Hello, world" disabled/>
+              <input class="b-input b-input-tiny" type="text" placeholder="Empty"/>
+<input class="b-input b-input-tiny" type="text" placeholder="Placeholder" value="Filled"/>
+<input class="b-input b-input-tiny" type="text" placeholder="Placeholder" value="Disabled" disabled/>
               <div class="kss-modifier__example-footer"></div>
             </div>
             <div class="kss-modifier__name kss-style">
@@ -156,9 +158,9 @@
               simple
             </div>
             <div class="kss-modifier__example">
-              <input class="b-input b-input-simple" type="text" placeholder="Placeholder"/>
-<input class="b-input b-input-simple" type="text" placeholder="Placeholder" value="Hello, world"/>
-<input class="b-input b-input-simple" type="text" placeholder="Placeholder" value="Hello, world" disabled/>
+              <input class="b-input b-input-simple" type="text" placeholder="Empty"/>
+<input class="b-input b-input-simple" type="text" placeholder="Placeholder" value="Filled"/>
+<input class="b-input b-input-simple" type="text" placeholder="Placeholder" value="Disabled" disabled/>
               <div class="kss-modifier__example-footer"></div>
             </div>
             <div class="kss-modifier__name kss-style">
@@ -168,9 +170,9 @@
               max
             </div>
             <div class="kss-modifier__example">
-              <input class="b-input b-input-max" type="text" placeholder="Placeholder"/>
-<input class="b-input b-input-max" type="text" placeholder="Placeholder" value="Hello, world"/>
-<input class="b-input b-input-max" type="text" placeholder="Placeholder" value="Hello, world" disabled/>
+              <input class="b-input b-input-max" type="text" placeholder="Empty"/>
+<input class="b-input b-input-max" type="text" placeholder="Placeholder" value="Filled"/>
+<input class="b-input b-input-max" type="text" placeholder="Placeholder" value="Disabled" disabled/>
               <div class="kss-modifier__example-footer"></div>
             </div>
             <div class="kss-modifier__name kss-style">
@@ -180,9 +182,9 @@
               error
             </div>
             <div class="kss-modifier__example">
-              <input class="b-input b-input-error" type="text" placeholder="Placeholder"/>
-<input class="b-input b-input-error" type="text" placeholder="Placeholder" value="Hello, world"/>
-<input class="b-input b-input-error" type="text" placeholder="Placeholder" value="Hello, world" disabled/>
+              <input class="b-input b-input-error" type="text" placeholder="Empty"/>
+<input class="b-input b-input-error" type="text" placeholder="Placeholder" value="Filled"/>
+<input class="b-input b-input-error" type="text" placeholder="Placeholder" value="Disabled" disabled/>
               <div class="kss-modifier__example-footer"></div>
             </div>
         </div>
@@ -191,9 +193,9 @@
             <summary>
                 Markup
             </summary>
-            <pre class="hljs"><code class="language-handlebars"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"b-input [modifier class]"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Placeholder"</span>/&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"b-input [modifier class]"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Placeholder"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"Hello, world"</span>/&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"b-input [modifier class]"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Placeholder"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"Hello, world"</span> <span class="hljs-attr">disabled</span>/&gt;</span></span></code></pre>
+            <pre class="hljs"><code class="language-handlebars"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"b-input [modifier class]"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Empty"</span>/&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"b-input [modifier class]"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Placeholder"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"Filled"</span>/&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"b-input [modifier class]"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Placeholder"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"Disabled"</span> <span class="hljs-attr">disabled</span>/&gt;</span></span></code></pre>
           </details>
 
         <div class="kss-source kss-style">

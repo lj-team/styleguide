@@ -19,8 +19,10 @@
 <link rel="stylesheet" href="kss-assets/layout.css">
 <link rel="stylesheet" href="kss-assets/components.css">
 <link rel="stylesheet" href="kss-assets/basetable.css">
+<link rel="stylesheet" href="kss-assets/tabs.css">
 <link rel="stylesheet" href="kss-assets/headertabs.css">
 <link rel="stylesheet" href="kss-assets/sortcontrol.css">
+<link rel="stylesheet" href="kss-assets/switcher.css">
 <link rel="stylesheet" href="kss-assets/dropdown.css">
 <link rel="stylesheet" href="kss-assets/lightcontrols.css">
 
@@ -102,13 +104,10 @@
           </p>
 
           <div class="kss-description">
-            <p>Very simple tabs, on 450px become dropdown.</p>
-<p>Directive lj-tabs is needed to make dropdown work on mobile</p>
-<p>TODO:</p>
-<ul>
-<li>more clever detection of breakpoint</li>
-<li>more advanced version with hiding items in dropdown</li>
-</ul>
+            <p>Extends core/components/tabs</p>
+<p>Need angular to display &amp; work correctly</p>
+<p>Js: htdocs/js/misc/tabs.js</p>
+<p>Directive tabs is needed to make dropdown work on mobile</p>
 
           </div>
 
@@ -122,20 +121,23 @@
 
 
           <div class="kss-modifier__example">
-            <ul
+            <div
   class="headertabs"
-  tabs
->
-  <li class="headertabs__tab headertabs__tab--current">
-    <a class="headertabs__tab-link" href="#">Is there</a>
-  </li>
-  <li class="headertabs__tab">
-    <a class="headertabs__tab-link" href="#">anybody</a>
-  </li>
-  <li class="headertabs__tab">
-    <a class="headertabs__tab-link" href="#">out there?</a>
-  </li>
-</ul>
+  tabs>
+  <ul
+    class="headertabs__list"
+  >
+    <li class="headertabs__item headertabs__item--current">
+      <a class="headertabs__item-link" href="#">Is there</a>
+    </li>
+    <li class="headertabs__item">
+      <a class="headertabs__item-link" href="#">anybody</a>
+    </li>
+    <li class="headertabs__item">
+      <a class="headertabs__item-link" href="#">out there?</a>
+    </li>
+  </ul>
+</div>
             <div class="kss-modifier__example-footer"></div>
           </div>
 
@@ -145,20 +147,23 @@
             <summary>
                 Markup
             </summary>
-            <pre class="hljs"><code class="language-handlebars"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">ul</span>
+            <pre class="hljs"><code class="language-handlebars"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>
   <span class="hljs-attr">class</span>=<span class="hljs-string">"headertabs"</span>
-  <span class="hljs-attr">tabs</span>
-&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"headertabs__tab headertabs__tab--current"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"headertabs__tab-link"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Is there<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"headertabs__tab"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"headertabs__tab-link"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>anybody<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"headertabs__tab"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"headertabs__tab-link"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>out there?<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span></span></code></pre>
+  <span class="hljs-attr">tabs</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">ul</span>
+    <span class="hljs-attr">class</span>=<span class="hljs-string">"headertabs__list"</span>
+  &gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"headertabs__item headertabs__item--current"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"headertabs__item-link"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Is there<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"headertabs__item"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"headertabs__item-link"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>anybody<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"headertabs__item"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"headertabs__item-link"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>out there?<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span></code></pre>
           </details>
 
         <div class="kss-source kss-style">

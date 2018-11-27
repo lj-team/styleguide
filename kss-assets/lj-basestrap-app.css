@@ -146,9 +146,9 @@ b-input
 Standart text input
 
 Markup:
-<input class="b-input {{modifier_class}}" type="text" placeholder="Placeholder"/>
-<input class="b-input {{modifier_class}}" type="text" placeholder="Placeholder" value="Hello, world"/>
-<input class="b-input {{modifier_class}}" type="text" placeholder="Placeholder" value="Hello, world" disabled/>
+<input class="b-input {{modifier_class}}" type="text" placeholder="Empty"/>
+<input class="b-input {{modifier_class}}" type="text" placeholder="Placeholder" value="Filled"/>
+<input class="b-input {{modifier_class}}" type="text" placeholder="Placeholder" value="Disabled" disabled/>
 
 .b-input-nano - nano version
 .b-input-tiny - tiny version
@@ -210,13 +210,11 @@ Style guide: Flatstyle.inputs.b-input
     padding-bottom: 2px;
     font-size: 15px;
     line-height: 1.05;
-    font-weight: 300;
     }
 /* tiny */
 .b-input-tiny {
     font-size: 15px;
     line-height: 1.05;
-    font-weight: 300;
     }
 .html-ie11 .b-input-tiny {
     padding: 9px 5px 5px;

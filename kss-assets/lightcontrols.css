@@ -2,7 +2,7 @@
 /*
 Colors
 
-Weight: -1
+Weight: -3
 
 Colors:
 $white: #FFFFFF - white
@@ -52,7 +52,9 @@ $red-darksalmon: #FF4C44 - red-darksalmon
 $yellow-sand: #C09853 - yellow-sand
 $yellow-smoke: #FCF8E3 - yellow-smoke
 $green-grass: #468847 - green-grass
+$green-emerald-darker: #34AD66 - green-emerald-darker
 $green-emerald: #39BF71 - green-emerald
+$green-emerald-lighter: #4ECA82 - green-emerald-lighter
 $green-smoke: #DFF0D8 - green-smoke
 $brands-facebook: #3B5A97 - brands-facebook
 $brands-twitter: #1CA1F1 - brands-twitter
@@ -77,9 +79,31 @@ smoke
 */
 
 /*
-Light controls
+Mixins
 
-Weight: -1
+Weight: -2
+
+Style guide: Core.mixins
+*/
+
+/*
+capsText
+
+Gray text with caps. Usually used in table headers & labels for inputs
+
+Style guide: Core.mixins.capsText
+*/
+
+/*
+visually-hidden
+
+Hides element for users & keep it available for screenreaders
+
+Style guide: Core.mixins.visually-hidden
+*/
+
+/*
+Light controls
 
 Style guide: Core.light
 */
@@ -88,21 +112,22 @@ Style guide: Core.light
 Light input
 
 Markup:
-<input type="text" class="lightinput" placeholder="Empty spaces what are we living for"/>
+<input type="text" class="lightinput {{modifier_class}}" placeholder="Empty spaces what are we living for"/>
 
 :disabled - disabled
+.lightinput--big - big input
 
 Style guide: Core.light.input
 */
 
 .lightinput {
-  width: 100%;
-  height: 32px;
+  height: 28px;
   padding: 0 12px;
   box-sizing: border-box;
   background-color: #FFFFFF;
   border: 1px solid #D4DCE0;
   border-radius: 4px;
+  vertical-align: middle;
   font: inherit;
   font-size: 14px;
   line-height: 22px;
@@ -128,6 +153,13 @@ Style guide: Core.light.input
   cursor: not-allowed;
 }
 
+/* big */
+
+.lightinput--big {
+  height: 36px;
+  font-size: 16px;
+  }
+
 /*
 Light input with clear control
 
@@ -143,7 +175,9 @@ Style guide: Core.light.light-clear
 */
 
 .lightclear {
+  display: inline-block;
   position: relative;
+  vertical-align: middle;
   }
 
 .lightclear__lightinput {
@@ -152,11 +186,10 @@ Style guide: Core.light.light-clear
 
 .lightclear__control {
   position: absolute;
-  top: 50%;
-  right: 10px;
-  -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
+  top: 1px;
+  right: 1px;
+  width: 28px;
+  bottom: 1px;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -167,7 +200,8 @@ Style guide: Core.light.light-clear
       -ms-flex-align: center;
           align-items: center;
   border: none;
-  background: none;
+  border-radius: 0 4px 4px 0;
+  background: linear-gradient(to right, rgba(255,255,255,0), #FFFFFF 4px);
   cursor: pointer;
   padding: 0;
   }
@@ -212,7 +246,9 @@ Style guide: Core.light.light-search
 */
 
 .lightsearch {
+  display: inline-block;
   position: relative;
+  vertical-align: middle;
   }
 
 .lightsearch__lightinput {
@@ -246,7 +282,10 @@ Markup:
 </button>
 
 :disabled - disabled
+.lightbutton--big - big button
 .lightbutton--blue - blue button
+.lightbutton--green - green button
+.lightbutton--red - red button
 
 Style guide: Core.light.button
 */
@@ -258,6 +297,7 @@ Style guide: Core.light.button
   background: none;
   border: 1px solid #D4DCE0;
   border-radius: 4px;
+  vertical-align: middle;
   text-align: center;
   font: inherit;
   font-size: 14px;
@@ -290,6 +330,15 @@ Style guide: Core.light.button
   cursor: not-allowed;
 }
 
+/* big */
+
+.lightbutton--big {
+  padding: 8px 20px 10px;
+  font-size: 16px;
+  }
+
+/* toggle */
+
 .lightbutton--toggle {
   position: relative;
   padding-right: 30px;
@@ -320,9 +369,13 @@ Style guide: Core.light.button
           transform: rotate(180deg);
 }
 
-.lightbutton--toggle.lightbutton--blue .lightbutton__dropdown-icon {
+.lightbutton--toggle.lightbutton--blue .lightbutton__dropdown-icon,
+  .lightbutton--toggle.lightbutton--green .lightbutton__dropdown-icon,
+  .lightbutton--toggle.lightbutton--red .lightbutton__dropdown-icon {
   fill: white
 }
+
+/* blue */
 
 .lightbutton--blue {
   background-color: #00A3D9;
@@ -345,6 +398,264 @@ Style guide: Core.light.button
   border-color: #0996C5;
   background-color: #0996C5;
 }
+
+/* green */
+
+.lightbutton--green {
+  background-color: #39BF71;
+  border-color: #39BF71;
+  }
+
+.lightbutton--green,
+  .lightbutton--green:link,
+  .lightbutton--green:visited {
+  color: #FFFFFF;
+}
+
+.lightbutton--green:hover,
+  .lightbutton--green:focus {
+  border-color: #4ECA82;
+  background-color: #4ECA82;
+}
+
+.lightbutton--green:active {
+  border-color: #34AD66;
+  background-color: #34AD66;
+}
+
+/* red */
+
+.lightbutton--red {
+  background-color: #EC3434;
+  border-color: #EC3434;
+  }
+
+.lightbutton--red,
+  .lightbutton--red:link,
+  .lightbutton--red:visited {
+  color: #FFFFFF;
+}
+
+.lightbutton--red:hover,
+  .lightbutton--red:focus {
+  border-color: #FF3838;
+  background-color: #FF3838;
+}
+
+.lightbutton--red:active {
+  border-color: #CB1427;
+  background-color: #CB1427;
+}
+
+/*
+Light input + light button
+
+Markup:
+<ul class="kss-demo-list ">
+  <li>
+    <input type="text" class="lightinput" placeholder="Empty spaces what are we living for"/>
+    <select class="lightselect">
+      <option>Across darkened skies</option>
+      <option>I travelled without a light</option>
+      <option>I sank in the well of my mind</option>
+      <option>Too deep, never to be found</option>
+    </select>
+    <button class="lightbutton lightbutton--blue" type="button">Button</button>
+  </li>
+  <li>
+    <input type="text" class="lightinput lightinput--big" placeholder="Empty spaces what are we living for"/>
+    <select class="lightselect lightselect--big">
+      <option>Across darkened skies</option>
+      <option>I travelled without a light</option>
+      <option>I sank in the well of my mind</option>
+      <option>Too deep, never to be found</option>
+    </select>
+    <button class="lightbutton lightbutton--big lightbutton--blue" type="button">Button</button>
+  </li>
+</ul>
+
+Style guide: Core.light.input-button
+*/
+
+/*
+Light checkbox
+
+Markup:
+<label class="lightcheckbox {{modifier_class}}">
+  <input class="lightcheckbox__input" type="checkbox" value="keyword.name">
+  <span class="lightcheckbox__text">Hold my breath and wait</span>
+</label>
+<label class="lightcheckbox {{modifier_class}}">
+  <input class="lightcheckbox__input" disabled type="checkbox" value="keyword.name">
+  <span class="lightcheckbox__text">Hold my breath and wait</span>
+</label>
+
+.lightcheckbox--big - big checkbox
+
+Style guide: Core.light.checkbox
+*/
+
+.lightcheckbox {
+    display: inline-block;
+    position: relative;
+    box-sizing: border-box;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    cursor: pointer;
+    }
+
+.lightcheckbox--big {
+  font-size: 16px;
+  }
+
+.lightcheckbox + .lightcheckbox {
+  margin-left: 16px;
+  }
+
+.lightcheckbox__input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+  }
+
+.lightcheckbox__text {
+  position: relative;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  padding-left: 0;
+  color: #333333;
+}
+
+.lightcheckbox__text::before,
+  .lightcheckbox__text::after {
+  content: "";
+  display: block;
+  position: relative;
+  top: 2px;
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  border-radius: 2px;
+  transition: all .15s;
+  pointer-events: none;
+}
+
+.lightcheckbox--big .lightcheckbox__text::before,
+    .lightcheckbox--big .lightcheckbox__text::after {
+  width: 18px;
+  height: 18px;
+}
+
+.lightcheckbox__text::before {
+  margin-right: 8px;
+  box-sizing: border-box;
+  background-color: #FFFFFF;
+  border: 1px solid #D4DCE0;
+  box-shadow: 0 0 0 2px transparent;
+  cursor: pointer;
+  transition: all .15s;
+  }
+
+.lightcheckbox__text::after {
+  position: absolute;
+  left: 0;
+  margin-top: -7px;
+  opacity: 0;
+  background: 50% no-repeat;
+  background-size: 10px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10'%3E%3Cpath d='M1 6l3 3 5-8' stroke-width='2' stroke='%23FFF' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  }
+
+.lightcheckbox--big .lightcheckbox__text::after {
+  background-size: 12px;
+}
+
+.lightcheckbox__text:hover::before, .lightcheckbox__text:active::before {
+  border-color: #BDC8CD;
+}
+
+.lightcheckbox__input:checked + .lightcheckbox__text::before {
+  background-color: #00A3D9;
+  border-color: transparent !important;
+}
+
+.lightcheckbox__input:checked + .lightcheckbox__text::after {
+  margin-top: 0;
+  opacity: 1;
+}
+
+.lightcheckbox__input:focus + .lightcheckbox__text::before {
+  border-color: transparent;
+  box-shadow: 0 0 0 2px #00A3D9;
+}
+
+.lightcheckbox__input:focus + .lightcheckbox__text:hover::before {
+  box-shadow: 0 0 0 2px #00C0FF;
+}
+
+.lightcheckbox__input:checked:focus + .lightcheckbox__text::before {
+  border-color: transparent;
+  box-shadow: 0 0 0 2px #0086B3;
+}
+
+.lightcheckbox__input:checked:focus + .lightcheckbox__text:hover::before {
+  background-color: #00C0FF;
+  box-shadow: 0 0 0 2px #00A3D9;
+}
+
+.lightcheckbox__input:disabled + .lightcheckbox__text {
+  opacity: .5;
+  cursor: not-allowed;
+  }
+
+/*
+Light select
+
+Markup:
+<select class="lightselect {{modifier_class}}">
+  <option>Across darkened skies</option>
+  <option>I travelled without a light</option>
+  <option>I sank in the well of my mind</option>
+  <option>Too deep, never to be found</option>
+</select>
+
+:disabled - disabled
+.lightselect--big - big select
+
+Style guide: Core.light.select
+*/
+
+.lightselect {
+  height: 28px;
+  vertical-align: middle;
+  font-size: 14px;
+  }
+
+.lightselect:disabled {
+  opacity: .5;
+  cursor: not-allowed;
+  }
+
+.lightselect--big {
+  height: 36px;
+  font-size: 16px;
+  }
 
 /* <<< file end: stc/core/components/lightcontrols.css */
 

@@ -57,23 +57,23 @@
 <main class="kss-main" aria-label="Content">
   <article>
 
-    <div id="kssref-core-basetable" class="kss-section kss-section--depth-2 is-fullscreen">
+    <div id="kssref-core-switcher" class="kss-section kss-section--depth-2 is-fullscreen">
 
       <div class="kss-style">
         <h2 class="kss-title kss-title--level-2">
-          <a class="kss-title__permalink" href="#kssref-core-basetable">
+          <a class="kss-title__permalink" href="#kssref-core-switcher">
             <span class="kss-title__ref">
-              1.3
+              1.8
               <span class="kss-title__permalink-hash">
-                  #Core.basetable
+                  #Core.switcher
               </span>
             </span>
-            Base Table
+            Switcher
           </a>
         </h2>
 
           <p class="kss-toolbar">
-            <a href="#kssref-core-basetable" data-kss-guides="true">
+            <a href="#kssref-core-switcher" data-kss-guides="true">
               <span class="kss-toolbar__tooltip">Toggle example guides</span>
               <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                 <rect class="kss-toolbar__icon-fill" x="5" y="35" width="5" height="9"/>
@@ -94,7 +94,7 @@
                 <rect class="kss-toolbar__icon-fill" x="20" y="54" width="9" height="5"/>
               </svg>
             </a>
-            <a href="#kssref-core-basetable" data-kss-markup="true">
+            <a href="#kssref-core-switcher" data-kss-markup="true">
               <span class="kss-toolbar__tooltip">Toggle HTML markup</span>
               <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
                 <path class="kss-toolbar__icon-fill" d="M37.555,46.239l6.103,6.103l20.342,-20.342l-20.342,-20.342l-6.103,6.103l14.24,14.239l-14.24,14.239Z"/>
@@ -104,7 +104,7 @@
           </p>
 
           <div class="kss-description">
-            <p>Table for service pages</p>
+            <p>Switcher for groups of radiobuttons</p>
 
           </div>
 
@@ -118,50 +118,50 @@
 
 
           <div class="kss-modifier__example">
-            <table class="basetable ">
-  <thead>
-    <tr>
-      <th>
-        <a
-          class="
-            basetable__sort
-            sortcontrol
-            kss-toggle-class
-            "
-          data-toggle-class="sortcontrol--asc"
-          href="#"
-          title="Sort by ID"
+            <ul class="switcher">
+  <li class="switcher__item">
+    <label class="switcher__label">
+      <input
+        type="radio"
+        name="test"
+        class="switcher__radio"
+        checked=""
         >
-          ID
-        </a>
-      </th>
-      <th>Text</th>
-      <th>Number</th>
-    </tr>
-  </thead>
-  <tr>
-    <td>
-      1
-    </td>
-    <td>
-      Kittens
-    </td>
-    <td class="basetable__td--number">
-      23
-    </td>
-  </tr>
-  <tr>
-    <td>
-      2
-    </td>
-    <td>
-      Balloons
-    </td>
-    <td class="basetable__td--number">
-      128
-    </td>
-  </tr>
-</table>
+      <span class="switcher__label-text">There’s</span>
+    </label>
+  </li>
+  <li class="switcher__item">
+    <label class="switcher__label">
+      <input
+        type="radio"
+        name="test"
+        class="switcher__radio"
+        >
+      <span class="switcher__label-text">something</span>
+    </label>
+  </li>
+  <li class="switcher__item">
+    <label class="switcher__label">
+      <input
+        type="radio"
+        name="test"
+        class="switcher__radio"
+        >
+      <span class="switcher__label-text"> in</span>
+    </label>
+  </li>
+  <li class="switcher__item">
+    <label class="switcher__label">
+      <input
+        type="radio"
+        name="test"
+        class="switcher__radio"
+        disabled
+        >
+      <span class="switcher__label-text">the air</span>
+    </label>
+  </li>
+</ul>
             <div class="kss-modifier__example-footer"></div>
           </div>
 
@@ -171,54 +171,54 @@
             <summary>
                 Markup
             </summary>
-            <pre class="hljs"><code class="language-handlebars"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">table</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"basetable "</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">thead</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">th</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">a</span>
-          <span class="hljs-attr">class</span>=<span class="hljs-string">"
-            basetable__sort
-            sortcontrol
-            kss-toggle-class
-            "</span>
-          <span class="hljs-attr">data-toggle-class</span>=<span class="hljs-string">"sortcontrol--asc"</span>
-          <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>
-          <span class="hljs-attr">title</span>=<span class="hljs-string">"Sort by ID"</span>
+            <pre class="hljs"><code class="language-handlebars"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"switcher"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"switcher__item"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"switcher__label"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">input</span>
+        <span class="hljs-attr">type</span>=<span class="hljs-string">"radio"</span>
+        <span class="hljs-attr">name</span>=<span class="hljs-string">"test"</span>
+        <span class="hljs-attr">class</span>=<span class="hljs-string">"switcher__radio"</span>
+        <span class="hljs-attr">checked</span>=<span class="hljs-string">""</span>
         &gt;</span>
-          ID
-        <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">th</span>&gt;</span>Text<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">th</span>&gt;</span>Number<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">thead</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>
-      1
-    <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>
-      Kittens
-    <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"basetable__td--number"</span>&gt;</span>
-      23
-    <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>
-      2
-    <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>
-      Balloons
-    <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"basetable__td--number"</span>&gt;</span>
-      128
-    <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">table</span>&gt;</span></span></code></pre>
+      <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"switcher__label-text"</span>&gt;</span>There’s<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"switcher__item"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"switcher__label"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">input</span>
+        <span class="hljs-attr">type</span>=<span class="hljs-string">"radio"</span>
+        <span class="hljs-attr">name</span>=<span class="hljs-string">"test"</span>
+        <span class="hljs-attr">class</span>=<span class="hljs-string">"switcher__radio"</span>
+        &gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"switcher__label-text"</span>&gt;</span>something<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"switcher__item"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"switcher__label"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">input</span>
+        <span class="hljs-attr">type</span>=<span class="hljs-string">"radio"</span>
+        <span class="hljs-attr">name</span>=<span class="hljs-string">"test"</span>
+        <span class="hljs-attr">class</span>=<span class="hljs-string">"switcher__radio"</span>
+        &gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"switcher__label-text"</span>&gt;</span> in<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"switcher__item"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"switcher__label"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">input</span>
+        <span class="hljs-attr">type</span>=<span class="hljs-string">"radio"</span>
+        <span class="hljs-attr">name</span>=<span class="hljs-string">"test"</span>
+        <span class="hljs-attr">class</span>=<span class="hljs-string">"switcher__radio"</span>
+        <span class="hljs-attr">disabled</span>
+        &gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"switcher__label-text"</span>&gt;</span>the air<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span></span></code></pre>
           </details>
 
         <div class="kss-source kss-style">
-          Source: <code>core/components/basetable.css</code>, line 4
+          Source: <code>core/components/switcher.css</code>, line 4
         </div>
 
     </div>

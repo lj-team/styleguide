@@ -2,7 +2,7 @@
 /*
 Colors
 
-Weight: -1
+Weight: -3
 
 Colors:
 $white: #FFFFFF - white
@@ -52,7 +52,9 @@ $red-darksalmon: #FF4C44 - red-darksalmon
 $yellow-sand: #C09853 - yellow-sand
 $yellow-smoke: #FCF8E3 - yellow-smoke
 $green-grass: #468847 - green-grass
+$green-emerald-darker: #34AD66 - green-emerald-darker
 $green-emerald: #39BF71 - green-emerald
+$green-emerald-lighter: #4ECA82 - green-emerald-lighter
 $green-smoke: #DFF0D8 - green-smoke
 $brands-facebook: #3B5A97 - brands-facebook
 $brands-twitter: #1CA1F1 - brands-twitter
@@ -74,6 +76,30 @@ lighter
 light
 lightest
 smoke
+*/
+
+/*
+Mixins
+
+Weight: -2
+
+Style guide: Core.mixins
+*/
+
+/*
+capsText
+
+Gray text with caps. Usually used in table headers & labels for inputs
+
+Style guide: Core.mixins.capsText
+*/
+
+/*
+visually-hidden
+
+Hides element for users & keep it available for screenreaders
+
+Style guide: Core.mixins.visually-hidden
 */
 
 /*

@@ -4197,34 +4197,32 @@ HTML#js BODY .lj-like--v4 .b-flatsocial-openid:hover {
     -moz-transform: scale(1);
     }
 
-/* SVG Preloader
------------------------------------ */
-
 /*
-== Ways to add preloader on your page ==
+SVG Preloader
 
-1. Single SVG Tag
-<div class="svgpreloader-wrapper svgpreloader-16"><svg class="svgpreloader svgpreloader-svg svgpreloader-16" viewBox="0 0 31 31" version="1.1" xmlns="http://www.w3.org/2000/svg"><g fill-rule="evenodd"><path d="M15.5,31 C24.0604136,31 31,24.0604136 31,15.5 C31,6.93958638 24.0604136,0 15.5,0 C6.93958638,0 0,6.93958638 0,15.5 C0,24.0604136 6.93958638,31 15.5,31 Z M15.5,24 C20.1944204,24 24,20.1944204 24,15.5 C24,10.8055796 20.1944204,7 15.5,7 C10.8055796,7 7,10.8055796 7,15.5 C7,20.1944204 10.8055796,24 15.5,24 Z" fill="#00AFEA"></path><path d="M15.7960584,7.00505942 L15.8509795,0.00389541322 C20.1020367,0.0983450811 23.9309467,1.90428116 26.675877,4.7598713 L26.675877,4.7598713 L21.7412314,9.72958246 C20.2508535,8.11838542 18.1443589,7.08544079 15.7960584,7.00505942 Z" fill="#346B7C"></path></g></svg></div>
+Markup:
+<ol>
+    <li>
+        Single SVG Tag
+        <div class="svgpreloader-wrapper svgpreloader-16 {{modifier_class}}"><svg class="svgpreloader svgpreloader-svg svgpreloader-16 {{modifier_class}}" viewBox="0 0 31 31" version="1.1" xmlns="http://www.w3.org/2000/svg"><g fill-rule="evenodd"><path d="M15.5,31 C24.0604136,31 31,24.0604136 31,15.5 C31,6.93958638 24.0604136,0 15.5,0 C6.93958638,0 0,6.93958638 0,15.5 C0,24.0604136 6.93958638,31 15.5,31 Z M15.5,24 C20.1944204,24 24,20.1944204 24,15.5 C24,10.8055796 20.1944204,7 15.5,7 C10.8055796,7 7,10.8055796 7,15.5 C7,20.1944204 10.8055796,24 15.5,24 Z" fill="#00AFEA"></path><path d="M15.7960584,7.00505942 L15.8509795,0.00389541322 C20.1020367,0.0983450811 23.9309467,1.90428116 26.675877,4.7598713 L26.675877,4.7598713 L21.7412314,9.72958246 C20.2508535,8.11838542 18.1443589,7.08544079 15.7960584,7.00505942 Z" fill="#346B7C"></path></g></svg></div>
+    </li>
+    <li>
+        Single Tag<br/>
+        <div class="svgpreloader svgpreloader-tag {{modifier_class}}"></div>
+    </li>
+    <li>
+        Pseudo-Element
+        <div class="example svgpreloader svgpreloader-16 svgpreloader-pseudo {{modifier_class}}"></div>
+    </li>
+</ol>
 
+.svgpreloader-16 - 16x16
+.svgpreloader-20 - 20x20
+.svgpreloader-25 - 25x25
+.svgpreloader-30 - 30x30
+.svgpreloader-50 - 50x50
 
-2. Single Tag
-<span class="svgpreloader svgpreloader-tag svgpreloader-16"></span>
-
-3. Pseudo-Element
-<div class="example svgpreloader svgpreloader-pseudo svgpreloader-16"></div>
-
-
-== Sizes ==
-
-16x16px - svgpreloader-16
-
-20x20px - svgpreloader-20
-
-25x25px - svgpreloader-25
-
-30x30px - svgpreloader-30
-
-50x50px - svgpreloader-50
+Style guide: Flatstyle.svgpreloader
 
 */
 
