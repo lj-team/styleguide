@@ -1,4 +1,4 @@
-/* >>> file start: stc/core/components/switcher.css */
+/* >>> file start: stc/core/components/tumbler.css */
 
 
 
@@ -117,87 +117,49 @@ smoke
 
 
 /*
-Switcher
+Tumbler
 
-Switcher for groups of radiobuttons
+Tumbler for switchin On/Off states
 
 Markup:
-<ul class="switcher">
-  <li class="switcher__item">
-    <label class="switcher__label">
-      <input
-        type="radio"
-        name="test"
-        class="switcher__radio"
-        checked=""
-        >
-      <span class="switcher__label-text">There’s</span>
-    </label>
-  </li>
-  <li class="switcher__item">
-    <label class="switcher__label">
-      <input
-        type="radio"
-        name="test"
-        class="switcher__radio"
-        >
-      <span class="switcher__label-text">something</span>
-    </label>
-  </li>
-  <li class="switcher__item">
-    <label class="switcher__label">
-      <input
-        type="radio"
-        name="test"
-        class="switcher__radio"
-        >
-      <span class="switcher__label-text"> in</span>
-    </label>
-  </li>
-  <li class="switcher__item">
-    <label class="switcher__label">
-      <input
-        type="radio"
-        name="test"
-        class="switcher__radio"
-        disabled
-        >
-      <span class="switcher__label-text">the air</span>
-    </label>
-  </li>
-</ul>
+<label class="tumbler">
+  <input
+    type="checkbox"
+    name="tumbler"
+    class="tumbler__checkbox {{modifier_class}}"
+    >
+  <span class="tumbler__text">
+    All empty words and all rhymes will fade
+  </span>
+  <span class="tumbler__control"></span>
+</label>
 
-Style guide: Core.switcher
+:checked - checked state
+:disabled - disabled state
+
+Style guide: Core.tumbler
 */
 
 
 
-.switcher {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
+.tumbler {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  font-size: 14px;
-  line-height: 1;
-  }
-
-
-
-.switcher__item {
-  }
-
-
-
-.switcher__label {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   cursor: pointer;
   }
 
 
 
-.switcher__radio {
+.tumbler__checkbox {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -213,123 +175,116 @@ Style guide: Core.switcher
 
 
 
-.switcher__label-text {
+.tumbler__control {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  padding: 4px 8px;
-  border: 1px solid #C7D4DA;
-  border-left-width: 0;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 40px;
+  height: 24px;
+  margin-left: 1em;
+  padding: 2px;
   box-sizing: border-box;
-}
+  border-radius: 12px;
+  background: #ABBBC2;
+  -webkit-transition: background .05s;
+  transition: background .05s;
+  }
 
 
 
-.switcher__label-text::before {
+.tumbler__control::before {
   content: "";
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  border-radius: inherit;
-  pointer-events: none;
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #FFF;
+  box-shadow:
+      0 4px 8px 0 rgba(0, 0, 0, 0.12),
+      0 0 2px 0 rgba(0, 0, 0, 0.08);
 }
 
 
 
-.switcher__label-text:hover::before {
-  box-shadow: 0 0 0 2px rgba(0,0,0,.2);
+.tumbler:hover .tumbler__control {
+  background: #C7D4DA;
 }
 
 
 
-.switcher__label-text:active::before {
-  box-shadow: 0 0 0 2px rgba(0,0,0,.4);
+.tumbler:active .tumbler__control {
+  background: #7A9199;
 }
 
 
 
-.switcher__item:first-child .switcher__label-text {
-  border-left-width: 1px;
-  border-radius: 8px 0 0 8px;
-}
+/* focus */
 
 
 
-.switcher__item:last-child .switcher__label-text {
-  border-radius: 0 8px 8px 0 ;
-}
+.tumbler__checkbox:focus ~ .tumbler__control {
+  box-shadow: 0 0 0 3px rgba(0,0,0,.2) inset;
+  }
 
 
 
-.switcher__radio:focus + .switcher__label-text::before {
-  box-shadow: 0 0 0 2px rgba(0,0,0,.25);
-}
+/* checked */
 
 
 
-.switcher__radio:active + .switcher__label-text::before {
-  box-shadow: 0 0 0 2px rgba(0,0,0,.4);
-}
-
-
-
-.switcher__radio:checked + .switcher__label-text {
+.tumbler__checkbox:checked ~ .tumbler__control {
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   background: #00A3D9;
-  border-color: #00A3D9;
-  color: #FFFFFF;
-}
+  }
 
 
 
-.switcher__radio:checked + .switcher__label-text:hover {
+.tumbler:hover .tumbler__checkbox:checked ~ .tumbler__control {
   background: #00C0FF;
 }
 
 
 
-.switcher__radio:checked + .switcher__label-text:hover::before {
-  box-shadow: 0 0 0 2px #0996C5;
+.tumbler:active .tumbler__checkbox:checked ~ .tumbler__control {
+  background: #0996C5;
 }
 
 
 
-.switcher__radio:checked:focus + .switcher__label-text::before {
-  box-shadow: 0 0 0 2px #0086B3;
-}
+/* disabled */
 
 
 
-.switcher__radio:checked:focus + .switcher__label-text:hover {
-  background: #00C0FF;
-}
-
-
-
-.switcher__radio:checked:focus + .switcher__label-text:hover::before {
-  box-shadow: 0 0 0 2px #0996C5;
-}
-
-
-
-.switcher__radio:disabled + .switcher__label-text {
-  background: none;
-  color: #BDC8CD;
+.tumbler__checkbox:disabled ~ .tumbler__control {
+  background: #E5EBEE;
   cursor: not-allowed;
+  }
+
+
+
+.tumbler:hover .tumbler__checkbox:disabled ~ .tumbler__control {
+  background: #E5EBEE;
 }
 
 
 
-.switcher__radio:disabled + .switcher__label-text::before {
-  content: none;
-}
+.tumbler__checkbox:disabled + .tumbler__text {
+  opacity: .5;
+  }
 
+/* <<< file end: stc/core/components/tumbler.css */
 
-
-/* <<< file end: stc/core/components/switcher.css */
-
-/*# sourceMappingURL=switcher.css.map */
+/*# sourceMappingURL=tumbler.css.map */

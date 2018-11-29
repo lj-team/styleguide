@@ -132,6 +132,7 @@ Style guide: Core.light.input
   font-size: 14px;
   line-height: 22px;
   color: #333333;
+  -webkit-transition: border-color .2s;
   transition: border-color .2s;
   }
 
@@ -190,17 +191,21 @@ Style guide: Core.light.light-clear
   right: 1px;
   width: 28px;
   bottom: 1px;
+  display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   border: none;
   border-radius: 0 4px 4px 0;
+  background: -webkit-linear-gradient(left, rgba(255,255,255,0), #FFFFFF 4px);
   background: linear-gradient(to right, rgba(255,255,255,0), #FFFFFF 4px);
   cursor: pointer;
   padding: 0;
@@ -303,6 +308,7 @@ Style guide: Core.light.button
   font-size: 14px;
   line-height: 1;
   cursor: pointer;
+  -webkit-transition: border-color .2s, background-color .2s, color .2s;
   transition: border-color .2s, background-color .2s, color .2s;
   }
 
@@ -358,6 +364,7 @@ Style guide: Core.light.button
   width: 10px;
   height: 6px;
   fill: #333333;
+  -webkit-transition: -webkit-transform 0.2s;
   transition: -webkit-transform 0.2s;
   transition: transform 0.2s;
   transition: transform 0.2s, -webkit-transform 0.2s;
@@ -533,6 +540,7 @@ Style guide: Core.light.checkbox
 
 .lightcheckbox__text {
   position: relative;
+  display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -552,6 +560,7 @@ Style guide: Core.light.checkbox
   width: 16px;
   height: 16px;
   border-radius: 2px;
+  -webkit-transition: all .15s;
   transition: all .15s;
   pointer-events: none;
 }
@@ -569,6 +578,7 @@ Style guide: Core.light.checkbox
   border: 1px solid #D4DCE0;
   box-shadow: 0 0 0 2px transparent;
   cursor: pointer;
+  -webkit-transition: all .15s;
   transition: all .15s;
   }
 
@@ -620,6 +630,160 @@ Style guide: Core.light.checkbox
 }
 
 .lightcheckbox__input:disabled + .lightcheckbox__text {
+  opacity: .5;
+  cursor: not-allowed;
+  }
+
+/*
+Light radio
+
+Markup:
+<label class="lightradio {{modifier_class}}">
+  <input class="lightradio__input" type="radio" name="lightradio" value="lightradio-1">
+  <span class="lightradio__text">Open your eyes, here the dreams burn</span>
+</label>
+<label class="lightradio {{modifier_class}}">
+  <input class="lightradio__input" disabled type="radio" name="lightradio" value="lightradio-2">
+  <span class="lightradio__text">And light up the skies</span>
+</label>
+
+.lightradio--big - big radio
+
+Style guide: Core.light.radio
+*/
+
+.lightradio {
+    display: inline-block;
+    position: relative;
+    box-sizing: border-box;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    cursor: pointer;
+    }
+
+.lightradio--big {
+  font-size: 16px;
+  }
+
+.lightradio + .lightradio {
+  margin-left: 16px;
+  }
+
+.lightradio__input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+  }
+
+.lightradio__text {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  padding-left: 0;
+  color: #333333;
+}
+
+.lightradio__text::before,
+  .lightradio__text::after {
+  content: "";
+  display: block;
+  position: relative;
+  top: 2px;
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+  border-radius: 50%;
+  -webkit-transition: all .15s;
+  transition: all .15s;
+  pointer-events: none;
+}
+
+.lightradio__text::before {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  box-sizing: border-box;
+  background-color: #FFFFFF;
+  border: 1px solid #D4DCE0;
+  box-shadow: 0 0 0 2px transparent;
+  cursor: pointer;
+  -webkit-transition: all .15s;
+  transition: all .15s;
+  }
+
+.lightradio--big .lightradio__text::before {
+  width: 20px;
+  height: 20px;
+}
+
+.lightradio__text::after {
+  position: absolute;
+  left: 0;
+  margin: 5px;
+  opacity: 0;
+  width: 6px;
+  height: 6px;
+  background: #FFF;
+  }
+
+.lightradio--big .lightradio__text::after {
+  width: 8px;
+  height: 8px;
+  margin: 6px;
+}
+
+.lightradio__text:hover::before, .lightradio__text:active::before {
+  border-color: #BDC8CD;
+}
+
+.lightradio__input:checked + .lightradio__text::before {
+  background-color: #00A3D9;
+  border-color: transparent !important;
+}
+
+.lightradio__input:checked + .lightradio__text::after {
+  opacity: 1;
+}
+
+.lightradio__input:checked + .lightradio__text:hover::before, .lightradio__input:checked + .lightradio__text:active::before {
+  background-color: #00C0FF;
+}
+
+.lightradio__input:focus + .lightradio__text::before {
+  border-color: transparent;
+  box-shadow: 0 0 0 2px #00A3D9;
+}
+
+.lightradio__input:focus + .lightradio__text:hover::before {
+  box-shadow: 0 0 0 2px #00C0FF;
+}
+
+.lightradio__input:checked:focus + .lightradio__text::before {
+  border-color: transparent;
+  box-shadow: 0 0 0 2px #0086B3;
+}
+
+.lightradio__input:checked:focus + .lightradio__text:hover::before {
+  background-color: #00C0FF;
+  box-shadow: 0 0 0 2px #00A3D9;
+}
+
+.lightradio__input:disabled + .lightradio__text {
   opacity: .5;
   cursor: not-allowed;
   }

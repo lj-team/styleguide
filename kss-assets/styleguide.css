@@ -194,3 +194,7 @@
   background: #004359;
   box-shadow: 0 0 0 5px #004359;
 }
+
+.kss-disable-children-posabs > * {
+  position: relative !important;
+}

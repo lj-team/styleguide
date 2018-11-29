@@ -1,0 +1,395 @@
+/* >>> file start: stc/core/components/basepopup.css */
+/*
+Colors
+
+Weight: -3
+
+Colors:
+$white: #FFFFFF - white
+$black: #000000 - black
+$gray-pure-dark: #333333 - gray-pure-dark
+$gray-pure-darker: #5B5F61 - gray-pure-darker
+$gray-pure-middle: #7D7F7F - gray-pure-middle
+$gray-pure-light: #D8D8D8 - gray-pure-light
+$gray-pure-smoke: #F9FAFA - gray-pure-smoke
+$gray-stone-darker: #838B8E - gray-stone-darker
+$gray-stone-darker-2: #8C969B - gray-stone-darker-2
+$gray-stone-middle: #BEC3C6 - gray-stone-middle
+$gray-stone-middle-2: #D0D1D5 - gray-stone-middle-2
+$gray-stone-middle-3: #DfE0E4 - gray-stone-middle-3
+$gray-stone-lighter: #E5E6E9 - gray-stone-lighter
+$gray-stone-lighter-2: #EDEDF3 - gray-stone-lighter-2
+$gray-stone-smoke: #F6F6F9 - gray-stone-smoke
+$gray-blue-darker: #7A9199 - gray-blue-darker
+$gray-blue-darker-2: #829399 - gray-blue-darker-2
+$gray-blue-middle: #A8B3B9 - gray-blue-middle
+$gray-blue-middle-2: #ABBBC2 - gray-blue-middle-2
+$gray-blue-middle-3: #BDC8CD - gray-blue-middle-3
+$gray-blue-lighter: #C7D4DA - gray-blue-lighter
+$gray-blue-lighter-2: #C8D4DA - gray-blue-lighter-2
+$gray-blue-lighter-3: #D4DCE0 - gray-blue-lighter-3
+$gray-blue-light: #DCE1E4 - gray-blue-light
+$gray-blue-light-2: #DAE3E6 - gray-blue-light-2
+$gray-blue-lightest: #E5EBEE - gray-blue-lightest
+$gray-blue-smoke: #F5F7F8 - gray-blue-smoke
+$blue-deepest: #003040 - blue-deepest
+$blue-deeper: #00394D - blue-deeper
+$blue-deep: #004359 - blue-deep
+$blue-muted-darker: #007399 - blue-muted-darker
+$blue-muted: #3A87AD - blue-muted
+$blue-muted-smoke: #D9EDF7 - blue-muted-smoke
+$blue-base-dark: #0086B3 - blue-base-dark
+$blue-base-darker: #0996C5 - blue-base-darker
+$blue-base: #00A3D9 - blue-base
+$blue-base-lighter: #00C0FF - blue-base-lighter
+$blue-sky: #76DBEF - blue-sky
+$red-pure: #FF0000 - red-pure
+$red-pure-smoke: #FFEFEF - red-pure-smoke
+$red-base-darker: #CB1427 - red-base-darker
+$red-base: #EC3434 - red-base
+$red-base-lighter: #FF3838 - red-base-lighter
+$red-darksalmon: #FF4C44 - red-darksalmon
+$yellow-sand: #C09853 - yellow-sand
+$yellow-smoke: #FCF8E3 - yellow-smoke
+$green-grass: #468847 - green-grass
+$green-emerald-darker: #34AD66 - green-emerald-darker
+$green-emerald: #39BF71 - green-emerald
+$green-emerald-lighter: #4ECA82 - green-emerald-lighter
+$green-smoke: #DFF0D8 - green-smoke
+$brands-facebook: #3B5A97 - brands-facebook
+$brands-twitter: #1CA1F1 - brands-twitter
+$brands-vk: #4E76A1 - brands-vk
+$brands-ok: #F47421 - brands-ok
+
+Style guide: Core.colors
+*/
+
+/*
+Lightness steps
+
+midnight
+darkest
+dark
+darker
+middle
+lighter
+light
+lightest
+smoke
+*/
+
+/*
+Mixins
+
+Weight: -2
+
+Style guide: Core.mixins
+*/
+
+/*
+capsText
+
+Gray text with caps. Usually used in table headers & labels for inputs
+
+Style guide: Core.mixins.capsText
+*/
+
+/*
+visually-hidden
+
+Hides element for users & keep it available for screenreaders
+
+Style guide: Core.mixins.visually-hidden
+*/
+
+/*
+Base Popup
+
+Markup:
+<div class="kss-disable-children-posabs">
+<div class="basepopup {{modifier_class}}">
+  <div class="basepopup__group">
+    <div class="basepopup__title">Title</div>
+    <div class="basepopup__content">
+      <ul class="basepopup__list">
+        <li class="basepopup__item">
+          <label class="lightcheckbox">
+            <input class="lightcheckbox__input" type="checkbox" value="Hello">
+            <span class="lightcheckbox__text">Across darkened skies</span>
+          </label>
+        </li>
+        <li class="basepopup__item">
+          <label class="lightcheckbox">
+            <input class="lightcheckbox__input" type="checkbox" value="Good bye">
+            <span class="lightcheckbox__text">I travelled without a light</span>
+          </label>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="basepopup__group">
+    <div class="basepopup__content">
+      <div class="basepopup-selector">
+        <label class="basepopup-selector__label">
+          <input class="basepopup-selector__input" name="basepopup-selector-radio" type="radio" value="Hello" checked>
+          <span class="basepopup-selector__text">I sank in the well of my mind</span>
+        </label>
+        <label class="basepopup-selector__label">
+          <input class="basepopup-selector__input" name="basepopup-selector-radio" type="radio" value="Good bye">
+          <span class="basepopup-selector__text">Too deep, never to be found</span>
+        </label>
+      </div>
+    </div>
+  </div>
+  <button
+    class="basepopup__close"
+    type="button">
+    <span class="basepopup__close-text">Close popup</span>
+    <svg class="basepopup__close-icon svgicon" width="16" height="16"><use xlink:href="./kss-assets/flaticon.svg#flaticon--cross"/></svg>
+  </button>
+</div>
+
+.basepopup--arrow-top-left - arrow on top left
+.basepopup--arrow-top-center - arrow on top center
+.basepopup--arrow-top-right - arrow on top right
+.basepopup--arrow-right-top - arrow on right top
+.basepopup--arrow-right-center - arrow on right center
+.basepopup--arrow-right-bottom - arrow on right bottom
+.basepopup--arrow-bottom-left - arrow on bottom left
+.basepopup--arrow-bottom-center - arrow on bottom center
+.basepopup--arrow-bottom-right - arrow on bottom right
+.basepopup--arrow-left-top - arrow on left top
+.basepopup--arrow-left-center - arrow on left center
+.basepopup--arrow-left-bottom - arrow on left bottom
+
+Style guide: Core.basepopup
+*/
+
+.basepopup {
+  position: absolute;
+  min-width: 120px;
+  max-width: 300px;
+  padding: 13px 16px;
+  box-sizing: border-box;
+  border-radius: 6px;
+  background: #FFF;
+  border: 1px solid #D4DCE0;
+  box-shadow:
+    0 8px 12px 0 rgba(0, 0, 0, 0.12),
+    0 0 1px 0 rgba(0, 0, 0, 0.12);
+  font-size: 14px;
+  line-height: 22px;
+  color: #333333;
+  }
+
+.basepopup::before {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  box-sizing: border-box;
+  border: inherit;
+  border-right: none;
+  border-bottom: none;
+  background: inherit;
+}
+
+/* arrows */
+
+.basepopup--arrow-top-left::before, .basepopup--arrow-top-center::before, .basepopup--arrow-top-right::before {
+  content: "";
+  top: -5.65px;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.basepopup--arrow-bottom-left::before, .basepopup--arrow-bottom-center::before, .basepopup--arrow-bottom-right::before {
+  content: "";
+  bottom: -5.65px;
+  -webkit-transform: rotate(-135deg);
+      -ms-transform: rotate(-135deg);
+          transform: rotate(-135deg);
+}
+
+.basepopup--arrow-top-left::before,
+.basepopup--arrow-bottom-left::before {
+  left: 16px;
+  }
+
+.basepopup--arrow-top-center::before,
+.basepopup--arrow-bottom-center::before {
+  left: 50%;
+  margin-left: -5.65px;
+  }
+
+.basepopup--arrow-top-right::before,
+.basepopup--arrow-bottom-right::before {
+  right: 16px;
+  }
+
+.basepopup--arrow-left-top::before, .basepopup--arrow-left-center::before, .basepopup--arrow-left-bottom::before {
+  content: "";
+  left: -5.65px;
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.basepopup--arrow-right-top::before, .basepopup--arrow-right-center::before, .basepopup--arrow-right-bottom::before {
+  content: "";
+  right: -5.65px;
+  -webkit-transform: rotate(135deg);
+      -ms-transform: rotate(135deg);
+          transform: rotate(135deg);
+}
+
+.basepopup--arrow-left-top::before,
+.basepopup--arrow-right-top::before {
+  top: 16px;
+  }
+
+.basepopup--arrow-left-center::before,
+.basepopup--arrow-right-center::before {
+  top: 50%;
+  margin-top: -5.65px;
+  }
+
+.basepopup--arrow-left-bottom::before,
+.basepopup--arrow-right-bottom::before {
+  bottom: 16px;
+  }
+
+/* group */
+
+.basepopup__group {
+  margin-bottom: 14px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #D4DCE0;
+  }
+
+.basepopup__group:last-of-type {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.basepopup__title {
+  margin-bottom: 10px;
+  font-weight: bold;
+  line-height: 1.3;
+  }
+
+/* list */
+
+.basepopup__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  }
+
+.basepopup__item {
+  margin-bottom: 10px;
+  }
+
+.basepopup__item:last-child {
+  margin-bottom: 0;
+}
+
+/* popup selector */
+
+.basepopup-selector {
+  margin: -10px -16px -6px;
+  }
+
+.basepopup-selector__label {
+  display: block;
+  cursor: pointer;
+  }
+
+.basepopup-selector__input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+  }
+
+.basepopup-selector__text {
+  display: block;
+  padding: 5px 16px;
+  padding-left: 32px;
+  }
+
+.basepopup-selector__input:checked + .basepopup-selector__text::before {
+  content: "";
+  display: inline-block;
+  margin-left: -16px;
+  margin-right: 7px;
+  width: 9px;
+  height: 9px;
+  background-image: url("data:image/svg+xml,%3Csvg width='9' height='9' viewBox='0 0 9 9' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M.5 5.5l3 3 5-8' stroke='%23333' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+}
+
+.basepopup-selector__label:hover .basepopup-selector__text {
+  background: #F5F7F8;
+}
+
+.basepopup-selector__input:focus + .basepopup-selector__text {
+  background: #F5F7F8;
+}
+
+/* close button */
+
+.basepopup__close {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  padding: 6px;
+  background: none;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #ABBBC2;
+  }
+
+.basepopup__close:hover {
+  color: #C8D4DA;
+}
+
+.basepopup__close:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #C8D4DA inset;
+  color: #7A9199;
+}
+
+.basepopup__close-text {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+  }
+
+.basepopup__close-icon {
+  display: block;
+  width: 12px;
+  height: 12px;
+  fill: currentColor;
+}
+
+/* <<< file end: stc/core/components/basepopup.css */
+
+/*# sourceMappingURL=basepopup.css.map */

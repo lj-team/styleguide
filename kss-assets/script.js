@@ -44,4 +44,41 @@ USAGE:
       control.classList.toggle(toggleClass);
     });
   })
+
+  // ------------------------------
+
+  const closeParentClassControls = doc.querySelectorAll('.kss-close-parent');
+
+  if(!closeParentClassControls) {
+    return;
+  }
+
+  closeParentClassControls.forEach(control => {
+    const parent = control.parentNode;
+
+    control.addEventListener('click', (event) => {
+      event.preventDefault();
+      parent.hidden = true;
+    });
+  });
+
+  // ------------------------------
+
+  const toggleWithButtinsClassControls = doc.querySelectorAll('.kss-toggle-class-with-buttons');
+
+  if(!toggleWithButtinsClassControls) {
+    return;
+  }
+
+  toggleWithButtinsClassControls.forEach(controlsParent => {
+    const childrenContorls = controlsParent.querySelectorAll('button');
+    const toggleClass = controlsParent.dataset.toggleClass;
+
+    childrenContorls.forEach(control => {
+      control.addEventListener('click', (event) => {
+        event.preventDefault();
+        controlsParent.classList.toggle(toggleClass);
+      });
+    });
+  });
 })();

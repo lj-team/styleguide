@@ -23,6 +23,8 @@
 <link rel="stylesheet" href="kss-assets/headertabs.css">
 <link rel="stylesheet" href="kss-assets/sortcontrol.css">
 <link rel="stylesheet" href="kss-assets/switcher.css">
+<link rel="stylesheet" href="kss-assets/tumbler.css">
+<link rel="stylesheet" href="kss-assets/basepopup.css">
 <link rel="stylesheet" href="kss-assets/dropdown.css">
 <link rel="stylesheet" href="kss-assets/lightcontrols.css">
 
@@ -63,7 +65,7 @@
         <h2 class="kss-title kss-title--level-2">
           <a class="kss-title__permalink" href="#kssref-core-dropdown">
             <span class="kss-title__ref">
-              1.4
+              1.5
               <span class="kss-title__permalink-hash">
                   #Core.dropdown
               </span>
@@ -109,78 +111,186 @@
 
         <div class="kss-modifier__wrapper">
           <div class="kss-modifier__heading kss-style">
-            Example
+            Examples
           </div>
 
+            <div class="kss-modifier__default-name kss-style">
+              Default styling
+            </div>
 
           <div class="kss-modifier__example">
-            <div class="dropdown-box" >
+            <div
+  class="dropdown kss-toggle-class-with-buttons "
+  data-toggle-class="dropdown--opened">
   <button
-    class="dropdown-box__toggle kss-toggle kss-toggle-class"
-    type="button"
-    data-toggle-class="dropdown-box__toggle--open">
-    <span class="dropdown-box__toggle-text">Select something</span>
-    <svg class="svgicon flaticon flaticon--arrow-dropdown" width="16" height="16"><use xlink:href="./kss-assets/flaticon.svg#flaticon--arrow-dropdown"></svg>
+    class="lightbutton lightbutton--toggle kss-toggle-class"
+    data-toggle-class="lightbutton--toggle-open"
+    type="button">
+    Toggle button
+    <svg class="lightbutton__dropdown-icon svgicon" width="16" height="16"><use xlink:href="./kss-assets/flaticon.svg#flaticon--arrow-dropdown"/></svg>
   </button>
-  <div class="dropdown-box__container" hidden>
-    <div class="dropdown-box__title">Title</div>
-    <div class="dropdown-box__field-wrap">
-      <input class="dropdown-box__field" type="text" placeholder="I want to believe">
-      <div class="dropdown-box__field-holder">
-        <svg class="svgicon flaticon flaticon--search" width="16" height="16"><use xlink:href="./kss-assets/flaticon.svg#flaticon--search"></svg>
+  <div class="basepopup" hidden>
+    <div class="basepopup__group">
+      <div class="basepopup__title">Title</div>
+      <div class="basepopup__content">
+        <ul class="basepopup__list">
+          <li class="basepopup__item">
+            <label class="lightcheckbox">
+              <input class="lightcheckbox__input" type="checkbox" value="Hello">
+              <span class="lightcheckbox__text">Across darkened skies</span>
+            </label>
+          </li>
+          <li class="basepopup__item">
+            <label class="lightcheckbox">
+              <input class="lightcheckbox__input" type="checkbox" value="Good bye">
+              <span class="lightcheckbox__text">I travelled without a light</span>
+            </label>
+          </li>
+        </ul>
       </div>
     </div>
-    <div class="dropdown-box__checkbox-group">
-      <div class="dropdown-box__checkbox-wrap">
-        <input id="keyword.name" class="dropdown-box__checkbox" type="checkbox" value="keyword.name">
-        <label class="dropdown-box__checkbox-label" for="keyword.name">Don't disturb</label>
-        <label class="dropdown-box__checkbox-box" for="keyword.name"></label>
+    <div class="basepopup__group">
+      <div class="basepopup__content">
+        <div class="basepopup-selector">
+          <label class="basepopup-selector__label">
+            <input class="basepopup-selector__input" name="basepopup-selector-radio" type="radio" value="Hello" checked>
+            <span class="basepopup-selector__text">I sank in the well of my mind</span>
+          </label>
+          <label class="basepopup-selector__label">
+            <input class="basepopup-selector__input" name="basepopup-selector-radio" type="radio" value="Good bye">
+            <span class="basepopup-selector__text">Too deep, never to be found</span>
+          </label>
+        </div>
       </div>
-      <span>Nothing found</span>
     </div>
-    <div class="dropdown-box__footer">
-      <button type="button" class="dropdown-box__button dropdown-box__button--reset">Cancel</button>
-      <button type="button" class="dropdown-box__button">Add</button>
-    </div>
+    <button
+      class="basepopup__close"
+      type="button">
+      <span class="basepopup__close-text">Close popup</span>
+      <svg class="basepopup__close-icon svgicon" width="16" height="16"><use xlink:href="./kss-assets/flaticon.svg#flaticon--cross"/></svg>
+    </button>
   </div>
 </div>
             <div class="kss-modifier__example-footer"></div>
           </div>
 
+            <div class="kss-modifier__name kss-style">
+              .dropdown--hide-control
+            </div>
+            <div class="kss-modifier__description kss-style">
+              hide toggle button, popup will be placed above it
+            </div>
+            <div class="kss-modifier__example">
+              <div
+  class="dropdown kss-toggle-class-with-buttons dropdown--hide-control"
+  data-toggle-class="dropdown--opened">
+  <button
+    class="lightbutton lightbutton--toggle kss-toggle-class"
+    data-toggle-class="lightbutton--toggle-open"
+    type="button">
+    Toggle button
+    <svg class="lightbutton__dropdown-icon svgicon" width="16" height="16"><use xlink:href="./kss-assets/flaticon.svg#flaticon--arrow-dropdown"/></svg>
+  </button>
+  <div class="basepopup" hidden>
+    <div class="basepopup__group">
+      <div class="basepopup__title">Title</div>
+      <div class="basepopup__content">
+        <ul class="basepopup__list">
+          <li class="basepopup__item">
+            <label class="lightcheckbox">
+              <input class="lightcheckbox__input" type="checkbox" value="Hello">
+              <span class="lightcheckbox__text">Across darkened skies</span>
+            </label>
+          </li>
+          <li class="basepopup__item">
+            <label class="lightcheckbox">
+              <input class="lightcheckbox__input" type="checkbox" value="Good bye">
+              <span class="lightcheckbox__text">I travelled without a light</span>
+            </label>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="basepopup__group">
+      <div class="basepopup__content">
+        <div class="basepopup-selector">
+          <label class="basepopup-selector__label">
+            <input class="basepopup-selector__input" name="basepopup-selector-radio" type="radio" value="Hello" checked>
+            <span class="basepopup-selector__text">I sank in the well of my mind</span>
+          </label>
+          <label class="basepopup-selector__label">
+            <input class="basepopup-selector__input" name="basepopup-selector-radio" type="radio" value="Good bye">
+            <span class="basepopup-selector__text">Too deep, never to be found</span>
+          </label>
+        </div>
+      </div>
+    </div>
+    <button
+      class="basepopup__close"
+      type="button">
+      <span class="basepopup__close-text">Close popup</span>
+      <svg class="basepopup__close-icon svgicon" width="16" height="16"><use xlink:href="./kss-assets/flaticon.svg#flaticon--cross"/></svg>
+    </button>
+  </div>
+</div>
+              <div class="kss-modifier__example-footer"></div>
+            </div>
         </div>
 
           <details class="kss-markup kss-style">
             <summary>
                 Markup
             </summary>
-            <pre class="hljs"><code class="language-handlebars"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"dropdown-box"</span> &gt;</span>
+            <pre class="hljs"><code class="language-handlebars"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>
+  <span class="hljs-attr">class</span>=<span class="hljs-string">"dropdown kss-toggle-class-with-buttons [modifier class]"</span>
+  <span class="hljs-attr">data-toggle-class</span>=<span class="hljs-string">"dropdown--opened"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">button</span>
-    <span class="hljs-attr">class</span>=<span class="hljs-string">"dropdown-box__toggle kss-toggle kss-toggle-class"</span>
-    <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span>
-    <span class="hljs-attr">data-toggle-class</span>=<span class="hljs-string">"dropdown-box__toggle--open"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"dropdown-box__toggle-text"</span>&gt;</span>Select something<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"svgicon flaticon flaticon--arrow-dropdown"</span> <span class="hljs-attr">width</span>=<span class="hljs-string">"16"</span> <span class="hljs-attr">height</span>=<span class="hljs-string">"16"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">use</span> <span class="hljs-attr">xlink:href</span>=<span class="hljs-string">"./kss-assets/flaticon.svg#flaticon--arrow-dropdown"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
+    <span class="hljs-attr">class</span>=<span class="hljs-string">"lightbutton lightbutton--toggle kss-toggle-class"</span>
+    <span class="hljs-attr">data-toggle-class</span>=<span class="hljs-string">"lightbutton--toggle-open"</span>
+    <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span>&gt;</span>
+    Toggle button
+    <span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"lightbutton__dropdown-icon svgicon"</span> <span class="hljs-attr">width</span>=<span class="hljs-string">"16"</span> <span class="hljs-attr">height</span>=<span class="hljs-string">"16"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">use</span> <span class="hljs-attr">xlink:href</span>=<span class="hljs-string">"./kss-assets/flaticon.svg#flaticon--arrow-dropdown"</span>/&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"dropdown-box__container"</span> <span class="hljs-attr">hidden</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"dropdown-box__title"</span>&gt;</span>Title<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"dropdown-box__field-wrap"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"dropdown-box__field"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"I want to believe"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"dropdown-box__field-holder"</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"svgicon flaticon flaticon--search"</span> <span class="hljs-attr">width</span>=<span class="hljs-string">"16"</span> <span class="hljs-attr">height</span>=<span class="hljs-string">"16"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">use</span> <span class="hljs-attr">xlink:href</span>=<span class="hljs-string">"./kss-assets/flaticon.svg#flaticon--search"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"basepopup"</span> <span class="hljs-attr">hidden</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"basepopup__group"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"basepopup__title"</span>&gt;</span>Title<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"basepopup__content"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"basepopup__list"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"basepopup__item"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"lightcheckbox"</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"lightcheckbox__input"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"checkbox"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"Hello"</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"lightcheckbox__text"</span>&gt;</span>Across darkened skies<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"basepopup__item"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"lightcheckbox"</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"lightcheckbox__input"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"checkbox"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"Good bye"</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"lightcheckbox__text"</span>&gt;</span>I travelled without a light<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"dropdown-box__checkbox-group"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"dropdown-box__checkbox-wrap"</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"keyword.name"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"dropdown-box__checkbox"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"checkbox"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"keyword.name"</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"dropdown-box__checkbox-label"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"keyword.name"</span>&gt;</span>Don't disturb<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"dropdown-box__checkbox-box"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"keyword.name"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"basepopup__group"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"basepopup__content"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"basepopup-selector"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"basepopup-selector__label"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"basepopup-selector__input"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"basepopup-selector-radio"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"radio"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"Hello"</span> <span class="hljs-attr">checked</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"basepopup-selector__text"</span>&gt;</span>I sank in the well of my mind<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"basepopup-selector__label"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"basepopup-selector__input"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"basepopup-selector-radio"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"radio"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"Good bye"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"basepopup-selector__text"</span>&gt;</span>Too deep, never to be found<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>Nothing found<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"dropdown-box__footer"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"dropdown-box__button dropdown-box__button--reset"</span>&gt;</span>Cancel<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"dropdown-box__button"</span>&gt;</span>Add<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">button</span>
+      <span class="hljs-attr">class</span>=<span class="hljs-string">"basepopup__close"</span>
+      <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"basepopup__close-text"</span>&gt;</span>Close popup<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"basepopup__close-icon svgicon"</span> <span class="hljs-attr">width</span>=<span class="hljs-string">"16"</span> <span class="hljs-attr">height</span>=<span class="hljs-string">"16"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">use</span> <span class="hljs-attr">xlink:href</span>=<span class="hljs-string">"./kss-assets/flaticon.svg#flaticon--cross"</span>/&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span></code></pre>
           </details>

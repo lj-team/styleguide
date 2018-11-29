@@ -236,6 +236,7 @@ Must be removed after implementation of Framework! */
     border: 1px solid #F99;
     background-color: #FEE;
     background-image: url(/img/message-error.gif?v=4888);
+    background-image: -webkit-linear-gradient(top, #FED4D3 0%, #FFF2F0 100%);
     background-image: linear-gradient(to bottom, #FED4D3 0%, #FFF2F0 100%);
     }
 
@@ -1320,11 +1321,14 @@ HTML BODY.p-openpopup .b-popup.b-bubble-calendar .i-popup-close {
     right: 0 !important;
     bottom: 0 !important;
     left: 0 !important;
+    display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
     overflow-x: auto;
     overflow-y: auto;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
     -webkit-flex-direction: column;
         -ms-flex-direction: column;
             flex-direction: column;
@@ -1337,9 +1341,11 @@ HTML BODY.p-openpopup .b-popup.b-bubble-calendar .i-popup-close {
     background: #000;
     background: rgba(0, 0, 0, 0.6);
     box-shadow: none;
+    -webkit-box-pack: center;
     -webkit-justify-content: center;
         -ms-flex-pack: center;
             justify-content: center;
+    -webkit-box-align: center;
     -webkit-align-items: center;
         -ms-flex-align: center;
             align-items: center;
@@ -1371,11 +1377,14 @@ HTML BODY.p-openpopup .b-popup.b-bubble-calendar .i-popup-close {
             right: 0 !important;
             bottom: 0 !important;
             left: 0 !important;
+            display: -webkit-box;
             display: -webkit-flex;
             display: -ms-flexbox;
             display: flex;
             overflow-x: auto;
             overflow-y: auto;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
             -webkit-flex-direction: column;
                 -ms-flex-direction: column;
                     flex-direction: column;
@@ -1388,9 +1397,11 @@ HTML BODY.p-openpopup .b-popup.b-bubble-calendar .i-popup-close {
             background: #000;
             background: rgba(0, 0, 0, 0.6);
             box-shadow: none;
+            -webkit-box-pack: center;
             -webkit-justify-content: center;
                 -ms-flex-pack: center;
                     justify-content: center;
+            -webkit-box-align: center;
             -webkit-align-items: center;
                 -ms-flex-align: center;
                     align-items: center;
@@ -1946,11 +1957,13 @@ TD.help .b-helplink {
     padding: 0.4em;
     border-radius: 10px;
     background-color: #049;
+    background-image: -webkit-linear-gradient(top, #38D 0%, #038 100%);
     background-image: linear-gradient(to bottom, #38D 0%, #038 100%);
     }
 
 .b-ljbutton-submit.b-ljbutton-disabled {
     background-color: #AFAFAF;
+    background-image: -webkit-linear-gradient(top, #E8E8E8 0%, #AFAFAF 100%);
     background-image: linear-gradient(to bottom, #E8E8E8 0%, #AFAFAF 100%);
     }
 
@@ -1959,6 +1972,7 @@ TD.help .b-helplink {
     padding: 0.4em;
     border-radius: 10px;
     background-color: #970000;
+    background-image: -webkit-linear-gradient(top, #DA0000 0%, #970000 100%);
     background-image: linear-gradient(to bottom, #DA0000 0%, #970000 100%);
     }
 
@@ -2394,6 +2408,7 @@ HTML BODY .i-ljuser-userhead {
             image-rendering: -webkit-crisp-edges; /* Safari */
             image-rendering: crisp-edges; /* FF */
             -ms-interpolation-mode: nearest-neighbor;
+                image-rendering: -webkit-optimize-contrast;
                 image-rendering: -moz-crisp-edges;
                 image-rendering: pixelated;
             }
@@ -3118,17 +3133,22 @@ quote text
     background: none !important;
     box-shadow: none !important;
     -webkit-column-count: auto !important;
+       -moz-column-count: auto !important;
             column-count: auto !important;
     -webkit-column-gap: normal !important;
+       -moz-column-gap: normal !important;
             column-gap: normal !important;
     -webkit-columns: auto !important;
+       -moz-columns: auto !important;
             columns: auto !important;
     }
 
 .lj-like--v4 .b-flatrepost {
+    display: -webkit-box !important;
     display: -webkit-flex !important;
     display: -ms-flexbox !important;
     display: flex !important;
+    -webkit-box-align: center !important;
     -webkit-align-items: center !important;
         -ms-flex-align: center !important;
             align-items: center !important;
@@ -3164,9 +3184,11 @@ quote text
         }
 
 .lj-like--v4 .b-flatrepost-name {
+        display: -webkit-box !important;
         display: -webkit-flex !important;
         display: -ms-flexbox !important;
         display: flex !important;
+        -webkit-box-align: center !important;
         -webkit-align-items: center !important;
             -ms-flex-align: center !important;
                 align-items: center !important;
@@ -3604,10 +3626,13 @@ HTML#js BODY .lj-like--v4 .b-flatrepost-give .b-flatrepost-name {
     background: none !important;
     box-shadow: none !important;
     -webkit-column-count: auto !important;
+       -moz-column-count: auto !important;
             column-count: auto !important;
     -webkit-column-gap: normal !important;
+       -moz-column-gap: normal !important;
             column-gap: normal !important;
     -webkit-columns: auto !important;
+       -moz-columns: auto !important;
             columns: auto !important;
     }
 
@@ -3722,12 +3747,15 @@ HTML#js BODY .lj-like--v4 .b-flatsocial-openid:hover {
 /* name */
 
 .b-flatsocial-name {
+        display: -webkit-inline-box !important;
         display: -webkit-inline-flex !important;
         display: -ms-inline-flexbox !important;
         display: inline-flex !important;
+        -webkit-box-pack: center !important;
         -webkit-justify-content: center !important;
             -ms-flex-pack: center !important;
                 justify-content: center !important;
+        -webkit-box-align: center !important;
         -webkit-align-items: center !important;
             -ms-flex-align: center !important;
                 align-items: center !important;
@@ -4461,6 +4489,7 @@ Style guide: Flatstyle.svgpreloader
                             vertical-align: -5px;
                             border-radius: 3px;
                             background: #7A202C;
+                            background: -webkit-linear-gradient(top, #7A202C 0,#9D2738 1px,#9F021A 2px,#AD0720 3px,#DB0728 4px,#F0072B 5px,#840116 6px);
                             background: linear-gradient(to bottom, #7A202C 0,#9D2738 1px,#9F021A 2px,#AD0720 3px,#DB0728 4px,#F0072B 5px,#840116 6px);
                             font: 0/0 a;
                             }
@@ -4685,6 +4714,7 @@ IMG[src*="twemoji"] {
     }
 
 .mdsmain .yap-layout_block_poster .yap-layout__slider {
+    -webkit-transition: none !important;
     transition: none !important;
     -webkit-transform: none !important;
         -ms-transform: none !important;
@@ -5294,14 +5324,6 @@ IMG[src*="twemoji"] {
     margin-bottom: 36px;
     }
 
-.mdspost .ljsale[lj-sale-init*="adfox_native_footer"]:not(.ljsale--empty) {
-    max-width: 1256px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 26px;
-    margin-bottom: 26px;
-    }
-
 @media (max-width: 1000px) {
     .mdsmain .ljsale:not(.ljsale--empty) {
         margin-bottom: 20px;
@@ -5425,6 +5447,7 @@ IMG[src*="twemoji"] {
     -webkit-transform: none !important;
         -ms-transform: none !important;
             transform: none !important;
+    -webkit-transition: none !important;
     transition: none !important;
     opacity: 1 !important;
     }
@@ -5668,7 +5691,6 @@ IMG[src*="twemoji"] {
 
 .stories__screen--second .ljsale[lj-sale-init*="adfox_mobile_listing"]:not(.ljsale--empty),
 .stories__screen--third .ljsale[lj-sale-init*="adfox_mobile_listing"]:not(.ljsale--empty) {
-    margin: 0 -16px;
     }
 
 .stories__screen--second .ljsale[lj-sale-init*="adfox_mobile_listing"]:not(.ljsale--empty) .allbanners-close,

@@ -82,384 +82,81 @@ smoke
 Dropdown
 
 Markup:
-<div class="dropdown-box" >
+<div
+  class="dropdown kss-toggle-class-with-buttons {{modifier_class}}"
+  data-toggle-class="dropdown--opened">
   <button
-    class="dropdown-box__toggle kss-toggle kss-toggle-class"
-    type="button"
-    data-toggle-class="dropdown-box__toggle--open">
-    <span class="dropdown-box__toggle-text">Select something</span>
-    <svg class="svgicon flaticon flaticon--arrow-dropdown" width="16" height="16"><use xlink:href="./kss-assets/flaticon.svg#flaticon--arrow-dropdown"></svg>
+    class="lightbutton lightbutton--toggle kss-toggle-class"
+    data-toggle-class="lightbutton--toggle-open"
+    type="button">
+    Toggle button
+    <svg class="lightbutton__dropdown-icon svgicon" width="16" height="16"><use xlink:href="./kss-assets/flaticon.svg#flaticon--arrow-dropdown"/></svg>
   </button>
-  <div class="dropdown-box__container" hidden>
-    <div class="dropdown-box__title">Title</div>
-    <div class="dropdown-box__field-wrap">
-      <input class="dropdown-box__field" type="text" placeholder="I want to believe">
-      <div class="dropdown-box__field-holder">
-        <svg class="svgicon flaticon flaticon--search" width="16" height="16"><use xlink:href="./kss-assets/flaticon.svg#flaticon--search"></svg>
+  <div class="basepopup" hidden>
+    <div class="basepopup__group">
+      <div class="basepopup__title">Title</div>
+      <div class="basepopup__content">
+        <ul class="basepopup__list">
+          <li class="basepopup__item">
+            <label class="lightcheckbox">
+              <input class="lightcheckbox__input" type="checkbox" value="Hello">
+              <span class="lightcheckbox__text">Across darkened skies</span>
+            </label>
+          </li>
+          <li class="basepopup__item">
+            <label class="lightcheckbox">
+              <input class="lightcheckbox__input" type="checkbox" value="Good bye">
+              <span class="lightcheckbox__text">I travelled without a light</span>
+            </label>
+          </li>
+        </ul>
       </div>
     </div>
-    <div class="dropdown-box__checkbox-group">
-      <div class="dropdown-box__checkbox-wrap">
-        <input id="keyword.name" class="dropdown-box__checkbox" type="checkbox" value="keyword.name">
-        <label class="dropdown-box__checkbox-label" for="keyword.name">Don't disturb</label>
-        <label class="dropdown-box__checkbox-box" for="keyword.name"></label>
+    <div class="basepopup__group">
+      <div class="basepopup__content">
+        <div class="basepopup-selector">
+          <label class="basepopup-selector__label">
+            <input class="basepopup-selector__input" name="basepopup-selector-radio" type="radio" value="Hello" checked>
+            <span class="basepopup-selector__text">I sank in the well of my mind</span>
+          </label>
+          <label class="basepopup-selector__label">
+            <input class="basepopup-selector__input" name="basepopup-selector-radio" type="radio" value="Good bye">
+            <span class="basepopup-selector__text">Too deep, never to be found</span>
+          </label>
+        </div>
       </div>
-      <span>Nothing found</span>
     </div>
-    <div class="dropdown-box__footer">
-      <button type="button" class="dropdown-box__button dropdown-box__button--reset">Cancel</button>
-      <button type="button" class="dropdown-box__button">Add</button>
-    </div>
+    <button
+      class="basepopup__close"
+      type="button">
+      <span class="basepopup__close-text">Close popup</span>
+      <svg class="basepopup__close-icon svgicon" width="16" height="16"><use xlink:href="./kss-assets/flaticon.svg#flaticon--cross"/></svg>
+    </button>
   </div>
 </div>
+
+.dropdown--hide-control - hide toggle button, popup will be placed above it
 
 Style guide: Core.dropdown
 */
 
-.dropdown-box {
+.dropdown {
   position: relative;
-  z-index: 10;
-  margin-top: 16px;
-  margin-bottom: 4px;
   }
 
-.dropdown-box__toggle {
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  height: 32px;
-  margin-right: 12px;
-  padding: 0 30px 0 12px;
-  box-sizing: border-box;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  background-color: #FFFFFF;
-  border: 1px solid #D4DCE0;
-  border-radius: 4px;
-  outline: 0;
-  text-decoration: none;
-  cursor: pointer;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  transition: border-color .2s, background-color .2s, color .2s;
-}
-
-.dropdown-box__toggle .svgicon {
-  position: absolute;
-  right: 11px;
-  width: 10px;
-  height: 6px;
-  fill: #333333;
-  transition: -webkit-transform 0.2s;
-  transition: transform 0.2s;
-  transition: transform 0.2s, -webkit-transform 0.2s;
-}
-
-.dropdown-box__toggle:hover {
-  border-color: #BDC8CD;
-}
-
-.dropdown-box__toggle:focus {
-  border-color: #00A3D9;
-}
-
-.dropdown-box__toggle:active {
-  background-color: #F9FAFA;
-}
-
-.dropdown-box__toggle--open .svgicon {
-  -webkit-transform: rotate(180deg);
-      -ms-transform: rotate(180deg);
-          transform: rotate(180deg);
-}
-
-.dropdown-box__toggle-text {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  font-size: 14px;
-  line-height: 16px;
-  letter-spacing: -0.2px;
-  color: #333333;
-}
-
-.dropdown-box__reset {
-  margin: 8px 0;
-  padding: 0;
-  background: none;
-  border: none;
-  font-size: 14px;
-  line-height: 16px;
-  cursor: pointer;
-  color: #00A3D9;
-}
-
-.dropdown-box__reset:hover {
-  color: #00C0FF;
-}
-
-.dropdown-box__reset:focus {
-  outline: none;
-  color: #00C0FF;
-}
-
-.dropdown-box__reset:active {
-  color: #0996C5;
-}
-
-.dropdown-box__container {
-  display: inline-block;
-  position: absolute;
+.dropdown--opened .basepopup {
+  display: block !important;
   z-index: 10;
-  top: calc(100% + 4px);
-  left: 0;
-  min-width: 272px;
-  padding: 7px 0;
-  box-sizing: border-box;
-  border: 1px solid #D4DCE0;
-  border-radius: 6px;
-  background-color: #FFFFFF;
-  box-shadow: 0 0 1px rgba(0, 0, 0, .12), 0 8px 12px rgba(0, 0, 0, .12);
-  text-align: left;
-  color: #333333;
+  margin-top: 2px;
 }
 
-.dropdown-box__container--hidden {
-  display: none;
+.dropdown--hide-control.dropdown--opened .lightbutton {
+  visibility: hidden;
 }
 
-.dropdown-box__title {
-  display: block;
-  position: relative;
-  width: auto;
-  margin: 0 15px 0;
-  padding: 6px 40px 6px 0;
-  box-sizing: border-box;
-  font-size: 14px;
-  line-height: 20px;
-  font-weight: 700;
-  letter-spacing: 0.1px;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-}
-
-.dropdown-box__field-wrap {
-  position: relative;
-  margin: 7px 15px 12px;
-}
-
-.dropdown-box__field {
-  width: 100%;
-  height: 32px;
-  padding: 0 8px;
-  padding-left: 40px;
-  box-sizing: border-box;
-  background-color: #FFFFFF;
-  border-radius: 4px;
-  border: 1px solid #D4DCE0;
-  font-weight: 400;
-  font-family: inherit;
-  font-size: 14px;
-  line-height: 22px;
-  color: #333333;
-  transition: border-color .2s;
-}
-
-.dropdown-box__field:focus {
-  outline: 0;
-  border-color: #00A3D9;
-}
-
-.dropdown-box__field-holder {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  position: absolute;
+.dropdown--hide-control.dropdown--opened .basepopup {
   top: 0;
-  left: 4px;
-  width: 32px;
-  height: 32px;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  pointer-events: none;
-}
-
-.dropdown-box__field-holder .svgicon {
-  width: auto;
-  height: 16px;
-  overflow: hidden;
-  fill: #C8D4DA;
-}
-
-.dropdown-box__checkbox-group {
-  max-height: 208px;
-  min-height: 100px;
-  overflow: auto;
-  padding: 0 15px 8px;
-}
-
-.dropdown-box__checkbox-wrap {
-  display: block;
-  position: relative;
-  padding: 6px 0 6px 24px;
-  box-sizing: border-box;
-  font-size: 14px;
-  line-height: 20px;
-  font-weight: 400;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-}
-
-.dropdown-box__checkbox {
-  position: absolute;
-  left: -9999px;
-  width: 1px;
-  height: 1px;
-}
-
-.dropdown-box__checkbox:checked ~ .dropdown-box__checkbox-box {
-  background-color: #00A3D9;
-  border-color: transparent !important;
-}
-
-.dropdown-box__checkbox:focus ~ .dropdown-box__checkbox-box {
-  border-color: #00A3D9;
-}
-
-.dropdown-box__checkbox:checked:focus ~ .dropdown-box__checkbox-box {
-  background-color: #00C0FF;
-}
-
-.dropdown-box__checkbox:checked ~ .dropdown-box__checkbox-box::after {
   margin-top: 0;
-  opacity: 1;
-}
-
-.dropdown-box__checkbox-label {
-  display: block;
-  margin-right: 8px;
-  word-break: break-word;
-  color: #333333;
-  cursor: pointer;
-}
-
-.dropdown-box__checkbox-box {
-  display: block;
-  position: absolute;
-  top: 8px;
-  width: 16px;
-  height: 16px;
-  margin-left: -24px;
-  box-sizing: border-box;
-  background-color: #FFFFFF;
-  border: 1px solid #D4DCE0;
-  border-radius: 2px;
-  cursor: pointer;
-  transition: border-width .15s, border-color .15s, background-color .15s;
-}
-
-.dropdown-box__checkbox-box::before,
-    .dropdown-box__checkbox-box::after {
-  content: "";
-  display: block;
-  transition: opacity .15s, margin .15s;
-}
-
-.dropdown-box__checkbox-box::before {
-  height: 2px;
-  margin: 6px 7px;
-  opacity: 0;
-  border-radius: 1px;
-  background-color: #FFFFFF;
-}
-
-.dropdown-box__checkbox-box::after {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  margin-top: -7px;
-  opacity: 0;
-  background: 50% no-repeat;
-  background-size: 10px;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 10 10'%3E%3Cpath d='M1 6l3 3 5-8' stroke-width='2' stroke='%23FFF' fill='none' fill-rule='evenodd' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
-}
-
-.dropdown-box__checkbox-box:hover {
-  background-color: #FFFFFF;
-  border-color: #BDC8CD;
-}
-
-.dropdown-box__checkbox-box:active {
-  background-color: #F9FAFA;
-  border-color: #BDC8CD;
-}
-
-.dropdown-box__footer {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-justify-content: flex-end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  border-top: 1px solid #D4DCE0;
-  padding: 16px 15px 8px;
-}
-
-.dropdown-box__button {
-  height: 32px;
-  margin-left: 8px;
-  padding: 0 14px 2px;
-  background: none;
-  border: 1px solid #D4DCE0;
-  border-radius: 4px;
-  font-size: 14px;
-  font-weight: 700;
-  color: #00A3D9;
-  cursor: pointer;
-  transition: border-color .2s, background-color .2s, color .2s;
-}
-
-.dropdown-box__button:hover {
-  border-color: #BDC8CD;
-}
-
-.dropdown-box__button:focus {
-  outline: none;
-  border-color: #00A3D9;
-}
-
-.dropdown-box__button:active {
-  background-color: #F9FAFA;
-}
-
-.dropdown-box__button--reset {
-  background-color: transparent;
-  border: 1px solid transparent;
-  font-weight: 400;
-  color: #333333;
 }
 
 /* <<< file end: stc/core/components/dropdown.css */
