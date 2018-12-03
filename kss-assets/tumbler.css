@@ -143,14 +143,12 @@ Style guide: Core.tumbler
 
 
 .tumbler {
-  display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
   position: relative;
   margin: 0;
   padding: 0;
-  -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -177,15 +175,12 @@ Style guide: Core.tumbler
 
 .tumbler__control {
   position: relative;
-  display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
   -webkit-justify-content: flex-start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  -webkit-box-align: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
@@ -196,7 +191,6 @@ Style guide: Core.tumbler
   box-sizing: border-box;
   border-radius: 12px;
   background: #ABBBC2;
-  -webkit-transition: background .05s;
   transition: background .05s;
   }
 
@@ -243,7 +237,6 @@ Style guide: Core.tumbler
 
 
 .tumbler__checkbox:checked ~ .tumbler__control {
-  -webkit-box-pack: end;
   -webkit-justify-content: flex-end;
       -ms-flex-pack: end;
           justify-content: flex-end;

@@ -236,7 +236,6 @@ Must be removed after implementation of Framework! */
     border: 1px solid #F99;
     background-color: #FEE;
     background-image: url(/img/message-error.gif?v=4888);
-    background-image: -webkit-linear-gradient(top, #FED4D3 0%, #FFF2F0 100%);
     background-image: linear-gradient(to bottom, #FED4D3 0%, #FFF2F0 100%);
     }
 
@@ -1321,14 +1320,11 @@ HTML BODY.p-openpopup .b-popup.b-bubble-calendar .i-popup-close {
     right: 0 !important;
     bottom: 0 !important;
     left: 0 !important;
-    display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
     overflow-x: auto;
     overflow-y: auto;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
     -webkit-flex-direction: column;
         -ms-flex-direction: column;
             flex-direction: column;
@@ -1341,11 +1337,9 @@ HTML BODY.p-openpopup .b-popup.b-bubble-calendar .i-popup-close {
     background: #000;
     background: rgba(0, 0, 0, 0.6);
     box-shadow: none;
-    -webkit-box-pack: center;
     -webkit-justify-content: center;
         -ms-flex-pack: center;
             justify-content: center;
-    -webkit-box-align: center;
     -webkit-align-items: center;
         -ms-flex-align: center;
             align-items: center;
@@ -1377,14 +1371,11 @@ HTML BODY.p-openpopup .b-popup.b-bubble-calendar .i-popup-close {
             right: 0 !important;
             bottom: 0 !important;
             left: 0 !important;
-            display: -webkit-box;
             display: -webkit-flex;
             display: -ms-flexbox;
             display: flex;
             overflow-x: auto;
             overflow-y: auto;
-            -webkit-box-orient: vertical;
-            -webkit-box-direction: normal;
             -webkit-flex-direction: column;
                 -ms-flex-direction: column;
                     flex-direction: column;
@@ -1397,11 +1388,9 @@ HTML BODY.p-openpopup .b-popup.b-bubble-calendar .i-popup-close {
             background: #000;
             background: rgba(0, 0, 0, 0.6);
             box-shadow: none;
-            -webkit-box-pack: center;
             -webkit-justify-content: center;
                 -ms-flex-pack: center;
                     justify-content: center;
-            -webkit-box-align: center;
             -webkit-align-items: center;
                 -ms-flex-align: center;
                     align-items: center;
@@ -1957,13 +1946,11 @@ TD.help .b-helplink {
     padding: 0.4em;
     border-radius: 10px;
     background-color: #049;
-    background-image: -webkit-linear-gradient(top, #38D 0%, #038 100%);
     background-image: linear-gradient(to bottom, #38D 0%, #038 100%);
     }
 
 .b-ljbutton-submit.b-ljbutton-disabled {
     background-color: #AFAFAF;
-    background-image: -webkit-linear-gradient(top, #E8E8E8 0%, #AFAFAF 100%);
     background-image: linear-gradient(to bottom, #E8E8E8 0%, #AFAFAF 100%);
     }
 
@@ -1972,7 +1959,6 @@ TD.help .b-helplink {
     padding: 0.4em;
     border-radius: 10px;
     background-color: #970000;
-    background-image: -webkit-linear-gradient(top, #DA0000 0%, #970000 100%);
     background-image: linear-gradient(to bottom, #DA0000 0%, #970000 100%);
     }
 
@@ -2408,7 +2394,6 @@ HTML BODY .i-ljuser-userhead {
             image-rendering: -webkit-crisp-edges; /* Safari */
             image-rendering: crisp-edges; /* FF */
             -ms-interpolation-mode: nearest-neighbor;
-                image-rendering: -webkit-optimize-contrast;
                 image-rendering: -moz-crisp-edges;
                 image-rendering: pixelated;
             }
@@ -3133,22 +3118,17 @@ quote text
     background: none !important;
     box-shadow: none !important;
     -webkit-column-count: auto !important;
-       -moz-column-count: auto !important;
             column-count: auto !important;
     -webkit-column-gap: normal !important;
-       -moz-column-gap: normal !important;
             column-gap: normal !important;
     -webkit-columns: auto !important;
-       -moz-columns: auto !important;
             columns: auto !important;
     }
 
 .lj-like--v4 .b-flatrepost {
-    display: -webkit-box !important;
     display: -webkit-flex !important;
     display: -ms-flexbox !important;
     display: flex !important;
-    -webkit-box-align: center !important;
     -webkit-align-items: center !important;
         -ms-flex-align: center !important;
             align-items: center !important;
@@ -3184,11 +3164,9 @@ quote text
         }
 
 .lj-like--v4 .b-flatrepost-name {
-        display: -webkit-box !important;
         display: -webkit-flex !important;
         display: -ms-flexbox !important;
         display: flex !important;
-        -webkit-box-align: center !important;
         -webkit-align-items: center !important;
             -ms-flex-align: center !important;
                 align-items: center !important;
@@ -3626,13 +3604,10 @@ HTML#js BODY .lj-like--v4 .b-flatrepost-give .b-flatrepost-name {
     background: none !important;
     box-shadow: none !important;
     -webkit-column-count: auto !important;
-       -moz-column-count: auto !important;
             column-count: auto !important;
     -webkit-column-gap: normal !important;
-       -moz-column-gap: normal !important;
             column-gap: normal !important;
     -webkit-columns: auto !important;
-       -moz-columns: auto !important;
             columns: auto !important;
     }
 
@@ -3747,15 +3722,12 @@ HTML#js BODY .lj-like--v4 .b-flatsocial-openid:hover {
 /* name */
 
 .b-flatsocial-name {
-        display: -webkit-inline-box !important;
         display: -webkit-inline-flex !important;
         display: -ms-inline-flexbox !important;
         display: inline-flex !important;
-        -webkit-box-pack: center !important;
         -webkit-justify-content: center !important;
             -ms-flex-pack: center !important;
                 justify-content: center !important;
-        -webkit-box-align: center !important;
         -webkit-align-items: center !important;
             -ms-flex-align: center !important;
                 align-items: center !important;
@@ -4235,11 +4207,19 @@ Markup:
         <div class="svgpreloader-wrapper svgpreloader-16 {{modifier_class}}"><svg class="svgpreloader svgpreloader-svg svgpreloader-16 {{modifier_class}}" viewBox="0 0 31 31" version="1.1" xmlns="http://www.w3.org/2000/svg"><g fill-rule="evenodd"><path d="M15.5,31 C24.0604136,31 31,24.0604136 31,15.5 C31,6.93958638 24.0604136,0 15.5,0 C6.93958638,0 0,6.93958638 0,15.5 C0,24.0604136 6.93958638,31 15.5,31 Z M15.5,24 C20.1944204,24 24,20.1944204 24,15.5 C24,10.8055796 20.1944204,7 15.5,7 C10.8055796,7 7,10.8055796 7,15.5 C7,20.1944204 10.8055796,24 15.5,24 Z" fill="#00AFEA"></path><path d="M15.7960584,7.00505942 L15.8509795,0.00389541322 C20.1020367,0.0983450811 23.9309467,1.90428116 26.675877,4.7598713 L26.675877,4.7598713 L21.7412314,9.72958246 C20.2508535,8.11838542 18.1443589,7.08544079 15.7960584,7.00505942 Z" fill="#346B7C"></path></g></svg></div>
     </li>
     <li>
+        Single SVG Tag Light
+        <div class="svgpreloader-wrapper svgpreloader-16 {{modifier_class}}"><svg class="svgpreloader svgpreloader-svg svgpreloader-16 {{modifier_class}}" viewBox="0 0 31 31" version="1.1" xmlns="http://www.w3.org/2000/svg"><g fill-rule="evenodd"><path d="M15.5,31 C24.0604136,31 31,24.0604136 31,15.5 C31,6.93958638 24.0604136,0 15.5,0 C6.93958638,0 0,6.93958638 0,15.5 C0,24.0604136 6.93958638,31 15.5,31 Z M15.5,24 C20.1944204,24 24,20.1944204 24,15.5 C24,10.8055796 20.1944204,7 15.5,7 C10.8055796,7 7,10.8055796 7,15.5 C7,20.1944204 10.8055796,24 15.5,24 Z" fill="#7A9199"></path><path d="M15.7960584,7.00505942 L15.8509795,0.00389541322 C20.1020367,0.0983450811 23.9309467,1.90428116 26.675877,4.7598713 L26.675877,4.7598713 L21.7412314,9.72958246 C20.2508535,8.11838542 18.1443589,7.08544079 15.7960584,7.00505942 Z" fill="#DAE3E6"></path></g></svg></div>
+    </li>
+    <li>
         Single Tag<br/>
         <div class="svgpreloader svgpreloader-tag {{modifier_class}}"></div>
     </li>
     <li>
-        Pseudo-Element
+        Single Tag Light<br/>
+        <div class="svgpreloader svgpreloader-tag svgpreloader-light {{modifier_class}}"></div>
+    </li>
+    <li>
+        Pseudo-Element<br/>
         <div class="example svgpreloader svgpreloader-16 svgpreloader-pseudo {{modifier_class}}"></div>
     </li>
 </ol>
@@ -4317,6 +4297,11 @@ Style guide: Flatstyle.svgpreloader
     background-position: 50% 50%;
     background-image: url(/img/preloader/preloader-disc-blue-white-16.gif?v=39502);
     background-image: url(data:image/svg+xml,%3Csvg%20class%3D%22svgpreloader%20svgpreloader-svg%22%20viewBox%3D%220%200%2031%2031%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cg%20fill-rule%3D%22evenodd%22%3E%3Cpath%20d%3D%22M15.5%2C31%20C24.0604136%2C31%2031%2C24.0604136%2031%2C15.5%20C31%2C6.93958638%2024.0604136%2C0%2015.5%2C0%20C6.93958638%2C0%200%2C6.93958638%200%2C15.5%20C0%2C24.0604136%206.93958638%2C31%2015.5%2C31%20Z%20M15.5%2C24%20C20.1944204%2C24%2024%2C20.1944204%2024%2C15.5%20C24%2C10.8055796%2020.1944204%2C7%2015.5%2C7%20C10.8055796%2C7%207%2C10.8055796%207%2C15.5%20C7%2C20.1944204%2010.8055796%2C24%2015.5%2C24%20Z%22%20fill%3D%22%2300AFEA%22%3E%3C%2Fpath%3E%3Cpath%20d%3D%22M15.7960584%2C7.00505942%20L15.8509795%2C0.00389541322%20C20.1020367%2C0.0983450811%2023.9309467%2C1.90428116%2026.675877%2C4.7598713%20L26.675877%2C4.7598713%20L21.7412314%2C9.72958246%20C20.2508535%2C8.11838542%2018.1443589%2C7.08544079%2015.7960584%2C7.00505942%20Z%22%20fill%3D%22%23346B7C%22%3E%3C%2Fpath%3E%3C%2Fg%3E%3C%2Fsvg%3E), none;
+    }
+
+.svgpreloader-light,
+.svgpreloader-light:after {
+    background-image: url(data:image/svg+xml,%3Csvg%20class%3D%22svgpreloader%20svgpreloader-svg%22%20viewBox%3D%220%200%2031%2031%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cg%20fill-rule%3D%22evenodd%22%3E%3Cpath%20d%3D%22M15.5%2C31%20C24.0604136%2C31%2031%2C24.0604136%2031%2C15.5%20C31%2C6.93958638%2024.0604136%2C0%2015.5%2C0%20C6.93958638%2C0%200%2C6.93958638%200%2C15.5%20C0%2C24.0604136%206.93958638%2C31%2015.5%2C31%20Z%20M15.5%2C24%20C20.1944204%2C24%2024%2C20.1944204%2024%2C15.5%20C24%2C10.8055796%2020.1944204%2C7%2015.5%2C7%20C10.8055796%2C7%207%2C10.8055796%207%2C15.5%20C7%2C20.1944204%2010.8055796%2C24%2015.5%2C24%20Z%22%20fill%3D%22%237A9199%22%3E%3C%2Fpath%3E%3Cpath%20d%3D%22M15.7960584%2C7.00505942%20L15.8509795%2C0.00389541322%20C20.1020367%2C0.0983450811%2023.9309467%2C1.90428116%2026.675877%2C4.7598713%20L26.675877%2C4.7598713%20L21.7412314%2C9.72958246%20C20.2508535%2C8.11838542%2018.1443589%2C7.08544079%2015.7960584%2C7.00505942%20Z%22%20fill%3D%22%23DAE3E6%22%3E%3C%2Fpath%3E%3C%2Fg%3E%3C%2Fsvg%3E), none;
     }
 
 /* 16x16 */
@@ -4489,7 +4474,6 @@ Style guide: Flatstyle.svgpreloader
                             vertical-align: -5px;
                             border-radius: 3px;
                             background: #7A202C;
-                            background: -webkit-linear-gradient(top, #7A202C 0,#9D2738 1px,#9F021A 2px,#AD0720 3px,#DB0728 4px,#F0072B 5px,#840116 6px);
                             background: linear-gradient(to bottom, #7A202C 0,#9D2738 1px,#9F021A 2px,#AD0720 3px,#DB0728 4px,#F0072B 5px,#840116 6px);
                             font: 0/0 a;
                             }
@@ -4714,7 +4698,6 @@ IMG[src*="twemoji"] {
     }
 
 .mdsmain .yap-layout_block_poster .yap-layout__slider {
-    -webkit-transition: none !important;
     transition: none !important;
     -webkit-transform: none !important;
         -ms-transform: none !important;
@@ -5447,7 +5430,6 @@ IMG[src*="twemoji"] {
     -webkit-transform: none !important;
         -ms-transform: none !important;
             transform: none !important;
-    -webkit-transition: none !important;
     transition: none !important;
     opacity: 1 !important;
     }

@@ -176,7 +176,6 @@ Style guide: Core.switcher
   margin: 0;
   padding: 0;
   list-style-type: none;
-  display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -215,7 +214,6 @@ Style guide: Core.switcher
 
 .switcher__label-text {
   position: relative;
-  display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
