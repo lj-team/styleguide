@@ -1426,7 +1426,6 @@ SUP.i-new {
 --------------------------------------*/
 .b-dropover-container {
     position: relative;
-    z-index: 3;
     }
 .b-dropover {
         position: relative;
@@ -4217,7 +4216,19 @@ BODY .layers-create-btn {
     height: 8px;
     fill:  #FFF;
 }
-
+.visuallyhidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    -webkit-clip-path: inset(100%);
+            clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+    }
 
 /* <<< file end: stc/lj-basestrap-app.css */
 
