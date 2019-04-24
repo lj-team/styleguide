@@ -278,6 +278,7 @@ H2.solid-blue {
     border-radius: 5px;
     cursor: pointer;
     background-color: #6ED1FF;
+    background-image: -webkit-linear-gradient(top, #6ED1FF 0%, #1BB5FD 3%, #158FC8 100%);
     background-image: linear-gradient(to bottom, #6ED1FF 0%, #1BB5FD 3%, #158FC8 100%);
     text-transform: uppercase;
     text-shadow: 1px 1px 1px #0B6294;
@@ -289,6 +290,7 @@ H2.solid-blue {
 .b-btn-disabled {
     border-color: #C0C0C0;
     background-color: #EAEAEA;
+    background-image: -webkit-linear-gradient(top, #EAEAEA 0%, #CFCFCF 3%, #C5C5C5 100%);
     background-image: linear-gradient(to bottom, #EAEAEA 0%, #CFCFCF 3%, #C5C5C5 100%);
     text-shadow: 1px 1px 1px #999;
     }
@@ -298,6 +300,7 @@ H2.solid-blue {
     padding: 10px 6px 7px;
     border-color: #025266;
     background-color: #1495A7;
+    background-image: -webkit-linear-gradient(top, #6ED6E5 0%, #1BBBD2 14%, #1BB2C8 37%, #1BA4B8 66%, #1B9EB1 83%, #1495A7 100%);
     background-image: linear-gradient(to bottom, #6ED6E5 0%, #1BBBD2 14%, #1BB2C8 37%, #1BA4B8 66%, #1B9EB1 83%, #1495A7 100%);
     text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.3);
     }
@@ -579,6 +582,7 @@ SUP.i-new {
     margin: 0;
     padding: 1.5em 0;
     background-color: #B4DDFE;
+    background-image: -webkit-linear-gradient(top, #C2EBFF 0%, #B4DDFE 100%);
     background-image: linear-gradient(to bottom, #C2EBFF 0%, #B4DDFE 100%);
     box-shadow: 0 -2px 7px 0 rgba(0, 43, 96, 0.5);
     }
@@ -641,6 +645,7 @@ SUP.i-new {
 
 .b-massaction-problems {
     background-color: #FFEFEF;
+    background-image: -webkit-linear-gradient(top, #FFF6F6 0%, #FFEFEF 100%);
     background-image: linear-gradient(to bottom, #FFF6F6 0%, #FFEFEF 100%);
     }
 
@@ -824,6 +829,7 @@ SUP.i-new {
     padding: 8px 12px;
     border-radius: 5px;
     background-color: #B5DEFE;
+    background-image: -webkit-linear-gradient(top, #C2EBFF 0%, #B5DEFE 100%);
     background-image: linear-gradient(to bottom, #C2EBFF 0%, #B5DEFE 100%);
     list-style: none;
     text-align: center;
@@ -869,6 +875,7 @@ SUP.i-new {
     .b-pager-page A:active {
         border-radius: 5px;
         background-color: #FFF;
+        background-image: -webkit-linear-gradient(top, #FFF 0%, #D9F2FF 100%);
         background-image: linear-gradient(to bottom, #FFF 0%, #D9F2FF 100%);
         box-shadow: 0 1px 1px #80A5B8;
         }
@@ -876,6 +883,7 @@ SUP.i-new {
 .b-pager-page-active {
     border-radius: 5px;
     background-color: #369AFF;
+    background-image: -webkit-linear-gradient(top, #3863A0 0%, #369AFF 100%);
     background-image: linear-gradient(to bottom, #3863A0 0%, #369AFF 100%);
     box-shadow: inset 0 0 6px #2B4C7B;
     color: #FFF;
@@ -981,6 +989,7 @@ SUP.i-new {
         border-bottom-right-radius: 9px;
         border-bottom-left-radius: 9px;
         background-color: #FAFAFA;
+        background-image: -webkit-linear-gradient(top, #FAFCFE 0%, #E2E3E7 25%, #FAFAFA 100%);
         background-image: linear-gradient(to bottom, #FAFCFE 0%, #E2E3E7 25%, #FAFAFA 100%);
         box-shadow: 0 10px 15px rgba(53, 99, 161, 0.8);
         list-style: none;
@@ -1062,6 +1071,7 @@ SUP.i-new {
 .b-steps-step.active {
         border-radius: 0.5em;
         background-color: #369AFF;
+        background-image: -webkit-linear-gradient(top, #3863A0 0%, #369AFF 100%);
         background-image: linear-gradient(to bottom, #3863A0 0%, #369AFF 100%);
         box-shadow: inset 0 0 6px #2B4C7B;
         color: #FFF;
@@ -1088,6 +1098,7 @@ SUP.i-new {
     border: 0;
     border-radius: 9px;
     background-color: #CDE7FE;
+    background-image: -webkit-linear-gradient(top, #DCFBFF 0%, #CDE7FE 100%);
     background-image: linear-gradient(to bottom, #DCFBFF 0%, #CDE7FE 100%);
     }
 

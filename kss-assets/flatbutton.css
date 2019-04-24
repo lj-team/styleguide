@@ -221,11 +221,6 @@ DIV .b-flatbutton-loading {
     cursor: wait;
     }
 
-DIV .b-flatbutton-loading::-moz-selection {
-    background: #09C;
-    color: #09C;
-    }
-
 DIV .b-flatbutton-loading::selection {
     background: #09C;
     color: #09C;

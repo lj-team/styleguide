@@ -1487,15 +1487,13 @@ Style guide: Flatstyle.inputs.radio-checkbox
 
 /* arrows top center */
 
-.popupus--tc .popupus__inner::before {
+/* .popupus--tc .popupus__inner::before {
     display: block;
     top: -7px;
     left: 50%;
     margin-left: -6px;
-    -webkit-transform: rotate(45deg);
-        -ms-transform: rotate(45deg);
-            transform: rotate(45deg);
-    }
+    transform: rotate(45deg);
+    } */
 
 /* arrow right center */
 
