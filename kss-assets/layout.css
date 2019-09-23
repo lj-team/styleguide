@@ -357,11 +357,9 @@ figure {
 
 @media screen and (min-width: 650.1px) {
     .s-options {
-        display: -webkit-box;
         display: -webkit-flex;
         display: -ms-flexbox;
         display: flex;
-        -webkit-box-pack: justify;
         -webkit-justify-content: space-between;
             -ms-flex-pack: justify;
                 justify-content: space-between;
@@ -383,7 +381,6 @@ figure {
 
 @media screen and (min-width: 720.1px) {
     .s-options {
-        -webkit-box-pack: start;
         -webkit-justify-content: flex-start;
             -ms-flex-pack: start;
                 justify-content: flex-start;
@@ -394,11 +391,9 @@ figure {
     }
 
 .s-social {
-    display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
     -webkit-justify-content: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -421,7 +416,6 @@ figure {
 
 @media screen and (min-width: 650.1px) {
     .s-social {
-        -webkit-box-pack: start;
         -webkit-justify-content: flex-start;
             -ms-flex-pack: start;
                 justify-content: flex-start;
@@ -495,11 +489,9 @@ figure {
     margin: 0;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
     -webkit-justify-content: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -593,7 +585,6 @@ figure {
 
 @media screen and (min-width: 650.1px) {
     .s-apps {
-        -webkit-box-pack: start;
         -webkit-justify-content: flex-start;
             -ms-flex-pack: start;
                 justify-content: flex-start;
@@ -861,7 +852,6 @@ figure {
         margin: 0;
         padding: 1em 0 0;
         text-align: center;
-        -webkit-transition: top 0.2s ease;
         transition: top 0.2s ease;
         }
 

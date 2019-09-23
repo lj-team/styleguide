@@ -27,6 +27,7 @@
 <link rel="stylesheet" href="kss-assets/basepopup.css">
 <link rel="stylesheet" href="kss-assets/dropdown.css">
 <link rel="stylesheet" href="kss-assets/lightcontrols.css">
+<link rel="stylesheet" href="kss-assets/post-badges.css">
 
 </head>
 <body id="kss-node" >
@@ -187,6 +188,11 @@
           <span class="kss-nav__ref">2</span><span class="kss-nav__name">Flatstyle</span>
         </a>
       </li>
+      <li class="kss-nav__menu-item">
+        <a class="kss-nav__menu-link" href="section-widgets.html">
+          <span class="kss-nav__ref">3</span><span class="kss-nav__name">Widgets</span>
+        </a>
+      </li>
     </ul>
   </nav>
 </div>
@@ -286,6 +292,28 @@
                     <strong class="kss-color-name">$gray-pure-middle</strong>
                     <code class="kss-color-code">#7D7F7F</code>
                       <p class="kss-color-desc">gray-pure-middle</p>
+                  </figcaption>
+                </figure>
+              </li>
+              <li>
+                <figure class="kss-color">
+                  <div class="kss-color-figure" style="background-color:#6A777D"></div>
+                  <figcaption class="kss-color-caption">
+                      <strong class="kss-color-name"></strong>
+                    <strong class="kss-color-name">$gray-pure-middle-2</strong>
+                    <code class="kss-color-code">#6A777D</code>
+                      <p class="kss-color-desc">gray-pure-middle-2</p>
+                  </figcaption>
+                </figure>
+              </li>
+              <li>
+                <figure class="kss-color">
+                  <div class="kss-color-figure" style="background-color:#999999"></div>
+                  <figcaption class="kss-color-caption">
+                      <strong class="kss-color-name"></strong>
+                    <strong class="kss-color-name">$gray-pure-middle-3</strong>
+                    <code class="kss-color-code">#999999</code>
+                      <p class="kss-color-desc">gray-pure-middle-3</p>
                   </figcaption>
                 </figure>
               </li>
@@ -2466,6 +2494,42 @@
               <div class="kss-modifier__example-footer"></div>
             </div>
             <div class="kss-modifier__name kss-style">
+              .lightbutton--link
+            </div>
+            <div class="kss-modifier__description kss-style">
+              button like a link
+            </div>
+            <div class="kss-modifier__example">
+              <a class="lightbutton lightbutton--link" href="#">Link</a>
+<button class="lightbutton lightbutton--link" type="button">Button</button>
+<button
+  class="lightbutton lightbutton--toggle kss-toggle-class lightbutton--link"
+  data-toggle-class="lightbutton--toggle-open"
+  type="button">
+  Toggle button
+  <svg class="lightbutton__dropdown-icon svgicon" width="16" height="16"><use xlink:href="./kss-assets/flaticon.svg#flaticon--arrow-dropdown"/></svg>
+</button>
+              <div class="kss-modifier__example-footer"></div>
+            </div>
+            <div class="kss-modifier__name kss-style">
+              .lightbutton--no-border
+            </div>
+            <div class="kss-modifier__description kss-style">
+              button without border
+            </div>
+            <div class="kss-modifier__example">
+              <a class="lightbutton lightbutton--no-border" href="#">Link</a>
+<button class="lightbutton lightbutton--no-border" type="button">Button</button>
+<button
+  class="lightbutton lightbutton--toggle kss-toggle-class lightbutton--no-border"
+  data-toggle-class="lightbutton--toggle-open"
+  type="button">
+  Toggle button
+  <svg class="lightbutton__dropdown-icon svgicon" width="16" height="16"><use xlink:href="./kss-assets/flaticon.svg#flaticon--arrow-dropdown"/></svg>
+</button>
+              <div class="kss-modifier__example-footer"></div>
+            </div>
+            <div class="kss-modifier__name kss-style">
               .lightbutton--big
             </div>
             <div class="kss-modifier__description kss-style">
@@ -2476,6 +2540,24 @@
 <button class="lightbutton lightbutton--big" type="button">Button</button>
 <button
   class="lightbutton lightbutton--toggle kss-toggle-class lightbutton--big"
+  data-toggle-class="lightbutton--toggle-open"
+  type="button">
+  Toggle button
+  <svg class="lightbutton__dropdown-icon svgicon" width="16" height="16"><use xlink:href="./kss-assets/flaticon.svg#flaticon--arrow-dropdown"/></svg>
+</button>
+              <div class="kss-modifier__example-footer"></div>
+            </div>
+            <div class="kss-modifier__name kss-style">
+              .lightbutton--bold
+            </div>
+            <div class="kss-modifier__description kss-style">
+              bold button
+            </div>
+            <div class="kss-modifier__example">
+              <a class="lightbutton lightbutton--bold" href="#">Link</a>
+<button class="lightbutton lightbutton--bold" type="button">Button</button>
+<button
+  class="lightbutton lightbutton--toggle kss-toggle-class lightbutton--bold"
   data-toggle-class="lightbutton--toggle-open"
   type="button">
   Toggle button
@@ -2555,7 +2637,7 @@
           </details>
 
         <div class="kss-source kss-style">
-          Source: <code>core/components/lightcontrols.css</code>, line 168
+          Source: <code>core/components/lightcontrols.css</code>, line 192
         </div>
 
     </section>
@@ -2684,7 +2766,7 @@
           </details>
 
         <div class="kss-source kss-style">
-          Source: <code>core/components/lightcontrols.css</code>, line 369
+          Source: <code>core/components/lightcontrols.css</code>, line 426
         </div>
 
     </section>
@@ -2769,6 +2851,11 @@
 
           <div class="kss-modifier__example">
             <input type="text" class="lightinput " placeholder="Empty spaces what are we living for"/>
+<!-- Example with tip -->
+<label class="lightinput-label">
+<input type="text" class="lightinput " placeholder="Start typing to see tip"/>
+<span class="lightinput-tip">Tip will be shown here</span>
+</label>
             <div class="kss-modifier__example-footer"></div>
           </div>
 
@@ -2780,6 +2867,11 @@
             </div>
             <div class="kss-modifier__example">
               <input type="text" class="lightinput pseudo-class-disabled" placeholder="Empty spaces what are we living for"/>
+<!-- Example with tip -->
+<label class="lightinput-label">
+<input type="text" class="lightinput pseudo-class-disabled" placeholder="Start typing to see tip"/>
+<span class="lightinput-tip">Tip will be shown here</span>
+</label>
               <div class="kss-modifier__example-footer"></div>
             </div>
             <div class="kss-modifier__name kss-style">
@@ -2790,6 +2882,11 @@
             </div>
             <div class="kss-modifier__example">
               <input type="text" class="lightinput lightinput--big" placeholder="Empty spaces what are we living for"/>
+<!-- Example with tip -->
+<label class="lightinput-label">
+<input type="text" class="lightinput lightinput--big" placeholder="Start typing to see tip"/>
+<span class="lightinput-tip">Tip will be shown here</span>
+</label>
               <div class="kss-modifier__example-footer"></div>
             </div>
         </div>
@@ -2798,7 +2895,12 @@
             <summary>
                 Markup
             </summary>
-            <pre class="hljs"><code class="language-handlebars"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"lightinput [modifier class]"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Empty spaces what are we living for"</span>/&gt;</span></span></code></pre>
+            <pre class="hljs"><code class="language-handlebars"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"lightinput [modifier class]"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Empty spaces what are we living for"</span>/&gt;</span>
+<span class="hljs-comment">&lt;!-- Example with tip --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"lightinput-label"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"lightinput [modifier class]"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Start typing to see tip"</span>/&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"lightinput-tip"</span>&gt;</span>Tip will be shown here<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span></span></code></pre>
           </details>
 
         <div class="kss-source kss-style">
@@ -2939,7 +3041,7 @@
           </details>
 
         <div class="kss-source kss-style">
-          Source: <code>core/components/lightcontrols.css</code>, line 337
+          Source: <code>core/components/lightcontrols.css</code>, line 394
         </div>
 
     </section>
@@ -3044,7 +3146,7 @@
           </details>
 
         <div class="kss-source kss-style">
-          Source: <code>core/components/lightcontrols.css</code>, line 66
+          Source: <code>core/components/lightcontrols.css</code>, line 90
         </div>
 
     </section>
@@ -3161,7 +3263,7 @@
           </details>
 
         <div class="kss-source kss-style">
-          Source: <code>core/components/lightcontrols.css</code>, line 127
+          Source: <code>core/components/lightcontrols.css</code>, line 151
         </div>
 
     </section>
@@ -3290,7 +3392,7 @@
           </details>
 
         <div class="kss-source kss-style">
-          Source: <code>core/components/lightcontrols.css</code>, line 512
+          Source: <code>core/components/lightcontrols.css</code>, line 569
         </div>
 
     </section>
@@ -3428,7 +3530,7 @@
           </details>
 
         <div class="kss-source kss-style">
-          Source: <code>core/components/lightcontrols.css</code>, line 661
+          Source: <code>core/components/lightcontrols.css</code>, line 718
         </div>
 
     </section>

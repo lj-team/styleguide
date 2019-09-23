@@ -1,0 +1,94 @@
+/* >>> file start: stc/widgets/post-badges.css */
+/*
+Post Badges
+
+Markup:
+<div
+  class="
+    post-badge
+    post-badge--education
+  ">
+  <a
+    class="post-badge__link"
+    href="#">
+    <svg class="basepopup__close-icon svgicon" width="16" height="16"><use xlink:href="./kss-assets/flaticon.svg#flaticon--education-badge"/></svg>
+  </a>
+  <div
+    class="
+      basepopup
+      basepopup--arrow-top-center
+      post-bage__basepopup
+      post-bage__basepopup--education
+      ">
+    <div class="basepopup__content">
+      Текст в бейдже попапа
+    </div>
+  </div>
+</div>
+
+Style guide: Widgets.post-badges
+*/
+
+.post-badges {
+  white-space: nowrap;
+  }
+
+.post-badge {
+  position: relative;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  }
+
+.post-badge + .post-badge {
+  margin-left: 8px;
+}
+
+.post-badge .svgicon {
+  position: relative;
+  width: 24px;
+  height: 32px;
+  transition: top .2s;
+}
+
+.post-badge__link:hover .svgicon {
+  top: -2px;
+}
+
+.post-bage__basepopup {
+  display: none;
+  top: 100%;
+  z-index: 2;
+  min-width: 120px;
+  margin-top: 6px;
+  padding: 10px 8px;
+  background: #014359;
+  border-color: #014359;
+  border-radius: 4px;
+  box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),
+              0 8px 12px 0 rgba(0,0,0,0.12);
+  font-size: 14px;
+  line-height: 1.3;
+  white-space: normal;
+  color: #FFF;
+  }
+
+.post-badge__link:hover + .post-bage__basepopup {
+  display: block;
+}
+
+.post-bage__basepopup--golden,
+  .post-bage__basepopup--recommended {
+  white-space: nowrap;
+}
+
+.post-bage__basepopup--education {
+  min-width: 140px;
+}
+
+/* <<< file end: stc/widgets/post-badges.css */
+
+/*# sourceMappingURL=post-badges.css.map */

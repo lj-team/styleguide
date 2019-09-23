@@ -27,6 +27,7 @@
 <link rel="stylesheet" href="kss-assets/basepopup.css">
 <link rel="stylesheet" href="kss-assets/dropdown.css">
 <link rel="stylesheet" href="kss-assets/lightcontrols.css">
+<link rel="stylesheet" href="kss-assets/post-badges.css">
 
 </head>
 <body id="kss-node" class="kss-fullscreen-mode">
@@ -51,6 +52,11 @@
       <li class="kss-nav__menu-item">
         <a class="kss-nav__menu-link" href="section-flatstyle.html">
           <span class="kss-nav__ref">2</span><span class="kss-nav__name">Flatstyle</span>
+        </a>
+      </li>
+      <li class="kss-nav__menu-item">
+        <a class="kss-nav__menu-link" href="section-widgets.html">
+          <span class="kss-nav__ref">3</span><span class="kss-nav__name">Widgets</span>
         </a>
       </li>
     </ul>
@@ -120,6 +126,11 @@
 
           <div class="kss-modifier__example">
             <input type="text" class="lightinput " placeholder="Empty spaces what are we living for"/>
+<!-- Example with tip -->
+<label class="lightinput-label">
+<input type="text" class="lightinput " placeholder="Start typing to see tip"/>
+<span class="lightinput-tip">Tip will be shown here</span>
+</label>
             <div class="kss-modifier__example-footer"></div>
           </div>
 
@@ -131,6 +142,11 @@
             </div>
             <div class="kss-modifier__example">
               <input type="text" class="lightinput pseudo-class-disabled" placeholder="Empty spaces what are we living for"/>
+<!-- Example with tip -->
+<label class="lightinput-label">
+<input type="text" class="lightinput pseudo-class-disabled" placeholder="Start typing to see tip"/>
+<span class="lightinput-tip">Tip will be shown here</span>
+</label>
               <div class="kss-modifier__example-footer"></div>
             </div>
             <div class="kss-modifier__name kss-style">
@@ -141,6 +157,11 @@
             </div>
             <div class="kss-modifier__example">
               <input type="text" class="lightinput lightinput--big" placeholder="Empty spaces what are we living for"/>
+<!-- Example with tip -->
+<label class="lightinput-label">
+<input type="text" class="lightinput lightinput--big" placeholder="Start typing to see tip"/>
+<span class="lightinput-tip">Tip will be shown here</span>
+</label>
               <div class="kss-modifier__example-footer"></div>
             </div>
         </div>
@@ -149,7 +170,12 @@
             <summary>
                 Markup
             </summary>
-            <pre class="hljs"><code class="language-handlebars"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"lightinput [modifier class]"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Empty spaces what are we living for"</span>/&gt;</span></span></code></pre>
+            <pre class="hljs"><code class="language-handlebars"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"lightinput [modifier class]"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Empty spaces what are we living for"</span>/&gt;</span>
+<span class="hljs-comment">&lt;!-- Example with tip --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"lightinput-label"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"lightinput [modifier class]"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Start typing to see tip"</span>/&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"lightinput-tip"</span>&gt;</span>Tip will be shown here<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span></span></code></pre>
           </details>
 
         <div class="kss-source kss-style">

@@ -10,6 +10,8 @@ $black: #000000 - black
 $gray-pure-dark: #333333 - gray-pure-dark
 $gray-pure-darker: #5B5F61 - gray-pure-darker
 $gray-pure-middle: #7D7F7F - gray-pure-middle
+$gray-pure-middle-2: #6A777D - gray-pure-middle-2
+$gray-pure-middle-3: #999999 - gray-pure-middle-3
 $gray-pure-light: #D8D8D8 - gray-pure-light
 $gray-pure-smoke: #F9FAFA - gray-pure-smoke
 $gray-stone-darker: #838B8E - gray-stone-darker
@@ -171,7 +173,7 @@ Style guide: Core.basepopup
   position: absolute;
   min-width: 120px;
   max-width: 300px;
-  padding: 13px 16px;
+  padding: 16px;
   box-sizing: border-box;
   border-radius: 6px;
   background: #FFF;
@@ -186,8 +188,8 @@ Style guide: Core.basepopup
 
 .basepopup::before {
   position: absolute;
-  width: 8px;
-  height: 8px;
+  width: 10px;
+  height: 10px;
   box-sizing: border-box;
   border: inherit;
   border-right: none;
@@ -199,7 +201,7 @@ Style guide: Core.basepopup
 
 .basepopup--arrow-top-left::before, .basepopup--arrow-top-center::before, .basepopup--arrow-top-right::before {
   content: "";
-  top: -5.65px;
+  top: -5px;
   -webkit-transform: rotate(45deg);
       -ms-transform: rotate(45deg);
           transform: rotate(45deg);
@@ -207,7 +209,7 @@ Style guide: Core.basepopup
 
 .basepopup--arrow-bottom-left::before, .basepopup--arrow-bottom-center::before, .basepopup--arrow-bottom-right::before {
   content: "";
-  bottom: -5.65px;
+  bottom: -5px;
   -webkit-transform: rotate(-135deg);
       -ms-transform: rotate(-135deg);
           transform: rotate(-135deg);
@@ -221,7 +223,7 @@ Style guide: Core.basepopup
 .basepopup--arrow-top-center::before,
 .basepopup--arrow-bottom-center::before {
   left: 50%;
-  margin-left: -5.65px;
+  margin-left: -5px;
   }
 
 .basepopup--arrow-top-right::before,
@@ -231,7 +233,7 @@ Style guide: Core.basepopup
 
 .basepopup--arrow-left-top::before, .basepopup--arrow-left-center::before, .basepopup--arrow-left-bottom::before {
   content: "";
-  left: -5.65px;
+  left: -5px;
   -webkit-transform: rotate(-45deg);
       -ms-transform: rotate(-45deg);
           transform: rotate(-45deg);
@@ -239,7 +241,7 @@ Style guide: Core.basepopup
 
 .basepopup--arrow-right-top::before, .basepopup--arrow-right-center::before, .basepopup--arrow-right-bottom::before {
   content: "";
-  right: -5.65px;
+  right: -5px;
   -webkit-transform: rotate(135deg);
       -ms-transform: rotate(135deg);
           transform: rotate(135deg);
@@ -253,7 +255,7 @@ Style guide: Core.basepopup
 .basepopup--arrow-left-center::before,
 .basepopup--arrow-right-center::before {
   top: 50%;
-  margin-top: -5.65px;
+  margin-top: -5px;
   }
 
 .basepopup--arrow-left-bottom::before,
@@ -279,6 +281,20 @@ Style guide: Core.basepopup
   margin-bottom: 10px;
   font-weight: bold;
   line-height: 1.3;
+  }
+
+.basepopup__title--size-16 {
+  font-size: 16px;
+  }
+
+.basepopup__text {
+  font-size: 14px;
+  line-height: 17px;
+  margin: -2px 0 0;
+  }
+
+.basepopup__text--light {
+  color: #6A777D;
   }
 
 /* list */
